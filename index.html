@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Curated golf offers with a members-only discount, from the Golf, nothing more community. Max twice per month.">
+<link rel="canonical" href="https://golfnothingmore.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://golfnothingmore.com/">
+<meta property="og:title" content="Golf, nothing more">
+<meta property="og:description" content="Curated golf offers with a members-only discount. Max twice per month.">
+<meta property="og:image" content="https://golfnothingmore.com/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<title>Golf, nothing more</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Archivo:wght@400;500;600;700&display=swap">
+
+<style>
+  :root {
+    --paper:   #EDEFEA;
+    --raise:   #F7F8F4;
+    --ink:     #101A15;
+    --soft:    #37473E;
+    --muted:   #5C6A61;
+    --line:    #D2D8CE;
+    --hair:    #E2E6DE;
+    --green:   #14512F;
+    --on-green:#F2F5EF;
+
+    --display: "Newsreader", Georgia, "Times New Roman", serif;
+    --body:    "Archivo", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, sans-serif;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0E1411; --raise: #151D18; --ink: #E9EEE8; --soft: #C0CBC2;
+      --muted: #8B9A91; --line: #26302A; --hair: #1D251F;
+      --green: #6FC594; --on-green: #0E1411;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper: #0E1411; --raise: #151D18; --ink: #E9EEE8; --soft: #C0CBC2;
+    --muted: #8B9A91; --line: #26302A; --hair: #1D251F;
+    --green: #6FC594; --on-green: #0E1411;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 0 1.75rem;
+  }
+
+  .label {
+    font-family: var(--body);
+    font-size: .68rem;
+    font-weight: 600;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  /* ---------- hero ---------- */
+
+  header.hero { padding: 4.5rem 0 0; }
+
+  .hero-inner { display: flex; flex-direction: column; gap: 1.5rem; max-width: 44rem; }
+
+  h1 {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: clamp(2.8rem, 8vw, 5.4rem);
+    line-height: 1;
+    letter-spacing: -.02em;
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  .lede {
+    font-size: clamp(1.1rem, 2.1vw, 1.35rem);
+    line-height: 1.55;
+    color: var(--soft);
+    max-width: 36rem;
+    margin: 0;
+  }
+
+  .lede b { color: var(--ink); font-weight: 600; }
+
+  /* ---------- signup ---------- */
+
+  .signup {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .9rem;
+    max-width: 32rem;
+  }
+
+  form {
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap;
+  }
+
+  input[type="email"] {
+    flex: 1 1 15rem;
+    min-width: 0;
+    font-family: var(--body);
+    font-size: 1rem;
+    color: var(--ink);
+    background: var(--raise);
+    border: 1px solid var(--line);
+    padding: .8rem .9rem;
+    border-radius: 0;
+  }
+
+  input[type="email"]::placeholder { color: var(--muted); }
+  input[type="email"]:focus-visible { outline: 2px solid var(--green); outline-offset: 1px; }
+
+  button {
+    font-family: var(--body);
+    font-size: .95rem;
+    font-weight: 600;
+    letter-spacing: .01em;
+    color: var(--on-green);
+    background: var(--green);
+    border: 1px solid var(--green);
+    padding: .8rem 1.35rem;
+    border-radius: 0;
+    cursor: pointer;
+  }
+
+  button:hover { opacity: .9; }
+  button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+
+  .fineprint { font-size: .87rem; line-height: 1.55; color: var(--muted); margin: 0; }
+  .fineprint b { color: var(--soft); font-weight: 500; }
+
+  .confirm {
+    font-size: .92rem;
+    color: var(--green);
+    margin: 0;
+    font-weight: 500;
+  }
+
+  /* ---------- hero photo ---------- */
+
+  .hero-shot {
+    margin: 3rem 0 0;
+    max-width: 42rem;
+  }
+
+  .hero-shot img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* ---------- facts ---------- */
+
+  .facts {
+    margin-top: 3.25rem;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 34rem;
+  }
+
+  .fact {
+    padding: 1.4rem 1.25rem 1.4rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+  }
+
+  .fact + .fact { border-left: 1px solid var(--hair); padding-left: 1.25rem; }
+
+  .fact b {
+    font-family: var(--display);
+    font-size: 1.9rem;
+    font-weight: 400;
+    line-height: 1.05;
+  }
+
+  .fact span { font-size: .82rem; color: var(--muted); }
+
+  @media (max-width: 38rem) {
+    .facts { grid-template-columns: 1fr; }
+    .fact + .fact { border-left: 0; border-top: 1px solid var(--hair); padding-left: 0; }
+  }
+
+  /* ---------- sections ---------- */
+
+  section { padding: 3.75rem 0 0; }
+
+  h2 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(1.7rem, 3.6vw, 2.3rem);
+    line-height: 1.15;
+    letter-spacing: -.01em;
+    margin: .5rem 0 1.75rem;
+    max-width: 26rem;
+    text-wrap: balance;
+  }
+
+  .items { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem 2.25rem; }
+  .items.pair { grid-template-columns: repeat(2, 1fr); max-width: 44rem; }
+
+  @media (max-width: 46rem) {
+    .items, .items.pair { grid-template-columns: 1fr; gap: 1.75rem; }
+  }
+
+  .item { display: flex; flex-direction: column; gap: .45rem; }
+
+  .item h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    padding-top: .8rem;
+    border-top: 1px solid var(--ink);
+  }
+
+  .item p { margin: 0; font-size: .93rem; line-height: 1.6; color: var(--soft); }
+
+  .soon .item h3 { border-top-color: var(--line); color: var(--soft); }
+
+  .note { font-size: .9rem; color: var(--muted); margin: 1.6rem 0 0; max-width: 34rem; }
+
+  /* ---------- partners ---------- */
+
+  .partners {
+    margin-top: 4rem;
+    border: 1px solid var(--line);
+    padding: 2.25rem 2rem;
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 2rem 3rem;
+    align-items: start;
+  }
+
+  @media (max-width: 46rem) {
+    .partners { grid-template-columns: 1fr; gap: 1.75rem; padding: 1.75rem 1.5rem; }
+  }
+
+  .partners h2 { margin: .5rem 0 .9rem; font-size: clamp(1.5rem, 3vw, 2rem); }
+  .partners p { margin: 0; color: var(--soft); font-size: .96rem; line-height: 1.6; }
+
+  .terms { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0; }
+
+  .terms li {
+    font-size: .92rem;
+    line-height: 1.55;
+    color: var(--soft);
+    padding: .7rem 0;
+    border-bottom: 1px solid var(--hair);
+  }
+
+  .terms li:first-child { border-top: 1px solid var(--hair); }
+  .terms li b { color: var(--ink); font-weight: 600; }
+
+  .btn-line {
+    display: inline-block;
+    margin-top: 1.2rem;
+    font-family: var(--body);
+    font-size: .93rem;
+    font-weight: 600;
+    color: var(--ink);
+    text-decoration: none;
+    border: 1px solid var(--ink);
+    padding: .7rem 1.2rem;
+  }
+
+  .btn-line:hover { background: var(--ink); color: var(--paper); }
+  .btn-line:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+
+  /* ---------- rule ---------- */
+
+  .rule-block {
+    margin-top: 4rem;
+    background: var(--raise);
+    border-top: 3px solid var(--green);
+    padding: 2.25rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .9rem;
+  }
+
+  .rule-block p {
+    margin: 0;
+    max-width: 38rem;
+    font-size: 1.02rem;
+    line-height: 1.6;
+    color: var(--soft);
+  }
+
+  .rule-block strong {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--ink);
+    display: block;
+    line-height: 1.2;
+  }
+
+  /* ---------- footer ---------- */
+
+  footer {
+    margin-top: 4.5rem;
+    border-top: 1px solid var(--line);
+    padding: 1.6rem 0 3.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem 2rem;
+    align-items: baseline;
+    font-size: .85rem;
+    color: var(--muted);
+  }
+
+  footer .name { font-family: var(--display); font-size: 1rem; color: var(--ink); }
+  footer a { color: var(--muted); text-underline-offset: 2px; }
+  footer a:hover { color: var(--ink); }
+</style>
+<style>
+  body { margin: 0; }
+  img { max-width: 100%; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="label">Member deals · max twice per month</p>
+      <h1>Golf, nothing&nbsp;more.</h1>
+      <p class="lede">Curated golf offers with a <b>members-only discount</b>. Max twice per month, and never more than that.</p>
+
+      <div class="signup">
+        <form id="signup" novalidate>
+          <label for="email" style="position:absolute;left:-9999px;">Email address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email">
+          <button type="submit">Send me the deals</button>
+        </form>
+        <p class="fineprint">Some offers earn us a commission. Unsubscribe any time.</p>
+      </div>
+    </div>
+
+    <figure class="hero-shot">
+      <img src="hero.jpg" alt="A links course on a clifftop above the sea, with four golfers on a green in the evening light.">
+    </figure>
+
+    <div class="facts">
+      <div class="fact"><b>246,000</b><span>members in the Facebook group</span></div>
+      <div class="fact"><b>Max 2</b><span>emails per month</span></div>
+    </div>
+  </header>
+
+  <section>
+    <p class="label">What you get</p>
+    <h2>Two things, and nothing you didn't ask for</h2>
+    <div class="items pair">
+      <div class="item">
+        <h3>Offers worth opening</h3>
+        <p>Every offer has to give members something the public doesn't get — a discount, extra lessons, early access. A link at the normal price is an advert, and it doesn't go in.</p>
+      </div>
+      <div class="item">
+        <h3>Nothing else</h3>
+        <p>No daily mail, no sequence, no "just checking in". At most two emails a month, and fewer when there is nothing worth sending.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="partners">
+    <div>
+      <p class="label">For brands</p>
+      <h2>Reach golfers who asked to hear from you</h2>
+      <p>Our subscribers come out of a 246,000-member community, but what you reach is the list: people who opted in because they want offers. It's new, so it's small and growing. Write to us and we'll tell you exactly how big it is this week, and how many of them open.</p>
+      <a class="btn-line" href="mailto:partners@golfnothingmore.com?subject=Partnership%20enquiry">partners@golfnothingmore.com</a>
+    </div>
+    <ul class="terms">
+      <li><b>Commission, not banners.</b> We're paid on what members actually buy, so we only run things we think they'll want.</li>
+      <li><b>A real member offer.</b> Something the public doesn't get — a discount, extra sessions, early access. A link at the normal price isn't a deal.</li>
+      <li><b>Nothing inside the group.</b> No posts, no moderator access, no sign-up forms. Offers go out here, clearly marked.</li>
+    </ul>
+  </div>
+
+  <div class="rule-block">
+    <strong>The rule isn't going anywhere.</strong>
+    <p>The group works because nobody is allowed to sell in it — no pitches, no "DM me", no coaching funnels. That stays exactly as it is. Anything commercial happens here instead, labelled as what it is, or it doesn't happen at all.</p>
+  </div>
+
+  <footer>
+    <span class="name">Golf, nothing more.</span>
+    <a href="https://www.facebook.com/groups/Golf.nothing.more">The group on Facebook</a>
+    <a href="mailto:hello@golfnothingmore.com">hello@golfnothingmore.com</a>
+    <span>Privacy</span>
+  </footer>
+
+</div>
+
+<script>
+  (function () {
+    var form = document.getElementById('signup');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var input = document.getElementById('email');
+      var msg = document.createElement('p');
+      msg.className = 'confirm';
+      var existing = document.querySelector('.confirm');
+      if (existing) existing.remove();
+      if (!input.value || input.value.indexOf('@') === -1) {
+        msg.textContent = 'Add an email address first.';
+      } else {
+        msg.textContent = 'Design preview — the form is not connected yet.';
+        input.value = '';
+      }
+      form.parentNode.appendChild(msg);
+    });
+  })();
+</script>
+</body>
+</html>
