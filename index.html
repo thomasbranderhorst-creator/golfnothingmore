@@ -151,11 +151,23 @@
   .fineprint b { color: var(--soft); font-weight: 500; }
 
   .confirm {
-    font-size: .92rem;
+    font-size: .95rem;
+    line-height: 1.5;
     color: var(--green);
     margin: 0;
     font-weight: 500;
+    max-width: 30rem;
   }
+
+  .confirm.is-error { color: #A3341C; }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .confirm.is-error { color: #E8896C; }
+  }
+
+  :root[data-theme="dark"] .confirm.is-error { color: #E8896C; }
+
+  button[disabled] { opacity: .6; cursor: default; }
 
   /* ---------- hero photo ---------- */
 
@@ -352,10 +364,12 @@
       <p class="lede">Curated golf offers with a <b>members-only discount</b>. Max twice per month, and never more than that.</p>
 
       <div class="signup">
-        <form id="signup" novalidate>
+        <form id="signup" action="https://assets.mailerlite.com/jsonp/2623605/forms/198071517381133550/subscribe" method="post" novalidate>
           <label for="email" style="position:absolute;left:-9999px;">Email address</label>
-          <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email">
-          <button type="submit">Send me the deals</button>
+          <input type="email" id="email" name="fields[email]" placeholder="you@example.com" autocomplete="email" required>
+          <input type="hidden" name="ml-submit" value="1">
+          <input type="hidden" name="anticsrf" value="true">
+          <button type="submit" id="signupBtn">Send me the deals</button>
         </form>
         <p class="fineprint">Some offers earn us a commission. Unsubscribe any time.</p>
       </div>
@@ -417,20 +431,45 @@
 <script>
   (function () {
     var form = document.getElementById('signup');
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var input = document.getElementById('email');
+    if (!form) return;
+    var input = document.getElementById('email');
+    var btn = document.getElementById('signupBtn');
+    var label = btn ? btn.textContent : '';
+    var valid = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+    function say(text, isError) {
+      var old = form.parentNode.querySelector('.confirm');
+      if (old) old.parentNode.removeChild(old);
       var msg = document.createElement('p');
-      msg.className = 'confirm';
-      var existing = document.querySelector('.confirm');
-      if (existing) existing.remove();
-      if (!input.value || input.value.indexOf('@') === -1) {
-        msg.textContent = 'Add an email address first.';
-      } else {
-        msg.textContent = 'Not quite open yet — sign-ups start in a few days. Nothing was saved.';
-        input.value = '';
-      }
+      msg.className = 'confirm' + (isError ? ' is-error' : '');
+      msg.setAttribute('role', 'status');
+      msg.textContent = text;
       form.parentNode.appendChild(msg);
+    }
+
+    form.addEventListener('submit', function (e) {
+      if (!window.fetch) return; // laat de browser het formulier gewoon versturen
+      e.preventDefault();
+
+      if (!valid.test(input.value.trim())) {
+        say('That address does not look right. Have another go.', true);
+        input.focus();
+        return;
+      }
+
+      if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+
+      fetch(form.action, { method: 'POST', mode: 'no-cors', body: new FormData(form) })
+        .then(function () {
+          form.style.display = 'none';
+          say('Almost there — check your inbox and click the confirmation link. That is the last thing we will ask of you.');
+        })
+        .catch(function () {
+          say('Something went wrong on our end. Try again in a minute, or email hello@golfnothingmore.com.', true);
+        })
+        .then(function () {
+          if (btn) { btn.disabled = false; btn.textContent = label; }
+        });
     });
   })();
 
