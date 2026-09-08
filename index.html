@@ -195,6 +195,7 @@
     font-size: 1.9rem;
     font-weight: 400;
     line-height: 1.05;
+    font-variant-numeric: tabular-nums;
   }
 
   .fact span { font-size: .82rem; color: var(--muted); }
@@ -365,7 +366,7 @@
     </figure>
 
     <div class="facts">
-      <div class="fact"><b>246,000</b><span>members in the Facebook group</span></div>
+      <div class="fact"><b>over <span id="memberCount" data-target="245000">245,000</span></b><span>members in the Facebook group</span></div>
       <div class="fact"><b>Max 2</b><span>emails per month</span></div>
     </div>
   </header>
@@ -431,6 +432,26 @@
       }
       form.parentNode.appendChild(msg);
     });
+  })();
+
+  (function () {
+    var el = document.getElementById('memberCount');
+    if (!el || !window.requestAnimationFrame) return;
+    var target = parseInt(el.getAttribute('data-target'), 10);
+    if (!target) return;
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) return;
+    var fmt = function (n) { return n.toLocaleString('en-US'); };
+    var start = null, dur = 1600;
+    el.textContent = fmt(0);
+    function step(ts) {
+      if (start === null) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = fmt(Math.round(target * eased));
+      if (p < 1) { requestAnimationFrame(step); } else { el.textContent = fmt(target); }
+    }
+    requestAnimationFrame(step);
   })();
 </script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "4e2f971824b14d21878164c9c05fa09b"}'></script><!-- End Cloudflare Web Analytics -->
