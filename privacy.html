@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy — Golf, nothing more</title>
+<meta name="description" content="How Golf, nothing more handles your personal data.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Archivo:wght@400;500;600;700&display=swap">
+<style>
+  :root {
+    --paper:   #EDEFEA;
+    --raise:   #F7F8F4;
+    --ink:     #101A15;
+    --soft:    #37473E;
+    --muted:   #5C6A61;
+    --line:    #D2D8CE;
+    --hair:    #E2E6DE;
+    --green:   #14512F;
+
+    --display: "Newsreader", Georgia, "Times New Roman", serif;
+    --body:    "Archivo", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, sans-serif;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0E1411; --raise: #151D18; --ink: #E9EEE8; --soft: #C0CBC2;
+      --muted: #8B9A91; --line: #26302A; --hair: #1D251F; --green: #6FC594;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper: #0E1411; --raise: #151D18; --ink: #E9EEE8; --soft: #C0CBC2;
+    --muted: #8B9A91; --line: #26302A; --hair: #1D251F; --green: #6FC594;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 40rem; margin: 0 auto; padding: 3.5rem 1.75rem 5rem; }
+
+  .label {
+    font-size: .68rem;
+    font-weight: 600;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 .8rem;
+  }
+
+  h1 {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    line-height: 1.1;
+    letter-spacing: -.02em;
+    margin: 0 0 .6rem;
+  }
+
+  .lede { font-size: 1.05rem; color: var(--soft); margin: 0 0 2.5rem; }
+
+  h2 {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: 1.35rem;
+    line-height: 1.2;
+    margin: 2.4rem 0 .7rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid var(--line);
+  }
+
+  p, li { margin: 0 0 .9rem; color: var(--soft); }
+  ul { padding-left: 1.15rem; margin: 0 0 .9rem; }
+  li::marker { color: var(--muted); }
+
+  strong { color: var(--ink); font-weight: 600; }
+
+  a { color: var(--green); text-underline-offset: 2px; }
+  a:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
+
+  .box {
+    background: var(--raise);
+    border-left: 3px solid var(--green);
+    padding: 1.2rem 1.35rem;
+    margin: 0 0 .9rem;
+  }
+
+  .box p:last-child { margin-bottom: 0; }
+
+  footer {
+    margin-top: 3.5rem;
+    border-top: 1px solid var(--line);
+    padding-top: 1.4rem;
+    font-size: .85rem;
+    color: var(--muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem 1.75rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <p class="label">Golf, nothing more</p>
+  <h1>Privacy</h1>
+  <p class="lede">What we collect, why, and what you can do about it. In plain language, because there is not much to it.</p>
+
+  <h2>Who we are</h2>
+  <p>This site and the Member Deals email are run by <strong>Golf Nothing More vof</strong>, registered in the Netherlands with the Chamber of Commerce under number [KVK-NUMMER], at [ADRES].</p>
+  <p>We are the controller for the personal data described here. For anything on this page, write to <a href="mailto:hello@golfnothingmore.com">hello@golfnothingmore.com</a>.</p>
+
+  <h2>What we collect</h2>
+  <p>If you sign up for Member Deals, we collect your <strong>email address</strong>, the date you signed up, and a record of your confirmation. That is the whole list.</p>
+  <p>Our email software also records whether an email was delivered, whether it was opened, and which links were clicked. We use that to see which offers are worth sending and which are not.</p>
+  <p>We measure visits to this website with Cloudflare Web Analytics. It uses no cookies, sets nothing on your device, and does not build a profile of you. We see page views and rough traffic sources, nothing that identifies you.</p>
+
+  <h2>Why we are allowed to</h2>
+  <p>We send you email because you asked us to. That is your consent, and you can withdraw it at any time — every email has an unsubscribe link, and using it takes effect immediately.</p>
+  <p>To make sure nobody signs you up without your knowledge, we use double opt-in: after you enter your address you get one email asking you to confirm. If you do not confirm, we delete the address.</p>
+
+  <h2>Who else sees it</h2>
+  <ul>
+    <li><strong>Our email provider</strong>, [PROVIDER], stores the list and sends the emails on our behalf. They process the data under our instructions and may not use it for anything else.</li>
+    <li><strong>GitHub</strong> hosts this website, and <strong>Cloudflare</strong> provides the visitor statistics.</li>
+  </ul>
+  <p>That is it. <strong>We do not sell, rent or share your email address with the partners whose offers we feature.</strong> When you click an offer you go to that company's own website, and from that point their privacy policy applies, not ours.</p>
+
+  <div class="box">
+    <p>We earn a commission on some of the offers we send. That does not change what happens to your data — the partner only learns about you if you choose to buy something from them.</p>
+  </div>
+
+  <h2>The Facebook group</h2>
+  <p>The Golf, nothing more group on Facebook is a separate thing, run on Facebook's platform under Facebook's own terms and privacy policy. We do not collect email addresses or other personal data through the group, and nothing you post there ends up on our list.</p>
+
+  <h2>How long we keep it</h2>
+  <p>We keep your address for as long as you are subscribed. If you unsubscribe, we remove you from the list and keep only the minimum needed to make sure you do not get added again by mistake.</p>
+
+  <h2>Where it is stored</h2>
+  <p>Our email provider stores the list within the European Union. Cloudflare and GitHub are established outside the EU; where they process any data on our behalf, that transfer is covered by the European Commission's standard contractual clauses.</p>
+
+  <h2>Your rights</h2>
+  <p>You can ask us for a copy of what we hold about you, ask us to correct it, or ask us to delete it. You can object to what we do with it, ask for it in a portable form, and withdraw your consent whenever you like.</p>
+  <p>Write to <a href="mailto:hello@golfnothingmore.com">hello@golfnothingmore.com</a> and we will sort it out. We are not going to make you jump through hoops — it is one email address in a list, and if you want it gone it is gone.</p>
+  <p>If you think we have handled your data badly, you can complain to the Dutch data protection authority, the <a href="https://autoriteitpersoonsgegevens.nl">Autoriteit Persoonsgegevens</a>.</p>
+
+  <h2>Changes</h2>
+  <p>If we change how any of this works — a different email provider, a new part of the site — we will update this page and note the date below.</p>
+
+  <footer>
+    <span>Last updated [DATUM]</span>
+    <a href="/">Back to Golf, nothing more</a>
+  </footer>
+
+</div>
+
+</body>
+</html>
