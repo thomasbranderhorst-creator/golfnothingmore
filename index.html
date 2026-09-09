@@ -204,13 +204,22 @@
 
   .fact b {
     font-family: var(--display);
-    font-size: 1.9rem;
+    font-size: 2.4rem;
     font-weight: 400;
     line-height: 1.05;
     font-variant-numeric: tabular-nums;
+    letter-spacing: -.01em;
   }
 
-  .fact span { font-size: .82rem; color: var(--muted); }
+  .fact b small {
+    font-size: .45em;
+    font-weight: 400;
+    color: var(--muted);
+    letter-spacing: .02em;
+    margin-right: .12em;
+  }
+
+  .fact > span { font-size: .82rem; color: var(--muted); }
 
   @media (max-width: 38rem) {
     .facts { grid-template-columns: 1fr; }
@@ -380,7 +389,7 @@
     </figure>
 
     <div class="facts">
-      <div class="fact"><b>over <span id="memberCount" data-target="245000">245,000</span></b><span>members in the Facebook group</span></div>
+      <div class="fact"><b><small>over</small><span id="memberCount" data-target="245000">245,000</span></b><span>members in the Facebook group</span></div>
       <div class="fact"><b>Max 2</b><span>emails per month</span></div>
     </div>
   </header>
