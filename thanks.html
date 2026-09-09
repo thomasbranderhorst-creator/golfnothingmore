@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>You're in — Golf, nothing more</title>
+<meta name="description" content="Your email is confirmed. Member Deals lands twice a month at most.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Archivo:wght@400;500;600;700&display=swap">
+<style>
+  :root {
+    --paper:   #EDEFEA;
+    --raise:   #F7F8F4;
+    --ink:     #101A15;
+    --soft:    #37473E;
+    --muted:   #5C6A61;
+    --line:    #D2D8CE;
+    --green:   #14512F;
+
+    --display: "Newsreader", Georgia, "Times New Roman", serif;
+    --body:    "Archivo", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, sans-serif;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0E1411; --raise: #151D18; --ink: #E9EEE8; --soft: #C0CBC2;
+      --muted: #8B9A91; --line: #26302A; --green: #6FC594;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper: #0E1411; --raise: #151D18; --ink: #E9EEE8; --soft: #C0CBC2;
+    --muted: #8B9A91; --line: #26302A; --green: #6FC594;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 36rem; margin: 0 auto; padding: 4.5rem 1.75rem 5rem; }
+
+  .label {
+    font-size: .68rem;
+    font-weight: 600;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 .9rem;
+  }
+
+  h1 {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: clamp(2.4rem, 7vw, 3.4rem);
+    line-height: 1.02;
+    letter-spacing: -.025em;
+    margin: 0 0 .7rem;
+  }
+
+  .lede { font-size: 1.08rem; color: var(--soft); margin: 0 0 2.6rem; }
+
+  h2 {
+    font-family: var(--body);
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 .9rem;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0 0 2.6rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+  }
+
+  li {
+    position: relative;
+    padding-left: 1.4rem;
+    color: var(--soft);
+    font-size: .97rem;
+  }
+
+  li::before {
+    content: "";
+    position: absolute;
+    left: .32rem;
+    top: .58rem;
+    width: .38rem;
+    height: .38rem;
+    background: var(--green);
+  }
+
+  p { margin: 0 0 1rem; color: var(--soft); }
+
+  strong { color: var(--ink); font-weight: 600; }
+
+  .back {
+    display: inline-block;
+    font-size: .92rem;
+    font-weight: 600;
+    color: var(--green);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 1px;
+  }
+
+  .back:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
+
+  footer {
+    margin-top: 3.5rem;
+    border-top: 1px solid var(--line);
+    padding-top: 1.4rem;
+    font-size: .85rem;
+    color: var(--muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem 1.75rem;
+  }
+
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <p class="label">Golf, nothing more</p>
+  <h1>You're in.</h1>
+  <p class="lede">Your address is confirmed. Nothing else to do — the next thing you hear from us will be an actual offer.</p>
+
+  <h2>What happens now</h2>
+  <ul>
+    <li><strong>Twice a month at most.</strong> Often less. If there is nothing worth sending, we don't send.</li>
+    <li><strong>Deals only.</strong> No newsletter, no roundups, no "hi, just checking in".</li>
+    <li><strong>We earn a commission on some of them</strong>, and we say which ones. That never changes what we put in front of you.</li>
+    <li><strong>One click to leave.</strong> Every email has an unsubscribe link and it works immediately.</li>
+  </ul>
+
+  <p>If an offer is ever not worth your time, reply and tell us. We read every reply, and it is the fastest way to make this better.</p>
+
+  <p><a class="back" href="/">Back to golfnothingmore.com</a></p>
+
+  <footer>
+    <a href="https://www.facebook.com/groups/Golf.nothing.more">The Facebook group</a>
+    <a href="/privacy.html">Privacy</a>
+    <a href="mailto:hello@golfnothingmore.com">hello@golfnothingmore.com</a>
+  </footer>
+
+</div>
+
+</body>
+</html>
