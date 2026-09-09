@@ -379,8 +379,8 @@
           <input type="hidden" name="ml-submit" value="1">
           <input type="hidden" name="anticsrf" value="true">
           <div aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;overflow:hidden;">
-            <label for="company">Leave this field empty</label>
-            <input type="text" id="company" name="company" tabindex="-1" autocomplete="off">
+            <label for="gnm_hp">Leave this field empty</label>
+            <input type="text" id="gnm_hp" name="gnm_hp" tabindex="-1" autocomplete="off">
           </div>
           <button type="submit" id="signupBtn">Send me the deals</button>
         </form>
@@ -465,7 +465,7 @@
       e.preventDefault();
 
       // Honeypot: alleen bots vullen dit veld in. Doe alsof het gelukt is.
-      var trap = document.getElementById('company');
+      var trap = document.getElementById('gnm_hp');
       if (trap && trap.value) {
         form.style.display = 'none';
         say('Almost there — check your inbox and click the confirmation link.');
