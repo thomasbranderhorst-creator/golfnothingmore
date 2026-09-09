@@ -490,16 +490,28 @@
     var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (reduce) return;
     var fmt = function (n) { return n.toLocaleString('en-US'); };
-    var start = null, dur = 1600;
-    el.textContent = fmt(0);
-    function step(ts) {
-      if (start === null) start = ts;
-      var p = Math.min((ts - start) / dur, 1);
-      var eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = fmt(Math.round(target * eased));
-      if (p < 1) { requestAnimationFrame(step); } else { el.textContent = fmt(target); }
+    var dur = 1600, done = false;
+    function run() {
+      if (done) return;
+      done = true;
+      var start = null;
+      el.textContent = fmt(0);
+      function step(ts) {
+        if (start === null) start = ts;
+        var p = Math.min((ts - start) / dur, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = fmt(Math.round(target * eased));
+        if (p < 1) { requestAnimationFrame(step); } else { el.textContent = fmt(target); }
+      }
+      requestAnimationFrame(step);
     }
-    requestAnimationFrame(step);
+    if (!window.IntersectionObserver) { run(); return; }
+    var io = new IntersectionObserver(function (entries) {
+      for (var i = 0; i < entries.length; i++) {
+        if (entries[i].isIntersecting) { io.disconnect(); run(); return; }
+      }
+    }, { threshold: 0.6 });
+    io.observe(el);
   })();
 </script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "4e2f971824b14d21878164c9c05fa09b"}'></script><!-- End Cloudflare Web Analytics -->
