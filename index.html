@@ -78,11 +78,11 @@
 
   /* ---------- hero ---------- */
 
-  .mark {
-    display: block;
-    height: 5.5rem;
+  .cap {
+    height: 1.29em;          /* zodat de G even hoog is als een hoofdletter */
     width: auto;
-    margin: 0 0 .35rem -.35rem;   /* optisch uitlijnen met de tekst */
+    vertical-align: -.529em; /* de tee hangt onder de basislijn, als een staart */
+    margin-right: .01em;
   }
 
   header.hero { padding: 4.5rem 0 0; }
@@ -93,7 +93,7 @@
     font-family: var(--display);
     font-weight: 600;
     font-size: clamp(2.8rem, 8vw, 5.4rem);
-    line-height: 1;
+    line-height: 1.12;
     letter-spacing: -.02em;
     margin: 0;
     text-wrap: balance;
@@ -377,13 +377,8 @@
 
   <header class="hero">
     <div class="hero-inner">
-      <picture>
-        <source srcset="logo-dark.png" media="(prefers-color-scheme: dark)">
-        <img class="mark" src="logo.png" width="1040" height="1056"
-             alt="Golf, nothing more" decoding="async">
-      </picture>
       <p class="label">Member deals · max twice per month</p>
-      <h1>Golf, nothing&nbsp;more.</h1>
+      <h1><picture><source srcset="cap-tee-dark.png" media="(prefers-color-scheme: dark)"><img class="cap" src="cap-tee.png" width="446" height="725" alt="G" decoding="async"></picture>olf, nothing&nbsp;more.</h1>
       <p class="lede">Curated golf offers with a <b>members-only discount</b>. Max twice per month, and never more than that.</p>
 
       <div class="signup">
