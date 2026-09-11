@@ -362,6 +362,7 @@
           <input type="email" id="email" name="fields[email]" placeholder="you@example.com" autocomplete="email" required>
           <input type="hidden" name="ml-submit" value="1">
           <input type="hidden" name="anticsrf" value="true">
+          <input type="hidden" name="fields[source]" id="gnm_source" value="site">
           <div aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;overflow:hidden;">
             <label for="gnm_hp">Leave this field empty</label>
             <input type="text" id="gnm_hp" name="gnm_hp" tabindex="-1" autocomplete="off">
@@ -428,6 +429,16 @@
     var btn = document.getElementById('signupBtn');
     var label = btn ? btn.textContent : '';
     var valid = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+    // Waar kwam deze inschrijver vandaan? /intro zet ?j=intro in de URL.
+    (function () {
+      var field = document.getElementById('gnm_source');
+      if (!field) return;
+      try {
+        var m = /[?&]j=([A-Za-z0-9_-]{1,32})/.exec(window.location.search);
+        if (m) { field.value = m[1]; }
+      } catch (e) { /* laat 'site' staan */ }
+    })();
 
     function say(text, isError) {
       var old = form.parentNode.querySelector('.confirm');
