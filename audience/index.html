@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Who's in the Golf, nothing more community: 246,000 amateur golfers, 83% male, three quarters aged 35 and over, concentrated in the US, UK, Australia and Canada.">
+<link rel="canonical" href="https://golfnothingmore.com/audience/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://golfnothingmore.com/audience/">
+<meta property="og:title" content="The audience — Golf, nothing more">
+<meta property="og:description" content="246,000 amateur golfers. Who they are, where they are, and what we don't know yet.">
+<meta property="og:image" content="https://golfnothingmore.com/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-512.png" sizes="512x512" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>The audience — Golf, nothing more</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Archivo:wght@400;500;600;700&display=swap">
+
+<style>
+  :root {
+    --paper:#EDEFEA; --raise:#F7F8F4; --ink:#101A15; --soft:#37473E;
+    --muted:#5C6A61; --line:#D2D8CE; --hair:#E2E6DE; --green:#14512F; --on-green:#F2F5EF;
+    --bar:#14512F; --bar-track:#DEE3D9;
+    --display:"Newsreader",Georgia,"Times New Roman",serif;
+    --body:"Archivo",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:#0E1411; --raise:#151D18; --ink:#E9EEE8; --soft:#C0CBC2;
+      --muted:#8B9A91; --line:#26302A; --hair:#1D251F; --green:#6FC594; --on-green:#0E1411;
+      --bar:#6FC594; --bar-track:#1F2A23;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:#0E1411; --raise:#151D18; --ink:#E9EEE8; --soft:#C0CBC2;
+    --muted:#8B9A91; --line:#26302A; --hair:#1D251F; --green:#6FC594; --on-green:#0E1411;
+    --bar:#6FC594; --bar-track:#1F2A23;
+  }
+
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:var(--body); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  img { max-width:100%; }
+  .wrap { max-width:52rem; margin:0 auto; padding:0 1.75rem; }
+
+  .label { font-size:.68rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); margin:0; }
+
+  header.hero { padding:4.5rem 0 0; display:flex; flex-direction:column; align-items:flex-start; gap:1.4rem; }
+  header.hero > picture { display:block; line-height:0; margin-bottom:-.35rem; }
+  .mark { height:clamp(3rem,6vw,4.1rem); width:auto; display:block; }
+  h1 { font-family:var(--display); font-weight:600; font-size:clamp(2.6rem,7vw,4.4rem); line-height:1.02; letter-spacing:-.02em; margin:0; text-wrap:balance; }
+  .lede { font-size:clamp(1.05rem,2vw,1.25rem); line-height:1.55; color:var(--soft); max-width:36rem; margin:0; }
+  .lede b { color:var(--ink); font-weight:600; }
+
+  /* ---------- kerncijfers ---------- */
+  .facts { margin-top:2.5rem; border-top:1px solid var(--ink); border-bottom:1px solid var(--line); display:grid; grid-template-columns:repeat(4,1fr); }
+  .fact { padding:1.4rem 1rem 1.4rem 0; display:flex; flex-direction:column; gap:.2rem; }
+  .fact + .fact { border-left:1px solid var(--hair); padding-left:1rem; }
+  .fact b { font-family:var(--display); font-size:clamp(1.8rem,4vw,2.4rem); font-weight:400; line-height:1.05; font-variant-numeric:tabular-nums; letter-spacing:-.01em; }
+  .fact > span { font-size:.8rem; color:var(--muted); line-height:1.45; }
+  @media (max-width:46rem) { .facts { grid-template-columns:repeat(2,1fr); } .fact:nth-child(odd) + .fact { border-left:1px solid var(--hair); padding-left:1rem; } .fact:nth-child(3) { border-left:0; padding-left:0; border-top:1px solid var(--hair); } .fact:nth-child(4) { border-top:1px solid var(--hair); } }
+
+  section { padding:3.5rem 0 0; }
+  h2 { font-family:var(--display); font-weight:400; font-size:clamp(1.6rem,3.4vw,2.1rem); line-height:1.15; margin:.4rem 0 .5rem; text-wrap:balance; }
+  .sub { color:var(--soft); margin:0 0 1.75rem; max-width:34rem; font-size:.95rem; }
+
+  /* ---------- staafgrafiek als tabel ---------- */
+  figure { margin:0; }
+  table.chart { width:100%; border-collapse:collapse; }
+  table.chart caption { text-align:left; font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); padding-bottom:.7rem; border-bottom:1px solid var(--ink); }
+  table.chart th, table.chart td { padding:.42rem 0; vertical-align:middle; font-weight:400; text-align:left; }
+  table.chart tbody tr + tr th, table.chart tbody tr + tr td { border-top:2px solid var(--paper); }
+  th.cat { width:6.5rem; font-size:.88rem; color:var(--soft); white-space:nowrap; padding-right:1rem; }
+  td.plot { width:auto; }
+  td.val { width:5.5rem; text-align:right; font-size:.88rem; font-variant-numeric:tabular-nums; color:var(--ink); padding-left:1rem; white-space:nowrap; }
+  td.val small { color:var(--muted); }
+  .track { background:var(--bar-track); height:14px; width:100%; }
+  .bar { background:var(--bar); height:14px; border-radius:0 4px 4px 0; }
+  @media (max-width:34rem) {
+    th.cat { width:4.6rem; font-size:.8rem; padding-right:.6rem; }
+    td.val { width:4.6rem; font-size:.8rem; padding-left:.6rem; }
+  }
+
+  .source { font-size:.82rem; color:var(--muted); margin:.9rem 0 0; }
+
+  .plain { display:flex; flex-direction:column; margin-top:.5rem; }
+  .plain div { padding:.75rem 0; border-bottom:1px solid var(--hair); display:flex; flex-direction:column; gap:.15rem; }
+  .plain div:first-child { border-top:1px solid var(--hair); }
+  .plain h3 { margin:0; font-size:.96rem; font-weight:600; }
+  .plain p { margin:0; color:var(--muted); font-size:.9rem; }
+
+  .partners { margin-top:3.5rem; border:1px solid var(--line); padding:2.25rem 2rem; }
+  .partners h2 { margin:.5rem 0 .9rem; }
+  .partners p { margin:0; color:var(--soft); font-size:.96rem; line-height:1.6; max-width:34rem; }
+  .btn-line { display:inline-block; margin-top:1.2rem; font-size:.93rem; font-weight:600; color:var(--ink); text-decoration:none; border:1px solid var(--ink); padding:.7rem 1.2rem; }
+  .btn-line:hover { background:var(--ink); color:var(--paper); }
+  .btn-line:focus-visible { outline:2px solid var(--green); outline-offset:2px; }
+
+  footer { margin-top:4rem; border-top:1px solid var(--line); padding:1.6rem 0 3.5rem; display:flex; flex-wrap:wrap; gap:.6rem 2rem; align-items:baseline; font-size:.85rem; color:var(--muted); }
+  footer .name { font-family:var(--display); font-size:1rem; color:var(--ink); }
+  footer a { color:var(--muted); text-underline-offset:2px; }
+  footer a:hover { color:var(--ink); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <picture><source srcset="/logo-dark.png" media="(prefers-color-scheme: dark)"><img class="mark" src="/logo.png" width="455" height="400" alt="" decoding="async"></picture>
+    <p class="label">The audience</p>
+    <h1>Who's actually in&nbsp;there.</h1>
+    <p class="lede">Golf, nothing more has been running since 2013. This is what Facebook's own figures say about the people in it — <b>including the parts that don't flatter us</b>.</p>
+
+    <div class="facts">
+      <div class="fact"><b>246,000</b><span>members</span></div>
+      <div class="fact"><b>83%</b><span>men</span></div>
+      <div class="fact"><b>~76%</b><span>aged 35 and over</span></div>
+      <div class="fact"><b>77%</b><span>US, UK, Australia, Canada</span></div>
+    </div>
+  </header>
+
+  <section>
+    <p class="label">Age</p>
+    <h2>The middle of the working life</h2>
+    <p class="sub">The group skews to the ages where people have both the time and the money for golf. A quarter of members are between 35 and 44, and three in four are 35 or over.</p>
+
+    <figure>
+      <table class="chart">
+        <caption>Share of members by age band</caption>
+        <tbody>
+          <tr><th class="cat" scope="row">13–17</th><td class="plot"><div class="track"><div class="bar" style="width:4%"></div></div></td><td class="val">1%</td></tr>
+          <tr><th class="cat" scope="row">18–24</th><td class="plot"><div class="track"><div class="bar" style="width:16%"></div></div></td><td class="val">4%</td></tr>
+          <tr><th class="cat" scope="row">25–34</th><td class="plot"><div class="track"><div class="bar" style="width:76%"></div></div></td><td class="val">19%</td></tr>
+          <tr><th class="cat" scope="row">35–44</th><td class="plot"><div class="track"><div class="bar" style="width:100%"></div></div></td><td class="val">25%</td></tr>
+          <tr><th class="cat" scope="row">45–54</th><td class="plot"><div class="track"><div class="bar" style="width:76%"></div></div></td><td class="val">19%</td></tr>
+          <tr><th class="cat" scope="row">55–64</th><td class="plot"><div class="track"><div class="bar" style="width:64%"></div></div></td><td class="val">16%</td></tr>
+          <tr><th class="cat" scope="row">65+</th><td class="plot"><div class="track"><div class="bar" style="width:64%"></div></div></td><td class="val">16%</td></tr>
+        </tbody>
+      </table>
+      <figcaption class="source">Facebook group insights, September 2026. Men and women combined; rounded to whole percentages.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <p class="label">Geography</p>
+    <h2>Four markets carry three quarters of it</h2>
+    <p class="sub">More than half the group is in the United States. Melbourne, Sydney and Perth all sit in the top five cities, so the Australian presence is heavier than the country figure suggests.</p>
+
+    <figure>
+      <table class="chart">
+        <caption>Members by country</caption>
+        <tbody>
+          <tr><th class="cat" scope="row">United States</th><td class="plot"><div class="track"><div class="bar" style="width:100%"></div></div></td><td class="val">134,376 <small>· 55%</small></td></tr>
+          <tr><th class="cat" scope="row">United Kingdom</th><td class="plot"><div class="track"><div class="bar" style="width:20%"></div></div></td><td class="val">26,924 <small>· 11%</small></td></tr>
+          <tr><th class="cat" scope="row">Australia</th><td class="plot"><div class="track"><div class="bar" style="width:10.5%"></div></div></td><td class="val">14,155 <small>· 6%</small></td></tr>
+          <tr><th class="cat" scope="row">Canada</th><td class="plot"><div class="track"><div class="bar" style="width:10.1%"></div></div></td><td class="val">13,596 <small>· 6%</small></td></tr>
+          <tr><th class="cat" scope="row">Nigeria</th><td class="plot"><div class="track"><div class="bar" style="width:8.2%"></div></div></td><td class="val">11,016 <small>· 4%</small></td></tr>
+          <tr><th class="cat" scope="row">Elsewhere</th><td class="plot"><div class="track"><div class="bar" style="width:34.2%"></div></div></td><td class="val">45,933 <small>· 19%</small></td></tr>
+        </tbody>
+      </table>
+      <figcaption class="source">Facebook group insights, September 2026. “Elsewhere” is every country outside the top five.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <p class="label">Straight answers</p>
+    <h2>What we don't know yet</h2>
+    <p class="sub">A media kit that only lists its best numbers isn't worth reading. Here is what we can't tell you.</p>
+    <div class="plain">
+      <div><h3>We don't have handicap or spend data</h3><p>Facebook doesn't collect it and we don't keep the answers people give when they join. A member survey is planned; until it has run, anyone quoting you a handicap profile for this audience is guessing.</p></div>
+      <div><h3>Reach is not attention</h3><p>We've measured posts that reached thousands of people and drew no reaction at all. We sell engagement per post, not impressions, and we'd rather show you a small honest number than a large meaningless one.</p></div>
+      <div><h3>Not every member is a customer</h3><p>Around one in twenty members is outside the shipping and service area of most golf brands. When we quote you an addressable audience, we leave those out.</p></div>
+      <div><h3>The email list is new</h3><p>It started in September 2026. It is small, it is growing, and we will tell you exactly how small it is this week rather than round it up.</p></div>
+    </div>
+  </section>
+
+  <div class="partners">
+    <p class="label">For brands</p>
+    <h2>Want to put something in front of them?</h2>
+    <p>We run a members-only page of standing partner codes, a member deals email, and a limited number of paid posts from our own page. Everything commercial is labelled as such. Write to us and we'll tell you what's free, what it costs, and what we honestly think it will do.</p>
+    <a class="btn-line" href="mailto:partners@golfnothingmore.com?subject=Partnership%20enquiry">partners@golfnothingmore.com</a>
+  </div>
+
+  <footer>
+    <span class="name">Golf, nothing more.</span>
+    <a href="/">Home</a>
+    <a href="https://www.facebook.com/groups/Golf.nothing.more">The group on Facebook</a>
+    <a href="mailto:hello@golfnothingmore.com">hello@golfnothingmore.com</a>
+    <a href="/privacy.html">Privacy</a>
+  </footer>
+
+</div>
+</body>
+</html>
