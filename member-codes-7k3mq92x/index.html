@@ -53,11 +53,10 @@
 
   /* ---------- de codes ---------- */
   .codes { display:flex; flex-direction:column; }
-  .code { padding:1.5rem 0; border-bottom:1px solid var(--hair); display:grid; grid-template-columns:9rem 1fr; gap:0 1.35rem; align-items:start; }
-  .code.noshot { grid-template-columns:1fr; }
-  .code .shot { width:100%; height:auto; display:block; border:1px solid var(--line); }
+  .code { padding:1.5rem 0; border-bottom:1px solid var(--hair); }
+  .code .shot { width:100%; height:auto; aspect-ratio:3.2/1; object-fit:cover; object-position:center 50%; display:block; border:1px solid var(--line); margin:0 0 1.15rem; }
   .code .body { display:flex; flex-direction:column; gap:.45rem; min-width:0; }
-  @media (max-width:34rem) { .code { grid-template-columns:5.5rem 1fr; gap:0 .9rem; } }
+  @media (max-width:34rem) { .code .shot { aspect-ratio:2.8/1; margin-bottom:1rem; } }
   .code:first-child { border-top:1px solid var(--ink); }
   .code .cat { font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
   .code h3 { margin:0; font-size:1.15rem; font-weight:600; }
