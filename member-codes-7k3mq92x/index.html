@@ -53,7 +53,11 @@
 
   /* ---------- de codes ---------- */
   .codes { display:flex; flex-direction:column; }
-  .code { padding:1.5rem 0; border-bottom:1px solid var(--hair); display:flex; flex-direction:column; gap:.45rem; }
+  .code { padding:1.5rem 0; border-bottom:1px solid var(--hair); display:grid; grid-template-columns:9rem 1fr; gap:0 1.35rem; align-items:start; }
+  .code.noshot { grid-template-columns:1fr; }
+  .code .shot { width:100%; height:auto; display:block; border:1px solid var(--line); }
+  .code .body { display:flex; flex-direction:column; gap:.45rem; min-width:0; }
+  @media (max-width:34rem) { .code { grid-template-columns:5.5rem 1fr; gap:0 .9rem; } }
   .code:first-child { border-top:1px solid var(--ink); }
   .code .cat { font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
   .code h3 { margin:0; font-size:1.15rem; font-weight:600; }
@@ -107,7 +111,8 @@
 
     <div class="codes">
 
-      <div class="code">
+      <div class="code noshot">
+        <div class="body">
         <p class="cat">Lessons</p>
         <h3>Sandbag Golf</h3>
         <p class="what"><b>A free 15 minute live video lesson with a PGA professional.</b> On demand, so you tap and you're in a lesson, rather than booking one for next Tuesday.</p>
@@ -115,9 +120,12 @@
         <span class="tag">GOLF13</span>
         <a class="go" href="https://sandbag-golf.com">Go to Sandbag Golf &rarr;</a>
         <p class="until">Added 18 September &middot; no end date</p>
+        </div>
       </div>
 
       <div class="code">
+        <img class="shot" src="/perk-edsg.jpg" width="480" height="369" alt="" loading="lazy" decoding="async">
+        <div class="body">
         <p class="cat">Golf trips</p>
         <h3>Eat Drink Sleep Golf &middot; Myrtle Beach</h3>
         <p class="what"><b>$25 off per golfer</b>, so $100 off a foursome. And the part that actually matters if you're trying to get a group together: <b>they'll take a $50 deposit per golfer instead of the usual $100.</b></p>
@@ -125,6 +133,7 @@
         <span class="tag">golfnothingmore25</span>
         <a class="go" href="https://www.eatdrinksleepgolf.com">Go to Eat Drink Sleep Golf &rarr;</a>
         <p class="until">Added 18 September &middot; no end date</p>
+        </div>
       </div>
 
     </div>
