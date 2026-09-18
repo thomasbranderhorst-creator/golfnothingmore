@@ -58,6 +58,23 @@
   .code .body { display:flex; flex-direction:column; gap:.45rem; min-width:0; }
   @media (max-width:34rem) { .code .shot { aspect-ratio:2.8/1; margin-bottom:1rem; } }
   .code:first-child { border-top:1px solid var(--ink); }
+
+  /* ---------- filters ---------- */
+  .filters { display:none; flex-wrap:wrap; gap:.5rem; margin:0 0 1.6rem; }
+  .filters.on { display:flex; }
+  .chip { font:inherit; font-size:.78rem; font-weight:600; letter-spacing:.02em;
+    background:none; border:1px solid var(--line); color:var(--soft);
+    padding:.42rem .8rem; cursor:pointer; line-height:1.2; }
+  .chip:hover { border-color:var(--green); color:var(--ink); }
+  .chip[aria-pressed="true"] { background:var(--green); border-color:var(--green); color:var(--on-green); }
+  .chip b { font-weight:600; opacity:.65; margin-left:.4rem; font-variant-numeric:tabular-nums; }
+  .chip[aria-pressed="true"] b { opacity:.8; }
+  .code[hidden] { display:none; }
+  .code .new { display:inline-block; font-size:.62rem; font-weight:700; letter-spacing:.12em;
+    text-transform:uppercase; color:var(--on-green); background:var(--green);
+    padding:.14rem .42rem; margin-left:.5rem; vertical-align:.12em; }
+  .soon { margin:1.8rem 0 0; font-size:.88rem; color:var(--muted); max-width:34rem; }
+  .soon b { color:var(--soft); font-weight:600; }
   .code .cat { font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
   .code h3 { margin:0; font-size:1.15rem; font-weight:600; }
   .code .what { margin:0; color:var(--soft); font-size:.95rem; }
@@ -108,9 +125,11 @@
          </div>
          ========================================================== -->
 
-    <div class="codes">
+    <div class="filters" id="filters" role="group" aria-label="Filter by category"></div>
 
-      <div class="code">
+    <div class="codes" id="codes">
+
+      <div class="code" data-cat="Training" data-added="2026-09-18">
         <img class="shot" src="/perk-stack.jpg" width="1200" height="375" alt="The Stack System" loading="lazy" decoding="async">
         <div class="body">
         <p class="cat">Speed training</p>
@@ -121,9 +140,11 @@
         <a class="go" href="https://www.thestacksystem.com/discount/Golfnothingmore26">Go to The Stack System &rarr;</a>
         <p class="until">Added 18 September &middot; no end date</p>
         </div>
+
+    <p class="soon">More on the way. We&rsquo;re working on <b>balls</b>, <b>rangefinders</b>, <b>bags</b>, <b>apparel</b> and <b>shoes</b>. When one lands it appears here, and you&rsquo;ll get one email about it.</p>
       </div>
 
-      <div class="code noshot">
+      <div class="code noshot" data-cat="Lessons" data-added="2026-09-17">
         <div class="body">
         <p class="cat">Lessons</p>
         <h3>Sandbag Golf</h3>
@@ -135,7 +156,7 @@
         </div>
       </div>
 
-      <div class="code">
+      <div class="code" data-cat="Travel" data-added="2026-09-17">
         <img class="shot" src="/perk-edsg.jpg" width="1200" height="375" alt="Eat Drink Sleep Golf" loading="lazy" decoding="async">
         <div class="body">
         <p class="cat">Golf trips</p>
@@ -165,5 +186,61 @@
   </footer>
 
 </div>
+
+<script>
+(function () {
+  var wrap = document.getElementById('filters');
+  var list = document.getElementById('codes');
+  if (!wrap || !list) return;
+  var items = Array.prototype.slice.call(list.querySelectorAll('.code[data-cat]'));
+  if (items.length < 4) return;              // onder de vier codes is filteren onzin
+
+  var counts = {};
+  items.forEach(function (el) {
+    var c = el.getAttribute('data-cat');
+    counts[c] = (counts[c] || 0) + 1;
+  });
+  var cats = Object.keys(counts).sort();
+
+  function chip(label, value, count, pressed) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'chip';
+    b.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+    b.setAttribute('data-value', value);
+    b.innerHTML = label + ' <b>' + count + '</b>';
+    return b;
+  }
+
+  wrap.appendChild(chip('All', '*', items.length, true));
+  cats.forEach(function (c) { wrap.appendChild(chip(c, c, counts[c], false)); });
+  wrap.classList.add('on');
+
+  wrap.addEventListener('click', function (e) {
+    var btn = e.target.closest ? e.target.closest('.chip') : null;
+    if (!btn) return;
+    var value = btn.getAttribute('data-value');
+    Array.prototype.forEach.call(wrap.children, function (c) {
+      c.setAttribute('aria-pressed', c === btn ? 'true' : 'false');
+    });
+    items.forEach(function (el) {
+      el.hidden = !(value === '*' || el.getAttribute('data-cat') === value);
+    });
+  });
+
+  // "New" op alles van de laatste 30 dagen
+  var cutoff = Date.now() - 30 * 864e5;
+  items.forEach(function (el) {
+    var d = Date.parse(el.getAttribute('data-added') || '');
+    if (!d || d < cutoff) return;
+    var h = el.querySelector('h3');
+    if (!h) return;
+    var tag = document.createElement('span');
+    tag.className = 'new';
+    tag.textContent = 'New';
+    h.appendChild(tag);
+  });
+})();
+</script>
 </body>
 </html>
