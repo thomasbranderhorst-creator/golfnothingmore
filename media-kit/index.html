@@ -4,10 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<meta name="description" content="Media kit — Golf, nothing more. What we offer brands, what we ask in return, and what we can't tell you yet.">
+<meta name="description" content="Media kit for Golf, nothing more: who is in the group, four ways for brands to work with us, what we ask in return, and what we can't tell you yet.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://golfnothingmore.com/media-kit/">
+<meta property="og:title" content="Media kit · Golf, nothing more">
+<meta property="og:description" content="247,000 amateur golfers. Who they are, how to reach them, and what we don't know yet.">
+<meta property="og:image" content="https://golfnothingmore.com/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-512.png" sizes="512x512" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<title>Media kit — Golf, nothing more</title>
+<title>Media kit · Golf, nothing more</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Archivo:wght@400;500;600;700&display=swap">
@@ -16,6 +23,7 @@
   :root {
     --paper:#EDEFEA; --raise:#F7F8F4; --ink:#101A15; --soft:#37473E;
     --muted:#5C6A61; --line:#D2D8CE; --hair:#E2E6DE; --green:#14512F; --on-green:#F2F5EF;
+    --bar:#14512F; --bar-track:#DEE3D9;
     --display:"Newsreader",Georgia,"Times New Roman",serif;
     --body:"Archivo",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,sans-serif;
   }
@@ -23,14 +31,17 @@
     :root:not([data-theme="light"]) {
       --paper:#0E1411; --raise:#151D18; --ink:#E9EEE8; --soft:#C0CBC2;
       --muted:#8B9A91; --line:#26302A; --hair:#1D251F; --green:#6FC594; --on-green:#0E1411;
+      --bar:#6FC594; --bar-track:#1F2A23;
     }
   }
   :root[data-theme="dark"] {
     --paper:#0E1411; --raise:#151D18; --ink:#E9EEE8; --soft:#C0CBC2;
     --muted:#8B9A91; --line:#26302A; --hair:#1D251F; --green:#6FC594; --on-green:#0E1411;
+    --bar:#6FC594; --bar-track:#1F2A23;
   }
 
   * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
   body { margin:0; background:var(--paper); color:var(--ink); font-family:var(--body); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased; }
   img { max-width:100%; }
   .wrap { max-width:50rem; margin:0 auto; padding-block:4rem 5rem; padding-left:1.75rem; padding-right:1.75rem; }
@@ -45,7 +56,11 @@
   .lede b { color:var(--ink); font-weight:600; }
   .stamp { font-size:.82rem; color:var(--muted); border-top:1px solid var(--line); padding-top:.85rem; margin:.4rem 0 0; }
 
-  .facts { margin-top:2.25rem; border-top:1px solid var(--ink); border-bottom:1px solid var(--line); display:grid; grid-template-columns:repeat(4,1fr); }
+  .toc { display:flex; flex-wrap:wrap; gap:.4rem 1.4rem; margin:0; padding:0; list-style:none; font-size:.88rem; }
+  .toc a { color:var(--soft); text-decoration:none; border-bottom:1px solid var(--line); }
+  .toc a:hover { color:var(--ink); border-color:var(--ink); }
+
+  .facts { width:100%; margin-top:1rem; border-top:1px solid var(--ink); border-bottom:1px solid var(--line); display:grid; grid-template-columns:repeat(4,1fr); }
   .fact { padding:1.35rem 1rem 1.35rem 0; display:flex; flex-direction:column; gap:.15rem; }
   .fact + .fact { border-left:1px solid var(--hair); padding-left:1rem; }
   .fact b { font-family:var(--display); font-size:clamp(1.65rem,3.6vw,2.2rem); font-weight:400; line-height:1.05; font-variant-numeric:tabular-nums; }
@@ -56,23 +71,53 @@
     .fact:nth-child(4) { border-top:1px solid var(--hair); }
   }
 
-  section { padding:3.5rem 0 0; }
+  section { padding:3.5rem 0 0; scroll-margin-top:1rem; }
   h2 { font-family:var(--display); font-weight:400; font-size:clamp(1.6rem,3.4vw,2.1rem); line-height:1.15; margin:.4rem 0 1.2rem; text-wrap:balance; }
+  h3.sect { font-family:var(--display); font-weight:500; font-size:1.3rem; margin:2.4rem 0 .4rem; }
   p.body { margin:0 0 1rem; color:var(--soft); max-width:36rem; font-size:.98rem; }
   p.body:last-child { margin-bottom:0; }
   p.body b { color:var(--ink); font-weight:600; }
   a { color:var(--green); text-underline-offset:2px; }
 
+  /* ---------- grafieken ---------- */
+  figure { margin:1.2rem 0 0; }
+  table.chart { width:100%; border-collapse:collapse; }
+  table.chart caption { text-align:left; font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); padding-bottom:.7rem; border-bottom:1px solid var(--ink); }
+  table.chart th, table.chart td { padding:.42rem 0; vertical-align:middle; font-weight:400; text-align:left; }
+  table.chart tbody tr + tr th, table.chart tbody tr + tr td { border-top:2px solid var(--paper); }
+  th.cat { width:7rem; font-size:.88rem; color:var(--soft); white-space:nowrap; padding-right:1rem; }
+  td.val { width:6.5rem; text-align:right; font-size:.88rem; font-variant-numeric:tabular-nums; color:var(--ink); padding-left:1rem; white-space:nowrap; }
+  td.val small { color:var(--muted); }
+  .track { background:var(--bar-track); height:14px; width:100%; }
+  .bar { background:var(--bar); height:14px; border-radius:0 4px 4px 0; }
+  @media (max-width:34rem) {
+    th.cat { width:4.8rem; font-size:.8rem; padding-right:.6rem; white-space:normal; line-height:1.25; }
+    td.val { width:5.4rem; font-size:.8rem; padding-left:.6rem; }
+  }
+  .source { font-size:.8rem; color:var(--muted); margin:.9rem 0 0; }
+
   /* ---------- het aanbod ---------- */
-  .offer { display:flex; flex-direction:column; }
-  .item { padding:1.6rem 0; border-bottom:1px solid var(--line); display:grid; grid-template-columns:1fr 13rem; gap:.5rem 2.5rem; align-items:start; }
-  .item:first-child { border-top:1px solid var(--ink); }
-  @media (max-width:44rem) { .item { grid-template-columns:1fr; gap:.7rem; } }
-  .item h3 { font-family:var(--display); font-weight:500; font-size:1.25rem; margin:0 0 .35rem; }
-  .item p { margin:0; font-size:.95rem; color:var(--soft); line-height:1.55; }
-  .price { }
+  .briefing { background:var(--raise); border-left:3px solid var(--green); padding:1.2rem 1.4rem; margin:0 0 2rem; }
+  .briefing p { margin:0; font-size:.93rem; color:var(--soft); line-height:1.55; max-width:38rem; }
+  .briefing p + p { margin-top:.6rem; }
+  .briefing b { color:var(--ink); font-weight:600; }
+
+  .stream { border-top:1px solid var(--ink); padding:1.6rem 0 .4rem; }
+  .stream-head { display:flex; gap:1rem; align-items:baseline; margin-bottom:.4rem; }
+  .num { font-family:var(--display); font-size:1rem; color:var(--muted); font-variant-numeric:tabular-nums; min-width:1.6rem; }
+  .stream-head h3 { font-family:var(--display); font-weight:500; font-size:1.4rem; margin:0; line-height:1.2; }
+  .stream > p.intro { margin:0 0 .4rem 2.6rem; font-size:.95rem; color:var(--soft); max-width:36rem; }
+  @media (max-width:44rem) { .stream > p.intro { margin-left:0; } }
+
+  .item { margin-left:2.6rem; padding:1.1rem 0 1.2rem; border-top:1px solid var(--hair); display:grid; grid-template-columns:1fr 12rem; gap:.5rem 2.2rem; align-items:start; }
+  .stream > .item:first-of-type { border-top:0; }
+  .stream > p.intro + .item { border-top:1px solid var(--hair); }
+  @media (max-width:44rem) { .item { margin-left:0; grid-template-columns:1fr; gap:.6rem; } }
+  .item h4 { font-size:1rem; font-weight:600; margin:0 0 .3rem; }
+  .item p { margin:0; font-size:.94rem; color:var(--soft); line-height:1.55; }
+  .item p + p { margin-top:.55rem; }
   .price b { display:block; font-size:.95rem; font-weight:600; color:var(--ink); }
-  .price span { display:block; font-size:.85rem; color:var(--muted); margin-top:.15rem; }
+  .price span { display:block; font-size:.84rem; color:var(--muted); margin-top:.15rem; line-height:1.45; }
   .price.open b { color:var(--muted); font-weight:500; font-style:italic; }
 
   .asks { display:flex; flex-direction:column; }
@@ -103,14 +148,19 @@
     <picture><source srcset="/logo-dark.png" media="(prefers-color-scheme: dark)"><img class="mark" src="/logo-3d.png" width="296" height="300" alt="" decoding="async"></picture>
     <p class="label">Media kit</p>
     <h1>Working with Golf, nothing&nbsp;more.</h1>
-    <p class="lede">A worldwide community of 247,000 amateur golfers, running since 2013. This is <b>everything we can offer you, everything we ask in return, and the things we can't tell you yet</b>. It should take four minutes.</p>
-    <p class="stamp">Updated 21 September 2026. Figures come from Facebook's own group insights &mdash; the full audience profile is at <a href="/audience/">golfnothingmore.com/audience</a>.</p>
+    <p class="lede">A worldwide community of 247,000 amateur golfers, running since 2013. This page is <b>who they are, the four ways to reach them, what we ask in return, and what we can't tell you yet</b>. It should take five minutes.</p>
+    <p class="stamp">Updated 22 September 2026. All audience figures come from Facebook's own group insights.</p>
+    <ul class="toc">
+      <li><a href="#audience">The audience</a></li>
+      <li><a href="#offer">Four ways to work with us</a></li>
+      <li><a href="#ask">What we ask</a></li>
+      <li><a href="#unknown">What we don't know</a></li>
+    </ul>
 
     <div class="facts">
       <div class="fact"><b>247,000</b><span>members</span></div>
       <div class="fact"><b>214,000</b><span>content views per day</span></div>
       <div class="fact"><b>1,400</b><span>members post or comment daily</span></div>
-      <div class="fact"><b>78%</b><span>US, UK, Australia, Canada</span></div>
       <div class="fact"><b>8.5</b><span>comments per 1,000 views, group average</span></div>
     </div>
   </header>
@@ -119,95 +169,165 @@
     <p class="label">Who we are</p>
     <h2>A golf group with a company behind it</h2>
     <p class="body">The group has been running since 2013 and is one of the largest amateur golf communities anywhere. Since 2026 there is a company behind it, and the reason is simple: a community this size was already being sold to, just not openly and not by us.</p>
-    <p class="body">We have one rule, and everything else follows from it: <b>members don't sell in here.</b> No affiliate links, no "DM me", no funnels. That rule is what keeps the group worth being in, and it is also why a commercial post in here carries weight: the only ones are ours and those of a few partners we let in.</p>
-    <p class="body">83% of members are men, and roughly three quarters are 35 or over &mdash; the ages where people have both the time and the money for golf. What they shoot we honestly don't know, and we say so further down rather than guess at it here.</p>
+    <p class="body">We have one rule, and everything else follows from it: <b>members don't sell in here.</b> No affiliate links, no "DM me", no funnels. That rule is what keeps the group worth being in. It is also why a commercial post in here carries weight: the only ones are ours and those of a few partners we let in.</p>
   </section>
 
-  <section>
+  <section id="audience">
+    <p class="label">The audience</p>
+    <h2>Who's actually in there</h2>
+    <p class="body">83% of members are men, three in four are 35 or over, and four countries carry three quarters of the group. Here is the detail, including the parts that don't flatter us.</p>
+
+    <h3 class="sect">The middle of the working life</h3>
+    <p class="body">The group leans towards the ages where people have both the time and the money for golf. A quarter of members are between 35 and 44.</p>
+    <figure>
+      <table class="chart">
+        <caption>Share of members by age band</caption>
+        <tbody>
+          <tr><th class="cat" scope="row">13–17</th><td><div class="track"><div class="bar" style="width:1.2%"></div></div></td><td class="val">0.3%</td></tr>
+          <tr><th class="cat" scope="row">18–24</th><td><div class="track"><div class="bar" style="width:16.7%"></div></div></td><td class="val">4.1%</td></tr>
+          <tr><th class="cat" scope="row">25–34</th><td><div class="track"><div class="bar" style="width:78%"></div></div></td><td class="val">19.1%</td></tr>
+          <tr><th class="cat" scope="row">35–44</th><td><div class="track"><div class="bar" style="width:100%"></div></div></td><td class="val">24.5%</td></tr>
+          <tr><th class="cat" scope="row">45–54</th><td><div class="track"><div class="bar" style="width:77.6%"></div></div></td><td class="val">19.0%</td></tr>
+          <tr><th class="cat" scope="row">55–64</th><td><div class="track"><div class="bar" style="width:69%"></div></div></td><td class="val">16.9%</td></tr>
+          <tr><th class="cat" scope="row">65+</th><td><div class="track"><div class="bar" style="width:65.7%"></div></div></td><td class="val">16.1%</td></tr>
+        </tbody>
+      </table>
+      <figcaption class="source">Facebook group insights, September 2026. Men and women combined.</figcaption>
+    </figure>
+
+    <h3 class="sect">What the group does on an average day</h3>
+    <p class="body">Member counts are easy to inflate and tell you very little. <b>About 1,400 people post or comment here every day</b>, and an average post picks up 15 comments and 26 reactions. That is the figure we sell against, not the membership number.</p>
+    <figure>
+      <table class="chart">
+        <caption>Daily average, 2–15 September 2026</caption>
+        <tbody>
+          <tr><th class="cat" scope="row">Views</th><td><div class="track"><div class="bar" style="width:100%"></div></div></td><td class="val">217,000</td></tr>
+          <tr><th class="cat" scope="row">Reactions</th><td><div class="track"><div class="bar" style="width:28%"></div></div></td><td class="val">3,050</td></tr>
+          <tr><th class="cat" scope="row">Comments</th><td><div class="track"><div class="bar" style="width:16%"></div></div></td><td class="val">1,781</td></tr>
+          <tr><th class="cat" scope="row">Contributors</th><td><div class="track"><div class="bar" style="width:13%"></div></div></td><td class="val">1,391</td></tr>
+          <tr><th class="cat" scope="row">Posts</th><td><div class="track"><div class="bar" style="width:1.1%"></div></div></td><td class="val">117</td></tr>
+          <tr><th class="cat" scope="row">New members</th><td><div class="track"><div class="bar" style="width:1%"></div></div></td><td class="val">103</td></tr>
+        </tbody>
+      </table>
+      <figcaption class="source">Facebook group insights. "Contributors" counts members who posted or commented that day. Bars use a square-root scale so the smaller rows stay legible next to views.</figcaption>
+    </figure>
+
+    <h3 class="sect">Four markets carry three quarters of it</h3>
+    <p class="body">More than half the group is in the United States. Melbourne, Sydney and Perth all sit in the top five cities, so the Australian presence is heavier than the country figure suggests.</p>
+    <figure>
+      <table class="chart">
+        <caption>Members by country</caption>
+        <tbody>
+          <tr><th class="cat" scope="row">United States</th><td><div class="track"><div class="bar" style="width:100%"></div></div></td><td class="val">134,376 <small>· 55%</small></td></tr>
+          <tr><th class="cat" scope="row">United Kingdom</th><td><div class="track"><div class="bar" style="width:20%"></div></div></td><td class="val">26,924 <small>· 11%</small></td></tr>
+          <tr><th class="cat" scope="row">Australia</th><td><div class="track"><div class="bar" style="width:10.5%"></div></div></td><td class="val">14,155 <small>· 6%</small></td></tr>
+          <tr><th class="cat" scope="row">Canada</th><td><div class="track"><div class="bar" style="width:10.1%"></div></div></td><td class="val">13,596 <small>· 6%</small></td></tr>
+          <tr><th class="cat" scope="row">Elsewhere</th><td><div class="track"><div class="bar" style="width:42.4%"></div></div></td><td class="val">56,949 <small>· 23%</small></td></tr>
+        </tbody>
+      </table>
+      <figcaption class="source">Facebook group insights, September 2026. "Elsewhere" is every country outside the top four.</figcaption>
+    </figure>
+  </section>
+
+  <section id="offer">
     <p class="label">The offer</p>
-    <h2>Five ways in, and two of them cost you nothing</h2>
-    <p class="body">Whichever you choose, it comes with a briefing from our own data. How our members respond to your category: which posts in your field got a response, what rate they ran at against our average of 8.5 comments per 1,000 views, and what fell flat. When the group is most active, so you know when to post. And how to build a post that gets answered here, from the first line to where the link goes. Including the parts that argue against working with us. It comes out of a group we run, not a report someone bought.</p>
+    <h2>Four ways to work with us, and two of them cost you nothing</h2>
 
-    <div class="offer">
+    <div class="briefing">
+      <p><b>Every partnership starts with a briefing from our own data.</b> How our members respond to your category: which posts in your field got a response, what rate they ran at against our average of 8.5 comments per 1,000 views, and what fell flat. When the group is most active, so you know when to post. And how to build a post that gets answered here, from the first line to where the link goes.</p>
+      <p>It includes the parts that argue against working with us. It comes out of a group we run, not a report someone bought.</p>
+    </div>
 
+    <div class="stream">
+      <div class="stream-head"><span class="num">01</span><h3>A standing member deal</h3></div>
       <div class="item">
         <div>
-          <h3>A place on the perks page</h3>
-          <p>A standing discount code for our members, on a members-only page they can come back to whenever they want. No deadline, no countdown &mdash; it sits there and keeps working. Members reach it by subscribing, which is what makes it a member benefit rather than a coupon anyone can find.</p>
+          <h4>A place on the perks page</h4>
+          <p>A standing discount code for our members, on a members-only page they can come back to whenever they want. No deadline, no countdown. It sits there and keeps working. Members reach it by subscribing, which is what makes it a member benefit rather than a coupon anyone can find.</p>
         </div>
         <div class="price">
           <b>No fee</b>
           <span>Your standard affiliate terms. You pay on what our members actually buy.</span>
         </div>
       </div>
+    </div>
 
+    <div class="stream">
+      <div class="stream-head"><span class="num">02</span><h3>Member Deals, our email</h3></div>
       <div class="item">
         <div>
-          <h3>A place in Member Deals</h3>
-          <p>Our email to subscribers, twice a month at most. This is where offers with a limit go &mdash; a closing date, a fixed number, early access to something. Every email says which links earn us a commission.</p>
+          <h4>A place in Member Deals</h4>
+          <p>Our email to subscribers, twice a month at most. This is where offers with a limit go: a closing date, a fixed number, early access to something. Every email says which links earn us a commission.</p>
+          <p>Once the list is big enough to be worth it, each edition also carries one sponsored spot: your offer at the top, clearly marked as sponsored.</p>
         </div>
         <div class="price">
           <b>No fee</b>
-          <span>Commission on sales. The rate depends on your margins and we'll agree it in one conversation.</span>
+          <span>Commission on sales, agreed in one conversation. A sponsored spot is priced per edition, on request.</span>
         </div>
       </div>
+    </div>
 
+    <div class="stream">
+      <div class="stream-head"><span class="num">03</span><h3>Your own posts in the group</h3></div>
+      <p class="intro">Since September, anything commercial in the group either comes from us or gets approved by us first, and a good deal of it never appears at all. These two options put your page in the feed, from your own page so you keep the reach, and always labelled.</p>
       <div class="item">
         <div>
-          <h3>A single post from your page</h3>
-          <p>Posted from your own page so you keep the reach, marked as paid, and confirmed by us in the first comment so members know it's sanctioned. A limited number per week &mdash; the value of this is that it's rare.</p>
-          <p style="margin-top:.6rem">We'll help you shape it. We measure every post in the group, and the ones that ask our members something get several times the response of the ones that announce.</p>
+          <h4>A single post</h4>
+          <p>One post from your page, marked as paid and confirmed by us in the first comment so members know it's sanctioned. We only allow a few a week. The value of this is that it's rare.</p>
+          <p>We'll help you shape it. The posts here that ask our members something get several times the response of the ones that announce.</p>
         </div>
         <div class="price open">
           <b>From $550</b>
-          <span>Introductory rate for a first campaign, including two reposts in the days after. We'll raise it once we can show you what a post returns, and we'll tell you when we do.</span>
+          <span>Introductory rate for a first campaign, including two reposts in the days after.</span>
         </div>
       </div>
-
       <div class="item">
         <div>
-          <h3>Posting access</h3>
-          <p>Since September, anything commercial in the group either comes from us or gets approved by us first, and a good deal of it never appears at all. With posting access you skip that queue: you post from your own page, up to two posts a day, and they publish the moment you send them. Every post is labelled as partner content, and we keep the right to take one down.</p>
-          <p style="margin-top:.6rem">We give this to a handful of partners at a time, no more. Anyone can hand out a discount code. Nobody else can put you in front of this group every day.</p>
+          <h4>Posting access</h4>
+          <p>You skip the queue: post from your own page, up to two posts a day, published the moment you send them. Every post is labelled as partner content, and we keep the right to take one down.</p>
+          <p>We give this to a handful of partners at a time, no more. Anyone can hand out a discount code. Nobody else can put you in front of this group every day.</p>
         </div>
         <div class="price open">
           <b>Monthly</b>
           <span>Limited places. Price on request, depending on how often you'll post.</span>
         </div>
       </div>
+    </div>
 
+    <div class="stream">
+      <div class="stream-head"><span class="num">04</span><h3>A post made by us</h3></div>
       <div class="item">
         <div>
-          <h3>A post made by us</h3>
+          <h4>In our calendar, in our formats</h4>
           <p>We write it and publish it in our own calendar, in the formats our members already respond to: a question built around your product, a caption contest with your product as the prize, or a weekly format like our Monday weekend recap, presented by you.</p>
-          <p style="margin-top:.6rem">These take one of our own slots, and we only give a couple of those away each week. Everything is labelled as sponsored.</p>
+          <p>These take one of our own slots, and we only give a couple of those away each week. Everything is labelled as sponsored.</p>
         </div>
         <div class="price open">
           <b>On request</b>
           <span>Per post, or per month for a recurring format.</span>
         </div>
       </div>
-
     </div>
   </section>
 
-  <section>
+  <section id="ask">
     <p class="label">In return</p>
     <h2>What we ask of you</h2>
     <div class="asks">
-      <div class="ask"><p><b>A real member offer.</b> Something the public doesn't get &mdash; a discount, an extra, early access. A link at the normal price is an advert, and we won't list it.</p></div>
+      <div class="ask"><p><b>A real member offer.</b> Something the public doesn't get: a discount, an extra, early access. A link at the normal price is an advert, and we won't list it.</p></div>
       <div class="ask"><p><b>A standing code, not a three-week promotion.</b> Codes that expire turn our page into a graveyard. If you can only do a limited run, that belongs in Member Deals instead.</p></div>
       <div class="ask"><p><b>Your own code, and monthly numbers.</b> How many orders came through it and what they were worth. We can't see your checkout, and we'd rather ask than guess.</p></div>
       <div class="ask"><p><b>Nothing dressed up as a member's own post.</b> Everything commercial is labelled. That protects your reputation here as much as ours.</p></div>
     </div>
   </section>
 
-  <section>
+  <section id="unknown">
     <div class="frank">
       <p class="label">Straight answers</p>
       <h2>What we can't tell you yet</h2>
-      <p><b>How big the email list is.</b> It started in September 2026. It is small. Write to us and we'll tell you the number that week rather than round it up &mdash; and if it's too small to be worth your time, we'll say so.</p>
+      <p><b>How big the email list is.</b> It started in September 2026. It is small and growing. Write to us and we'll tell you the number that week rather than round it up, and if it's too small to be worth your time, we'll say so.</p>
       <p><b>What a paid post returns.</b> Our first post from our own page, on 18 September, was an announcement with a link in it. It reached 250 people. A few days later we posted a photo with a question and nothing to click. It reached 3,300 people in its first hour and took 19 comments. Same page, same group. In here, a post that sends people away does not travel, and a post that gives them something to do does. The $550 is an introductory rate, not a rate we can yet defend with numbers, and we'd rather say that than dress it up.</p>
+      <p><b>Reach is not attention.</b> We've measured posts that reached thousands of people and drew no reaction at all. We sell engagement per post, not impressions.</p>
       <p><b>What our members play and what they spend.</b> Facebook doesn't collect it and we don't keep the answers people give when they join. A member survey is planned. Anyone quoting you a handicap profile for an audience this size is guessing.</p>
       <p><b>One in twenty members is outside the shipping area of most golf brands.</b> When we quote you an addressable audience, we leave those out.</p>
     </div>
@@ -222,7 +342,7 @@
 
   <footer>
     <span class="name">Golf, nothing more.</span>
-    <a href="/audience/">The audience in full</a>
+    <a href="/">Home</a>
     <a href="https://www.facebook.com/groups/Golf.nothing.more">The group on Facebook</a>
     <a href="/privacy.html">Privacy</a>
   </footer>
