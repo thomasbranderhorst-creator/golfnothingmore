@@ -79,7 +79,17 @@
   .code .cat { font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
   .code h3 { margin:0; font-size:1.15rem; font-weight:600; }
   .code .what { margin:0; color:var(--soft); font-size:.95rem; }
-  .code .tag { display:inline-block; font-family:ui-monospace,"SF Mono",Menlo,monospace; font-size:1rem; letter-spacing:.04em; background:var(--raise); border:1px dashed var(--line); padding:.5rem .8rem; color:var(--ink); margin:.2rem 0; align-self:flex-start; }
+  .code .tag { display:inline-flex; align-items:center; gap:.55rem; cursor:pointer; text-align:left; -webkit-appearance:none; appearance:none; line-height:1.3; font-family:ui-monospace,"SF Mono",Menlo,monospace; font-size:1rem; letter-spacing:.04em; background:var(--raise); border:1px dashed var(--line); padding:.5rem .8rem; color:var(--ink); margin:.2rem 0; align-self:flex-start; }
+  .code .tag:hover { border-style:solid; border-color:var(--green,#14512F); }
+  .code .tag:focus-visible { outline:2px solid var(--green,#14512F); outline-offset:2px; }
+  .code .tag .cp { font-family:inherit; font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; opacity:.55; }
+  .code .tag .cp::before { content:"Copy"; }
+  .code .tag.copied { border-style:solid; border-color:var(--green,#14512F); }
+  .code .tag.copied .cp { opacity:1; }
+  .code .tag.copied .cp::before { content:"Copied"; }
+  .no-copy .code .tag { cursor:text; }
+  .no-copy .code .tag .cp { display:none; }
+
   .code .go { font-size:.9rem; font-weight:600; color:var(--green); text-underline-offset:3px; align-self:flex-start; }
   .code .until { font-size:.83rem; color:var(--muted); }
 
@@ -148,7 +158,7 @@
         <h3>Sandbag Golf</h3>
         <p class="what"><b>A free 15 minute live video lesson with a PGA professional.</b> On demand, so you tap and you're in a lesson, rather than booking one for next Tuesday.</p>
         <p class="what" style="margin-top:.5rem">Download the app, then enter the code below when you sign up.</p>
-        <span class="tag">GOLF13</span>
+        <button type="button" class="tag" data-code="GOLF13" aria-label="Copy code GOLF13">GOLF13<span class="cp" aria-hidden="true"></span></button>
         <a class="go" href="/go/sandbag/">Go to Sandbag Golf &rarr;</a>
         <p class="until">Added 17 September &middot; no end date</p>
         </div>
@@ -160,7 +170,7 @@
         <h3>Two Guys with Balls</h3>
         <p class="what"><b>15% off your first order at Two Guys with Balls.</b> Used premium balls, which for most of us is the only sensible way to play a Pro V1.</p>
         <p class="what" style="margin-top:.5rem">We asked the group whether a scuffed ball is still worth playing and got 191 answers. The short version was yes, and that nobody has ever lost a hole to a scuff mark. Code works once per person, on a first order, and it does not expire.</p>
-        <span class="tag">NOTHINGMORE15</span>
+        <button type="button" class="tag" data-code="NOTHINGMORE15" aria-label="Copy code NOTHINGMORE15">NOTHINGMORE15<span class="cp" aria-hidden="true"></span></button>
         <a class="go" href="/go/twoguyswithballs/">Go to Two Guys with Balls &rarr;</a>
         <p class="until">Added 26 September &middot; no end date</p>
         </div>
@@ -172,7 +182,7 @@
         <h3>Shot Scope</h3>
         <p class="what"><b>15% off everything at Shot Scope</b>, the biggest member discount on this page so far. Rangefinders, GPS watches and the shot tracking that comes with them.</p>
         <p class="what" style="margin-top:.5rem">Their kit sits at a price most of us can actually justify, and every shot you hit lands in stats you can look at afterwards. Use the link below, then the code at checkout.</p>
-        <span class="tag">GOLFNOTHINGMORE</span>
+        <button type="button" class="tag" data-code="GOLFNOTHINGMORE" aria-label="Copy code GOLFNOTHINGMORE">GOLFNOTHINGMORE<span class="cp" aria-hidden="true"></span></button>
         <a class="go" href="/go/shotscope/">Go to Shot Scope &rarr;</a>
         <p class="until">Added 22 September &middot; no end date</p>
         </div>
@@ -185,7 +195,7 @@
         <h3>The Stack System</h3>
         <p class="what"><b>10% off TheStack</b>, so about $30 on the $299 unit. Weighted sticks plus an app that sets your protocol and measures what actually changed, instead of telling you to swing harder.</p>
         <p class="what" style="margin-top:.5rem">It was built by a sports biomechanics professor and PING&rsquo;s head of product. That is a rarer thing than it sounds in this corner of golf.</p>
-        <span class="tag">Golfnothingmore26</span>
+        <button type="button" class="tag" data-code="Golfnothingmore26" aria-label="Copy code Golfnothingmore26">Golfnothingmore26<span class="cp" aria-hidden="true"></span></button>
         <a class="go" href="/go/thestack/">Go to The Stack System &rarr;</a>
         <p class="until">Added 18 September &middot; no end date</p>
         </div>
@@ -199,7 +209,7 @@
         <h3>Eat Drink Sleep Golf &middot; Myrtle Beach</h3>
         <p class="what"><b>$25 off per golfer</b>, so $100 off a foursome. And the part that actually matters if you're trying to get a group together: <b>they'll take a $50 deposit per golfer instead of the usual $100.</b></p>
         <p class="what" style="margin-top:.5rem">Quote the code when you ask them for a package quote. Works on any of their Myrtle Beach packages, including the Legends Special.</p>
-        <span class="tag">golfnothingmore25</span>
+        <button type="button" class="tag" data-code="golfnothingmore25" aria-label="Copy code golfnothingmore25">golfnothingmore25<span class="cp" aria-hidden="true"></span></button>
         <a class="go" href="/go/eatdrinksleepgolf/">Go to Eat Drink Sleep Golf &rarr;</a>
         <p class="until">Added 17 September &middot; no end date</p>
         </div>
@@ -274,6 +284,23 @@
     tag.className = 'new';
     tag.textContent = 'New';
     h.appendChild(tag);
+  });
+})();
+</script>
+
+<script>
+(function () {
+  var ok = navigator.clipboard && window.isSecureContext;
+  if (!ok) { document.documentElement.classList.add('no-copy'); return; }
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest ? e.target.closest('.code .tag') : null;
+    if (!b) return;
+    navigator.clipboard.writeText(b.getAttribute('data-code')).then(function () {
+      document.querySelectorAll('.code .tag.copied').forEach(function (o) { o.classList.remove('copied'); });
+      b.classList.add('copied');
+      clearTimeout(b._t);
+      b._t = setTimeout(function () { b.classList.remove('copied'); }, 2000);
+    }).catch(function () {});
   });
 })();
 </script>
