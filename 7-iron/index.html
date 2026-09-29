@@ -109,6 +109,22 @@
   .fineprint{font-size:.87rem;line-height:1.55;color:var(--muted);margin:.8rem 0 0}
   .fineprint a{color:var(--green);font-weight:600;text-underline-offset:3px}
 
+  /* ---------- code ---------- */
+  .code{margin:1.4rem 0 0;background:var(--raise);border:1px solid var(--line);padding:1.2rem 1.25rem}
+  .code p{margin:0 0 .8rem}
+  .code .tag{display:inline-flex;align-items:center;gap:.55rem;font-family:var(--body);
+    font-size:1.05rem;font-weight:700;letter-spacing:.08em;color:var(--on-green);
+    background:var(--green);border:1px solid var(--green);padding:.7rem 1rem;border-radius:0;
+    cursor:pointer;-webkit-appearance:none;appearance:none;line-height:1.3;text-align:left}
+  .code .tag .cp{font-size:.72rem;font-weight:600;letter-spacing:.06em;opacity:.75}
+  .code .tag .cp::before{content:"Copy"}
+  .code .tag.copied .cp::before{content:"Copied"}
+  .code .tag.no-copy{cursor:default}
+  .code .tag.no-copy .cp{display:none}
+  .code.top{margin:1.6rem 0 0;display:flex;flex-wrap:wrap;align-items:center;gap:.8rem 1rem}
+  .code.top p{margin:0;flex:1 1 15rem;font-size:.95rem;line-height:1.5;color:var(--soft)}
+  .code.top b{color:var(--ink)}
+
   /* ---------- signup ---------- */
   .signup{margin:3.4rem 0 0;border-top:1px solid var(--line);padding-top:2.2rem}
   form{display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0 0}
@@ -157,6 +173,12 @@
     <div class="hero-stat">
       <b>160</b>
       <span>yards. The middle answer from 706 members. Half say more, half say less.</span>
+    </div>
+
+    <div class="code top">
+      <p><b>Shot Scope measured all of this.</b> Our readers get 15% off with the code, and the link carries it for you.</p>
+      <button type="button" class="tag" data-code="GOLFNOTHINGMORE" aria-label="Copy code GOLFNOTHINGMORE">GOLFNOTHINGMORE<span class="cp"></span></button>
+      <a class="btn" href="/go/shotscope/" rel="noopener" style="padding:.7rem 1.1rem;font-size:.95rem">Go to Shot Scope &rarr;</a>
     </div>
 
     <figure>
@@ -236,9 +258,14 @@
     <p class="first">We did not measure any of this ourselves. The measured data on this page comes from Shot Scope, who track every shot their users hit and can tell you what your own 7 iron really does, not what you think it does.</p>
     <p>They gave our members a discount. We earn a small commission when it is used, at no extra cost to you, and it does not change what is written above.</p>
 
+    <div class="code">
+      <p><b>15% off everything at Shot Scope</b>, for anyone reading this page. Enter the code at checkout, or follow the link and it travels with you.</p>
+      <button type="button" class="tag" data-code="GOLFNOTHINGMORE" aria-label="Copy code GOLFNOTHINGMORE">GOLFNOTHINGMORE<span class="cp"></span></button>
+    </div>
+
     <div class="cta">
-      <a class="btn" href="/go/shotscope/" rel="noopener">See what Shot Scope does &rarr;</a>
-      <p class="fineprint">Your members-only code is on the <a href="/partners/">deals page</a>.</p>
+      <a class="btn" href="/go/shotscope/" rel="noopener">Go to Shot Scope &rarr;</a>
+      <p class="fineprint">We get four more codes out of other golf brands. Those go to our email list, <a href="#more-codes">at the bottom of this page</a>.</p>
     </div>
 
     <h2>How we counted</h2>
@@ -247,9 +274,9 @@
     <p>We use the middle answer rather than the average, because one person claiming 300 yards would drag an average and does not drag a middle. For the record the two barely differ here: 160 and 159.</p>
     <p class="note">This is what our members say, not a laboratory test. It is a large and honest sample of adult amateur golfers, and it should be read as that.</p>
 
-    <section class="signup">
-      <h2 style="margin-top:0">One email a month</h2>
-      <p class="first">Every discount code we get out of golf brands, in one email a month. Nothing in between, and nothing at all in a quiet month.</p>
+    <section class="signup" id="more-codes">
+      <h2 style="margin-top:0">The other four codes</h2>
+      <p class="first">Shot Scope is one of five. The rest, a free lesson with a PGA professional among them, go to our email list: one email a month, plus a short note whenever a new code lands. Nothing at all in a quiet month.</p>
 
       <form id="signup" action="https://assets.mailerlite.com/jsonp/2623605/forms/198071517381133550/subscribe" method="post" novalidate>
         <label for="email" style="position:absolute;left:-9999px;">Email address</label>
@@ -296,6 +323,24 @@
     var slug = (a.getAttribute('href').split('/')[2] || 'unknown');
     try { plausible('Go', { props: { brand: slug, page: '7-iron' } }); } catch (err) {}
   });
+
+  // Code kopieren naar het klembord.
+  (function () {
+    var btns = document.querySelectorAll('.code .tag');
+    var ok = false;
+    try { ok = !!(navigator.clipboard && window.isSecureContext); } catch (e) {}
+    for (var i = 0; i < btns.length; i++) {
+      if (!ok) { btns[i].classList.add('no-copy'); continue; }
+      btns[i].addEventListener('click', function () {
+        var b = this;
+        navigator.clipboard.writeText(b.getAttribute('data-code')).then(function () {
+          b.classList.add('copied');
+          setTimeout(function () { b.classList.remove('copied'); }, 2000);
+          try { plausible('Copy code', { props: { brand: 'Shot Scope', page: '7-iron' } }); } catch (e) {}
+        });
+      });
+    }
+  })();
 
   var form = document.getElementById('signup');
   if (!form) return;

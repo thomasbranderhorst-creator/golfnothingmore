@@ -40,8 +40,8 @@ You asked for Member Deals. One click and you're on the list.
 
 [ Confirm my email ]
 
-Once a month, golf offers only, and one click to leave whenever
-you like.
+Once a month, plus a short note when a new code lands. Golf offers
+only, and one click to leave whenever you like.
 
 If you didn't sign up, ignore this email. Nothing happens and we
 delete the address.
@@ -85,7 +85,8 @@ That's it, you're on the list.
 
 Here's what you signed up for, so there are no surprises later:
 
-— Once a month. If there's nothing worth sending, we don't send.
+— Once a month, plus a short note when a new code lands. If there's
+  nothing worth sending, we don't send.
 — You see new codes first. A new partner code goes out in the
   email a week before it lands on the members page.
 — Deals only. No newsletter, no roundups, no checking in.
