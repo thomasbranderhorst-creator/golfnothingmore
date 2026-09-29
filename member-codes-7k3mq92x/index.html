@@ -116,6 +116,8 @@
   footer a { color:var(--muted); text-underline-offset:2px; }
   footer a:hover { color:var(--ink); }
 </style>
+<script defer data-domain="golfnothingmore.com" src="https://plausible.io/js/script.js"></script>
+<script>window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)}</script>
 </head>
 <body>
 <div class="wrap">
@@ -299,9 +301,25 @@
     navigator.clipboard.writeText(b.getAttribute('data-code')).then(function () {
       document.querySelectorAll('.code .tag.copied').forEach(function (o) { o.classList.remove('copied'); });
       b.classList.add('copied');
+      try {
+        var card = b.closest('.code'), h = card && card.querySelector('h3');
+        plausible('Copy code', { props: { brand: h ? h.textContent.trim() : 'unknown' } });
+      } catch (e) {}
       clearTimeout(b._t);
       b._t = setTimeout(function () { b.classList.remove('copied'); }, 2000);
     }).catch(function () {});
+  });
+})();
+</script>
+
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest ? e.target.closest('a[href^="/go/"]') : null;
+    if (!a) return;
+    var card = a.closest('.code'), h = card && card.querySelector('h3');
+    var slug = (a.getAttribute('href').split('/')[2] || 'unknown');
+    try { plausible('Go', { props: { brand: h ? h.textContent.trim() : slug } }); } catch (err) {}
   });
 })();
 </script>
