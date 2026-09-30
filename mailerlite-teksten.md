@@ -3,6 +3,9 @@
 Alles hieronder is bedoeld om over te nemen in MailerLite. Volgorde is bewust:
 zonder stap 1 komen de mails niet aan en is de rest zinloos.
 
+Voor het waarom achter de keuzes hieronder, en voor de checklist per
+verzending, zie `deliverability.md` in deze map.
+
 ---
 
 ## 1. Domeinauthenticatie (eerst doen)
@@ -16,6 +19,31 @@ Let op: je hebt al een SPF-record voor Soverin. Maak er **geen tweede** aan —
 het bestaande record.
 
 Wacht tot MailerLite groen aangeeft voordat je iets verstuurt.
+
+---
+
+## 1b. Afzender en tracking
+
+**Afzender**
+
+```
+From name:     Thomas · Golf, nothing more
+From address:  thomas@golfnothingmore.com
+Reply-to:      thomas@golfnothingmore.com
+```
+
+Niet `deals@`. Dat is een categoriewoord en dat is precies hoe het gelezen
+wordt, door Gmail en door de lezer. `deals@` blijft bestaan als alias.
+
+**Tracking**
+
+Per campagne: **click tracking uit**, open tracking aan. MailerLite schrijft
+anders elke link om naar een eigen trackingdomein, en dat is een vreemd domein
+in een mail van ons.
+
+We meten de kliks zelf. Alle links in de mail gaan naar
+`golfnothingmore.com/go/<merk>/?src=email`. Die pagina stuurt een `Go`-event
+naar Plausible met `brand`, `page` en `src`.
 
 ---
 
@@ -42,6 +70,10 @@ You asked for Member Deals. One click and you're on the list.
 
 Once a month, plus a short note when a new code lands. Golf offers
 only, and one click to leave whenever you like.
+
+One small favour while you're here. If this landed anywhere other
+than your main inbox, drag it across. Otherwise the codes go to a
+tab you never open.
 
 If you didn't sign up, ignore this email. Nothing happens and we
 delete the address.
@@ -99,8 +131,9 @@ years ago, and Thomas, who now runs it day to day. The group is
 246,000 golfers and it stays exactly what it was. This list is the
 part where we go and find things worth buying.
 
-If an offer is ever not worth your time, hit reply and say so. We
-read everything that comes back.
+One question, and a real answer helps us more than you'd think:
+what's the one thing you'd actually buy this year if the price was
+right? Hit reply and tell us. We read every one.
 
 Chris & Thomas
 golfnothingmore.com

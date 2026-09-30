@@ -5,13 +5,34 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="referrer" content="no-referrer-when-downgrade">
 <title>Going to Two Guys with Balls…</title>
-<meta http-equiv="refresh" content="0; url=https://twoguyswithballs.com/?balls=12467">
 <link rel="canonical" href="https://twoguyswithballs.com/?balls=12467">
+<noscript><meta http-equiv="refresh" content="0; url=https://twoguyswithballs.com/?balls=12467"></noscript>
 <style>body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,sans-serif;background:#EDEFEA;color:#101A15;margin:0;display:grid;place-items:center;min-height:100vh;padding:2rem;text-align:center}
 a{color:#14512F}p{max-width:24rem;line-height:1.6}</style>
+<script defer src="https://plausible.io/js/pa-jfuoECYdUyseGoZYZfrYs.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
 </head>
 <body>
-<p>Taking you to Two Guys with Balls…<br><a href="https://twoguyswithballs.com/?balls=12467">Continue</a></p>
-<script>location.replace("https://twoguyswithballs.com/?balls=12467");</script>
+<p>Taking you to Two Guys with Balls…<br><a id="go" href="https://twoguyswithballs.com/?balls=12467">Continue</a></p>
+<script>
+(function(){
+  var URL_ = "https://twoguyswithballs.com/?balls=12467";
+  var BRAND = "twoguyswithballs";
+  var src = "direct";
+  try {
+    var m = location.search.match(/[?&]src=([A-Za-z0-9_-]{1,32})/);
+    if (m) src = m[1].toLowerCase();
+  } catch (e) {}
+  var went = false;
+  function go(){ if (went) return; went = true; location.replace(URL_); }
+  setTimeout(go, 600);
+  try {
+    plausible('Go', { props: { brand: BRAND, page: 'go', src: src }, callback: go });
+  } catch (e) { go(); }
+})();
+</script>
 </body>
 </html>
