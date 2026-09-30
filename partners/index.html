@@ -192,13 +192,21 @@
 
 <script>
 (function () {
-  document.addEventListener('click', function (e) {
-    var a = e.target.closest ? e.target.closest('a[href^="/go/"]') : null;
-    if (!a) return;
-    var card = a.closest('.code'), h = card && card.querySelector('h3');
-    var slug = (a.getAttribute('href').split('/')[2] || 'unknown');
-    try { plausible('Go', { props: { brand: h ? h.textContent.trim() : slug } }); } catch (err) {}
-  });
+  // Bron meegeven aan /go/. Daar wordt het Go-event afgevuurd, hier niet,
+  // anders telt elke klik dubbel.
+  var PAGE = 'partners';
+  var src = PAGE;
+  try {
+    var m = /[?&]src=([A-Za-z0-9_-]{1,32})/.exec(window.location.search);
+    if (m) src = PAGE + '-' + m[1].toLowerCase();
+  } catch (e) {}
+  var links = document.querySelectorAll('a[href^="/go/"]');
+  for (var i = 0; i < links.length; i++) {
+    var h = links[i].getAttribute('href');
+    if (h.indexOf('src=') === -1) {
+      links[i].setAttribute('href', h + (h.indexOf('?') === -1 ? '?' : '&') + 'src=' + src);
+    }
+  }
 })();
 </script>
 </body>

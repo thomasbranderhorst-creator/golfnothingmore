@@ -316,13 +316,20 @@
     if (m && f) { f.value = '7-iron-' + m[1].toLowerCase(); }
   } catch (e) {}
 
-  // Doorklik naar Shot Scope meten.
-  document.addEventListener('click', function (e) {
-    var a = e.target.closest ? e.target.closest('a[href^="/go/"]') : null;
-    if (!a) return;
-    var slug = (a.getAttribute('href').split('/')[2] || 'unknown');
-    try { plausible('Go', { props: { brand: slug, page: '7-iron' } }); } catch (err) {}
-  });
+  // Bron meegeven aan /go/. Het Go-event wordt daar afgevuurd, niet hier,
+  // anders telt elke klik dubbel.
+  try {
+    var gsrc = '7-iron';
+    var gm = /[?&]src=([A-Za-z0-9_-]{1,32})/.exec(window.location.search);
+    if (gm) gsrc = '7-iron-' + gm[1].toLowerCase();
+    var glinks = document.querySelectorAll('a[href^="/go/"]');
+    for (var gi = 0; gi < glinks.length; gi++) {
+      var gh = glinks[gi].getAttribute('href');
+      if (gh.indexOf('src=') === -1) {
+        glinks[gi].setAttribute('href', gh + (gh.indexOf('?') === -1 ? '?' : '&') + 'src=' + gsrc);
+      }
+    }
+  } catch (e) {}
 
   // Code kopieren naar het klembord.
   (function () {
