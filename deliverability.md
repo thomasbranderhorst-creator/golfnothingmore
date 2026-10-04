@@ -151,7 +151,21 @@ Eén regel per verzending. Dit is het enige wat we over bezorging echt weten.
 
 | Datum | Onderwerp | Verstuurd | Inbox | Promotions | Spam | mail-tester | Opens | Kliks | Uitschrijvingen |
 |---|---|---|---|---|---|---|---|---|---|
+| 30-09-2026 | Member codes - september 2026 | 78 | ? | ? | ? | niet gedaan | 38 (48,7%) | 3 (3,9%) | 1 (1,3%) |
 | | | | | | | | | | |
+
+**Nulmeting 30-09-2026.** Eerste verzending. Afgeleverd 78 van 78, nul harde
+bounces, nul spamklachten. Bezorging was dus niet het probleem. Van de 38 die
+hem openden klikten er 3, een click-to-open van 7,9 procent. Dat is het cijfer
+dat omhoog moet.
+
+De verdeling inbox tegenover Promotions is niet gemeten, er waren nog geen
+seedadressen. Dat is de enige kolom die we voor de volgende verzending nog
+moeten invullen.
+
+MailerLite telde 3 kliks, Plausible zag 3 bezoekers met `src=email`. Twee
+onafhankelijke systemen, hetzelfde getal. De meting via `/go/` klopt dus en we
+kunnen er vanaf nu op bouwen.
 
 Wat je eruit wilt halen: het aandeel **inbox** over de tijd. Jason zit op 60
 procent. Onder de 50 is er iets mis met de inhoud of de authenticatie. Boven
