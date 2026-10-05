@@ -13,7 +13,10 @@
 <link rel="canonical" href="https://m.me/golfnothingmoreofficial?ref=welcome">
 <noscript><meta http-equiv="refresh" content="0; url=https://m.me/golfnothingmoreofficial?ref=welcome"></noscript>
 <style>body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,sans-serif;background:#EDEFEA;color:#101A15;margin:0;display:grid;place-items:center;min-height:100vh;padding:2rem;text-align:center}
-a{color:#14512F}p{max-width:24rem;line-height:1.6}</style>
+a{color:#14512F}p{max-width:26rem;line-height:1.6}
+a#go{display:inline-block;margin-top:1.1rem;background:#14512F;color:#F2EAD5;text-decoration:none;
+padding:.9rem 1.6rem;border-radius:999px;font-weight:600;font-size:1.05rem}
+a#go:focus-visible{outline:3px solid #B8651A;outline-offset:3px}</style>
 <script defer src="https://plausible.io/js/pa-jfuoECYdUyseGoZYZfrYs.js"></script>
 <script>
   window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
@@ -21,7 +24,7 @@ a{color:#14512F}p{max-width:24rem;line-height:1.6}</style>
 </script>
 </head>
 <body>
-<p>Opening Messenger…<br><a id="go" href="https://m.me/golfnothingmoreofficial?ref=welcome">Continue</a></p>
+<p>Opening Messenger…<br><a id="go" href="https://m.me/golfnothingmoreofficial?ref=welcome">Open it now</a></p>
 <script>
 (function(){
   var URL_ = "https://m.me/golfnothingmoreofficial?ref=welcome";
@@ -33,7 +36,7 @@ a{color:#14512F}p{max-width:24rem;line-height:1.6}</style>
   } catch (e) {}
   var went = false;
   function go(){ if (went) return; went = true; location.replace(URL_); }
-  setTimeout(go, 600);
+  setTimeout(go, 250);
   try {
     plausible('Go', { props: { brand: BRAND, page: 'go', src: src }, callback: go });
   } catch (e) { go(); }
