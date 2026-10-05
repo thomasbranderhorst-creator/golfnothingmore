@@ -41,6 +41,24 @@ a#go:focus-visible{outline:3px solid #B8651A;outline-offset:3px}</style>
   try {
     plausible('Go', { props: { brand: BRAND, page: 'go', src: src }, callback: go });
   } catch (e) { go(); }
+
+  var sent = {};
+  function flag(step){
+    if (sent[step]) return; sent[step] = true;
+    try { plausible('Go fallback', { props: { brand: BRAND, src: src, step: step } }); } catch (e) {}
+  }
+  var left = false;
+  function away(){ left = true; }
+  document.addEventListener('visibilitychange', function(){ if (document.hidden) away(); });
+  window.addEventListener('pagehide', away);
+  setTimeout(function(){
+    if (!left && document.visibilityState !== 'hidden') flag('stuck');
+  }, 2500);
+  var btn = document.getElementById('go');
+  if (btn) {
+    btn.addEventListener('pointerdown', function(){ flag('tap'); });
+    btn.addEventListener('click', function(){ flag('tap'); });
+  }
 })();
 </script>
 </body>
