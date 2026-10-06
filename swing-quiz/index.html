@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>The Swing Quiz · Golf, nothing more</title>
+<meta property="og:title" content="The Swing Quiz">
+<meta property="og:description" content="One video on the page, shared into the group with comments off. Every answer lands where it can open a conversation.">
+<meta property="og:url" content="https://golfnothingmore.com/swing-quiz/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://golfnothingmore.com/logo-3d.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&display=swap">
+<style>
+/* Layout: a single narrow column, built like a scorecard — numbered rows under hairline rules, one panel per phase. */
+:root{
+  --bg:#EDEFEA;
+  --panel:#F7F8F4;
+  --fg:#101A15;
+  --fg-dim:#5C6A61;
+  --rule:#D6CEBA;
+  --mark:#14512F;
+  --badge-bg:#14512F;
+  --badge-fg:#F2EAD5;
+  --accent:#B8651A;
+  --warn-bg:#F6EADB;
+  --display:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --body:"Newsreader",Georgia,"Times New Roman",serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1511;
+    --panel:#141D18;
+    --fg:#E6EDE6;
+    --fg-dim:#97A69C;
+    --rule:#2A3630;
+    --mark:#8FC9A8;
+    --badge-bg:#2F6B4A;
+    --badge-fg:#EAF3EC;
+    --accent:#E0974C;
+    --warn-bg:#1F2119;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1511;
+  --panel:#141D18;
+  --fg:#E6EDE6;
+  --fg-dim:#97A69C;
+  --rule:#2A3630;
+  --mark:#8FC9A8;
+  --badge-bg:#2F6B4A;
+  --badge-fg:#EAF3EC;
+  --accent:#E0974C;
+  --warn-bg:#1F2119;
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--bg);
+  color:var(--fg);
+  font-family:var(--body);
+  font-size:1.0625rem;
+  line-height:1.6;
+  margin:0;
+  padding-inline:20px;
+  padding-block:3rem 4rem;
+}
+.wrap{max-width:44rem;margin:0 auto;display:flex;flex-direction:column;gap:3rem}
+
+.eyebrow{
+  font-family:var(--display);
+  font-size:.7rem;
+  font-weight:600;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--fg-dim);
+  margin:0;
+}
+h1{
+  font-family:var(--display);
+  font-weight:700;
+  font-size:clamp(2rem,7vw,2.9rem);
+  line-height:1.05;
+  letter-spacing:-.02em;
+  margin:.5rem 0 0;
+  text-wrap:balance;
+}
+.lede{
+  font-size:1.15rem;
+  color:var(--fg-dim);
+  margin:1rem 0 0;
+  max-width:34rem;
+}
+h2{
+  font-family:var(--display);
+  font-weight:600;
+  font-size:1.1rem;
+  letter-spacing:-.01em;
+  margin:0 0 .25rem;
+}
+h2 .num{color:var(--mark);font-variant-numeric:tabular-nums}
+.sec-head{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:1rem;
+  flex-wrap:wrap;
+  border-bottom:2px solid var(--fg);
+  padding-bottom:.6rem;
+  margin-bottom:1.5rem;
+}
+.sec-note{font-family:var(--display);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-dim)}
+
+/* scorecard rows */
+ol.route{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+ol.route > li{
+  display:grid;
+  grid-template-columns:2.4rem 1fr;
+  gap:0 1rem;
+  padding:1.1rem 0;
+  border-top:1px solid var(--rule);
+}
+ol.route > li:first-child{border-top:none;padding-top:0}
+.badge{
+  font-family:var(--display);
+  font-weight:700;
+  font-size:.8rem;
+  width:2rem;height:2rem;
+  border-radius:50%;
+  background:var(--badge-bg);
+  color:var(--badge-fg);
+  display:grid;place-items:center;
+  font-variant-numeric:tabular-nums;
+  margin-top:.15rem;
+}
+.step-t{font-family:var(--display);font-weight:600;font-size:1rem;margin:0 0 .2rem}
+.step-b{margin:0;color:var(--fg-dim);font-size:1rem}
+.step-b strong{color:var(--fg);font-weight:500}
+.where{
+  font-family:var(--display);
+  font-size:.66rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--mark);
+  display:block;
+  margin-bottom:.3rem;
+}
+
+/* copy blocks */
+.copyset{display:flex;flex-direction:column;gap:1.6rem}
+.lbl{
+  font-family:var(--display);
+  font-size:.68rem;
+  font-weight:600;
+  letter-spacing:.11em;
+  text-transform:uppercase;
+  color:var(--mark);
+  display:block;
+  margin-bottom:.45rem;
+}
+.lbl span{color:var(--fg-dim);font-weight:400;letter-spacing:.04em;text-transform:none}
+.said{
+  background:var(--panel);
+  border:1px solid var(--rule);
+  border-left:3px solid var(--mark);
+  padding:1.05rem 1.2rem;
+  min-width:0;
+}
+.said p{margin:0}
+.said p + p{margin-top:.7rem}
+.said + .said{margin-top:.5rem}
+.ph{
+  font-family:var(--display);
+  font-weight:600;
+  font-size:.88em;
+  color:var(--accent);
+  white-space:nowrap;
+}
+.vary{
+  font-family:var(--display);
+  font-size:.66rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--fg-dim);
+  margin:.9rem 0 .4rem;
+}
+
+/* checklist */
+ul.check{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:0}
+ul.check li{
+  display:grid;
+  grid-template-columns:1.4rem 1fr;
+  gap:0 .8rem;
+  padding:.85rem 0;
+  border-top:1px solid var(--rule);
+}
+ul.check li:first-child{border-top:none;padding-top:0}
+.box{
+  width:1.05rem;height:1.05rem;
+  border:1.5px solid var(--mark);
+  border-radius:3px;
+  margin-top:.42rem;
+}
+ul.check p{margin:0;font-size:1rem}
+ul.check p span{display:block;color:var(--fg-dim);font-size:.95rem;margin-top:.15rem}
+
+/* risks */
+.risks{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.risk{background:var(--panel);padding:1.2rem;min-width:0}
+.risk h3{font-family:var(--display);font-size:.95rem;font-weight:600;margin:0 0 .4rem}
+.risk p{margin:0;font-size:.97rem;color:var(--fg-dim)}
+.risk .fix{display:block;margin-top:.6rem;color:var(--fg)}
+.risk .fix b{font-family:var(--display);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);display:block;font-weight:600}
+
+/* asks */
+ol.asks{margin:0;padding-left:1.3rem;display:flex;flex-direction:column;gap:.9rem}
+ol.asks li{padding-left:.3rem}
+ol.asks b{font-family:var(--display);font-weight:600;font-size:1rem}
+ol.asks span{display:block;color:var(--fg-dim);font-size:.97rem}
+
+.note{
+  background:var(--warn-bg);
+  border-left:3px solid var(--accent);
+  padding:1rem 1.2rem;
+  font-size:1rem;
+}
+.note p{margin:0}
+.note p + p{margin-top:.6rem}
+.note b{font-family:var(--display);font-weight:600}
+
+footer{
+  border-top:1px solid var(--rule);
+  padding-top:1rem;
+  font-family:var(--display);
+  font-size:.72rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--fg-dim);
+  display:flex;
+  justify-content:space-between;
+  gap:1rem;
+  flex-wrap:wrap;
+}
+@media (max-width:420px){
+  ol.route > li{grid-template-columns:1.9rem 1fr;gap:0 .7rem}
+  .badge{width:1.7rem;height:1.7rem;font-size:.72rem}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="eyebrow">Golf, nothing more &middot; Sandbag Golf</p>
+  <h1>The Swing Quiz</h1>
+  <p class="lede">One video, posted on the page, shared into the group with comments switched off. Every answer lands where it can open a conversation.</p>
+</header>
+
+<section>
+  <div class="sec-head">
+    <h2><span class="num">01</span> &nbsp;The route</h2>
+    <span class="sec-note">Seven steps, one direction</span>
+  </div>
+  <ol class="route">
+    <li>
+      <div class="badge">1</div>
+      <div>
+        <span class="where">Facebook page</span>
+        <p class="step-t">The video goes up on the page first</p>
+        <p class="step-b">A silhouette of a famous swing. <strong>Which swing is this?</strong> It has to live on the page, because a comment is only worth something to us if it sits under a page post.</p>
+      </div>
+    </li>
+    <li>
+      <div class="badge">2</div>
+      <div>
+        <span class="where">The group</span>
+        <p class="step-t">The page shares it into the group</p>
+        <p class="step-b">Posted as Golf, nothing more, which keeps it on brand. Being group admin is enough to switch the comments off afterwards, so the page can be the author.</p>
+      </div>
+    </li>
+    <li>
+      <div class="badge">3</div>
+      <div>
+        <span class="where">The group</span>
+        <p class="step-t">Comments off on the group post</p>
+        <p class="step-b">Three dots, <strong>Turn off comments</strong>. Now the only way to answer is to tap through to the page. The first line of the caption has to say exactly that, or people scroll on.</p>
+      </div>
+    </li>
+    <li>
+      <div class="badge">4</div>
+      <div>
+        <span class="where">Facebook page</span>
+        <p class="step-t">They answer under the original</p>
+        <p class="step-b">This is the one comment that counts. Comments inside a group trigger nothing, which is the whole reason for this detour.</p>
+      </div>
+    </li>
+    <li>
+      <div class="badge">5</div>
+      <div>
+        <span class="where">Manychat</span>
+        <p class="step-t">Two things fire at once</p>
+        <p class="step-b">A private message in Messenger, <strong>and</strong> a public reply under their comment. The public one is the safety net, because new pages land in Message requests.</p>
+      </div>
+    </li>
+    <li>
+      <div class="badge">6</div>
+      <div>
+        <span class="where">Messenger</span>
+        <p class="step-t">The offer is a free swing review</p>
+        <p class="step-b">They just judged someone else's swing. Now a PGA pro judges theirs. <strong>No app, no code</strong>, they upload a clip and that is it.</p>
+      </div>
+    </li>
+    <li>
+      <div class="badge">7</div>
+      <div>
+        <span class="where">Sandbag</span>
+        <p class="step-t">The answer only plays in the app</p>
+        <p class="step-b">A pro records a voice review. To hear it, they install Sandbag, and almost everyone who uploads gets that far.</p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<section>
+  <div class="sec-head">
+    <h2><span class="num">02</span> &nbsp;The words</h2>
+    <span class="sec-note">Ready to paste</span>
+  </div>
+  <div class="copyset">
+
+    <div>
+      <span class="lbl">On the page <span>&middot; under the video</span></span>
+      <div class="said">
+        <p>Whose swing is this? Comment below.</p>
+      </div>
+    </div>
+
+    <div>
+      <span class="lbl">In the group <span>&middot; above the shared post</span></span>
+      <div class="said">
+        <p>Whose swing is this?</p>
+        <p>React if you think you know, then tap the video to answer. Comments are off on this one here, so every guess lands in the same place and nobody has it spoiled halfway down the feed.</p>
+        <p>Everyone who answers gets a free swing review from a PGA professional.</p>
+      </div>
+    </div>
+
+    <div>
+      <span class="lbl">Under every comment <span>&middot; Manychat posts these itself</span></span>
+      <p class="vary">Five versions, rotated, so the spam detection does not trip</p>
+      <div class="said">
+        <p>Thanks for the guess. Your free swing review is in Messenger. If it is not in your inbox, look under Message requests. Straight link: <span class="ph">get.sandbag-golf.com/voice-analyze/gnm</span></p>
+      </div>
+      <div class="said">
+        <p>Answer noted. The free swing review from a PGA pro is waiting in Messenger, and it hides in Message requests more often than it should. You can also go straight here: <span class="ph">get.sandbag-golf.com/voice-analyze/gnm</span></p>
+      </div>
+      <div class="said">
+        <p>Got it, thanks for playing. Sent your free swing review link on Messenger. Not in your inbox? Check Message requests. Here it is as well: <span class="ph">get.sandbag-golf.com/voice-analyze/gnm</span></p>
+      </div>
+      <div class="said">
+        <p>Appreciate the guess. A PGA pro will look at your own swing for free, the details are in Messenger. Nothing there? Try Message requests. Direct link: <span class="ph">get.sandbag-golf.com/voice-analyze/gnm</span></p>
+      </div>
+      <div class="said">
+        <p>Good one. Your free swing review is sitting in Messenger. New senders land in Message requests, so look there too. Or use this: <span class="ph">get.sandbag-golf.com/voice-analyze/gnm</span></p>
+      </div>
+    </div>
+
+    <div>
+      <span class="lbl">In Messenger <span>&middot; the private message</span></span>
+      <div class="said">
+        <p>Want to know whose swing that was? <span class="ph">[ANSWER]</span>.</p>
+        <p>The more interesting question is yours. Send in a clip of your own swing and one of the PGA pros records a voice review of it. Free, no catch.</p>
+        <p><span class="ph">get.sandbag-golf.com/voice-analyze/gnm</span></p>
+        <p>Takes about a minute to upload. You get a message the moment a pro has looked at it.</p>
+      </div>
+    </div>
+
+    <div>
+      <span class="lbl">One reminder <span>&middot; a day later, only to people who did not upload</span></span>
+      <div class="said">
+        <p>Still sitting on that swing? A pro will take two minutes and tell you the one thing worth fixing. It stays free.</p>
+        <p><span class="ph">get.sandbag-golf.com/voice-analyze/gnm</span></p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="sec-head">
+    <h2><span class="num">03</span> &nbsp;Before anything goes live</h2>
+    <span class="sec-note">In this order</span>
+  </div>
+  <ul class="check">
+    <li><div class="box"></div><p>Manychat comment automation built and switched on<span>A comment that arrives before the automation is awake is gone. This comes first, every time.</span></p></li>
+    <li><div class="box"></div><p>Both channels enabled: private message and public reply<span>Five rotating versions of the public reply, each carrying the link in plain sight, because new pages land in Message requests.</span></p></li>
+    <li><div class="box"></div><p>Group settings allow pages to post<span>Otherwise the option to post as Golf, nothing more is not there when you need it.</span></p></li>
+    <li><div class="box"></div><p>Blocked word list on the page switched on<span>Set it before the video goes up, not after the first argument starts. Hide comments rather than delete them: a hidden commenter still gets their link.</span></p></li>
+    <li><div class="box"></div><p>First frame already shows the hair and the tie<span>Facebook often shows a still before it plays. If the clip opens on the address position the joke is gone before it starts.</span></p></li>
+    <li><div class="box"></div><p>Tested from an account that is not ours<span>Admins and page owners do not behave like ordinary members. Your point on the call, and a good one.</span></p></li>
+    <li><div class="box"></div><p>Your link used as it is, with nothing wrapped around it<span>get.sandbag-golf.com/voice-analyze/gnm goes in raw. Putting one of our own redirects in front of it is exactly what broke the last one inside Messenger.</span></p></li>
+    <li><div class="box"></div><p>Walked through with you before we publish<span>As agreed. The worst outcome is a post that works and earns nothing.</span></p></li>
+  </ul>
+</section>
+
+<section>
+  <div class="sec-head">
+    <h2><span class="num">04</span> &nbsp;What can kill it</h2>
+    <span class="sec-note">Known in advance</span>
+  </div>
+  <div class="risks">
+    <div class="risk">
+      <h3>Shares travel less far</h3>
+      <p>A share reaches fewer people than native video, and switching comments off removes Facebook&rsquo;s strongest signal.</p>
+      <span class="fix"><b>What we do</b>Ask for a reaction instead. Those still count.</span>
+    </div>
+    <div class="risk">
+      <h3>The messages hide</h3>
+      <p>On your new page they landed in Message requests. Ours is under 60 followers, so we assume the same.</p>
+      <span class="fix"><b>What we do</b>The public reply carries the link too, in plain sight.</span>
+    </div>
+    <div class="risk">
+      <h3>Nobody taps through</h3>
+      <p>People reach for the comment box where it always is. When it is gone, most scroll on.</p>
+      <span class="fix"><b>What we do</b>First line of the caption says to tap the video to answer.</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head">
+    <h2><span class="num">05</span> &nbsp;Where this stands</h2>
+    <span class="sec-note">6 October</span>
+  </div>
+  <ol class="asks">
+    <li><b>The link is live and in every message</b><span>get.sandbag-golf.com/voice-analyze/gnm, with the gnm tag, so the signups land on your side.</span></li>
+    <li><b>The clip is made and it is ours</b><span>Built here from a licensed swing, so there is no footage question hanging over it and nothing to clear.</span></li>
+    <li><b>Two things we still need from you</b><span>How many reviews your pros can turn around in a day, which decides how hard we push this. And whether signups through this link show in the partner dashboard the way GOLF13 does.</span></li>
+  </ol>
+</section>
+
+<section>
+  <div class="sec-head">
+    <h2><span class="num">06</span> &nbsp;The figure</h2>
+    <span class="sec-note">Why it is Trump</span>
+  </div>
+
+  <ol class="route">
+    <li>
+      <div class="badge">1</div>
+      <div>
+        <p class="step-t">The outline is the whole clue</p>
+        <p class="step-b">We drew it first to check. Above the shoulders is all you get: a hair or hat shape reads instantly, faces and beards vanish into the black. And the clue has to name one person, not a type. <strong>Trump&rsquo;s hair does. A top hat does not.</strong></p>
+      </div>
+    </li>
+    <li>
+      <div class="badge">2</div>
+      <div>
+        <p class="step-t">So no footage of him is needed</p>
+        <p class="step-b">Nobody has to recognise the body, so the swing is a clip we licensed. Nothing to clear. Two rules on our side: <strong>not one political word in the caption</strong>, and the blocked-word list live before the video goes up.</p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<footer>
+  <span>Post on the page, share to the group, answer on the page</span>
+  <span>6 October 2026</span>
+</footer>
+
+</div>
+</body>
+</html>
