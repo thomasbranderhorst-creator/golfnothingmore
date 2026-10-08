@@ -158,7 +158,7 @@ footer a{color:var(--mark)}
     });
   })(forms[i]);}
   var sent={};
-  document.addEventListener('pointerdown', function(e){
+  document.addEventListener('click', function(e){
     var a=e.target.closest('a.deal'); if(!a) return;
     var k=a.getAttribute('data-brand'); if(sent[k]) return; sent[k]=1;
     try{ plausible('Go',{props:{brand:k,page:'deals',src:a.getAttribute('data-cat')}}); }catch(err){}
