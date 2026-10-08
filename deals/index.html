@@ -74,6 +74,12 @@ padding:.65rem 1.1rem;background:var(--mark);color:var(--bg);cursor:pointer}
 .confirm.is-error{color:var(--accent)}
 footer{margin-top:2.6rem;border-top:1px solid var(--rule);padding-top:1rem;font-size:.88rem;color:var(--dim)}
 footer a{color:var(--mark)}
+.hero{display:block;width:100%;max-width:300px;height:auto;margin:.9rem 0 0;border:1px solid var(--rule)}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(9rem,1fr));gap:.7rem;margin:1.6rem 0 .5rem}
+.grid a{display:block;text-decoration:none;border:1px solid var(--rule);line-height:0}
+.grid a:hover,.grid a:focus-visible{border-color:var(--mark);outline:none}
+.grid img{width:100%;height:auto;display:block}
 </style>
 </head>
 <body>
@@ -85,7 +91,7 @@ footer a{color:var(--mark)}
     <p>Prices were checked on 8 October, US time. Amazon changes them without warning, so some may already be gone.</p>
     <p>Prices and stock are Amazon US. Outside the US some of these may not show, or show a different price. Sizes and colours are often priced differently from the one listed.</p>
   </div>
-  <nav><a class="on" href="./">All <span>39</span></a><a href="./top-deals/">Top Deals <span>5</span></a><a href="./clubs/">Clubs <span>6</span></a><a href="./balls/">Balls <span>5</span></a><a href="./rangefinders/">Rangefinders <span>4</span></a><a href="./shoes/">Shoes <span>5</span></a><a href="./apparel/">Apparel <span>8</span></a><a href="./other/">Other <span>6</span></a></nav>
+  <nav><div class="grid"><a href="./top-deals/" aria-label="Top Deals"><img src="https://golfnothingmore.com/og/w/top-deals.jpg" width="400" height="400" loading="lazy" alt="Top Deals, 5 deals"></a><a href="./clubs/" aria-label="Clubs"><img src="https://golfnothingmore.com/og/w/clubs.jpg" width="400" height="400" loading="lazy" alt="Clubs, 6 deals"></a><a href="./balls/" aria-label="Balls"><img src="https://golfnothingmore.com/og/w/balls.jpg" width="400" height="400" loading="lazy" alt="Balls, 5 deals"></a><a href="./rangefinders/" aria-label="Rangefinders"><img src="https://golfnothingmore.com/og/w/rangefinders.jpg" width="400" height="400" loading="lazy" alt="Rangefinders, 4 deals"></a><a href="./shoes/" aria-label="Shoes"><img src="https://golfnothingmore.com/og/w/shoes.jpg" width="400" height="400" loading="lazy" alt="Shoes, 5 deals"></a><a href="./apparel/" aria-label="Apparel"><img src="https://golfnothingmore.com/og/w/apparel.jpg" width="400" height="400" loading="lazy" alt="Apparel, 8 deals"></a><a href="./other/" aria-label="Other"><img src="https://golfnothingmore.com/og/w/other.jpg" width="400" height="400" loading="lazy" alt="Other, 6 deals"></a></div></nav>
 <div class="signup">
   <h3>Want these in your inbox?</h3>
   <p>We send the best golf deals to the Member Deals list, together with member codes the public does not get. One email, unsubscribe whenever you like.</p>
