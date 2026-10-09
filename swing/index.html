@@ -78,10 +78,6 @@ footer a{color:var(--mark)}
     <label for="email">Your email</label>
     <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
   </div>
-  <div>
-    <label for="phone">Your phone <span>optional, speeds up the review</span></label>
-    <input type="tel" id="phone" name="phone" autocomplete="tel">
-  </div>
   <div aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;overflow:hidden;">
     <label for="hp">Leave this field empty</label>
     <input type="text" id="hp" name="gnm_hp" tabindex="-1" autocomplete="off">
@@ -118,7 +114,6 @@ footer a{color:var(--mark)}
     var answer = document.getElementById('answer').value.trim();
     var name   = document.getElementById('name').value.trim();
     var email  = document.getElementById('email').value.trim();
-    var phone  = document.getElementById('phone').value.trim();
     if (document.getElementById('hp').value) { return; }
     if (!answer) { return fail('Put a name in the answer box first.'); }
     if (!name)   { return fail('We need a first name to know who you are.'); }
@@ -127,7 +122,6 @@ footer a{color:var(--mark)}
     var fd = new FormData();
     fd.append('fields[email]', email);
     fd.append('fields[name]', name);
-    if (phone) fd.append('fields[phone]', phone);
     fd.append('fields[signup_source]', 'swing-quiz');
     fd.append('ml-submit', '1');
     fd.append('anticsrf', 'true');
@@ -146,7 +140,7 @@ footer a{color:var(--mark)}
         form.style.display = 'none';
         document.getElementById('done').style.display = 'block';
         window.scrollTo({ top: 0, behavior: 'smooth' });
-        try { plausible('Quiz entry', { props: { correct: right ? 'yes' : 'no', phone: phone ? 'yes' : 'no' } }); } catch(e2){}
+        try { plausible('Quiz entry', { props: { correct: right ? 'yes' : 'no' } }); } catch(e2){}
       })
       .catch(function(){
         btn.disabled = false; btn.textContent = 'Send my answer';
