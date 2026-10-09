@@ -68,11 +68,7 @@ footer a{color:var(--mark)}
 <form id="quiz" novalidate>
   <div>
     <label for="answer">Your answer</label>
-    <input type="text" id="answer" name="answer" placeholder="Who is swinging?" autocomplete="off" required>
-  </div>
-  <div>
-    <label for="name">Your first name</label>
-    <input type="text" id="name" name="name" autocomplete="given-name" required>
+    <input type="text" id="answer" name="answer" placeholder="Who is swinging?" autocomplete="off" required autofocus>
   </div>
   <div>
     <label for="email">Your email</label>
@@ -83,14 +79,14 @@ footer a{color:var(--mark)}
     <input type="text" id="hp" name="gnm_hp" tabindex="-1" autocomplete="off">
   </div>
   <button type="submit">Send my answer</button>
-  <p class="fine">We email you the answer, and the link to your free lesson. One click to confirm and both are yours. No spam, unsubscribe whenever.</p>
+  <p class="fine">Your email joins the Golf, nothing more list. Deals and tips, no spam, unsubscribe whenever.</p>
   <p class="err" id="err" role="status"></p>
 </form>
 
 <div class="done" id="done">
   <h2 id="verdict">Answer received</h2>
-  <p id="msg">Check your inbox and follow the next steps. That is where you find out who it was, and where your free lesson is waiting.</p>
-  <p class="fine">Nothing there? Look in the promotions tab or your spam folder.</p>
+  <p id="msg">Taking you to the answer&hellip;</p>
+  <p class="fine"><a href="/swing/thanks/">Continue</a></p>
 </div>
 
 <footer>
@@ -112,16 +108,13 @@ footer a{color:var(--mark)}
     e.preventDefault();
     fail('');
     var answer = document.getElementById('answer').value.trim();
-    var name   = document.getElementById('name').value.trim();
     var email  = document.getElementById('email').value.trim();
     if (document.getElementById('hp').value) { return; }
     if (!answer) { return fail('Put a name in the answer box first.'); }
-    if (!name)   { return fail('We need a first name to know who you are.'); }
     if (!valid.test(email)) { return fail('That email address does not look right.'); }
 
     var fd = new FormData();
     fd.append('fields[email]', email);
-    fd.append('fields[name]', name);
     fd.append('fields[signup_source]', 'swing-quiz');
     fd.append('ml-submit', '1');
     fd.append('anticsrf', 'true');
@@ -138,8 +131,8 @@ footer a{color:var(--mark)}
         var right = /trump|donald/i.test(answer);
         form.style.display = 'none';
         document.getElementById('done').style.display = 'block';
-        window.scrollTo({ top: 0, behavior: 'smooth' });
         try { plausible('Quiz entry', { props: { correct: right ? 'yes' : 'no' } }); } catch(e2){}
+        window.location.href = '/swing/thanks/';
       })
       .catch(function(){
         btn.disabled = false; btn.textContent = 'Send my answer';
