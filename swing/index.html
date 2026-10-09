@@ -83,13 +83,13 @@ footer a{color:var(--mark)}
     <input type="text" id="hp" name="gnm_hp" tabindex="-1" autocomplete="off">
   </div>
   <button type="submit">Send my answer</button>
-  <p class="fine">We email you the link to your free review. One click to confirm and it is yours. No spam, unsubscribe whenever.</p>
+  <p class="fine">We email you the answer, and the link to your free review. One click to confirm and both are yours. No spam, unsubscribe whenever.</p>
   <p class="err" id="err" role="status"></p>
 </form>
 
 <div class="done" id="done">
   <h2 id="verdict">Answer received</h2>
-  <p id="msg">Check your inbox and click the confirmation link. Your free swing review is waiting right behind it.</p>
+  <p id="msg">Check your inbox and follow the next steps. That is where you find out who it was, and where your free swing review is waiting.</p>
   <p class="fine">Nothing there? Look in the promotions tab or your spam folder.</p>
 </div>
 
@@ -136,7 +136,6 @@ footer a{color:var(--mark)}
           return fail('That email address does not look right.');
         }
         var right = /trump|donald/i.test(answer);
-        document.getElementById('verdict').textContent = right ? 'Correct.' : 'Not him, but have the review anyway.';
         form.style.display = 'none';
         document.getElementById('done').style.display = 'block';
         window.scrollTo({ top: 0, behavior: 'smooth' });
