@@ -135,8 +135,8 @@ footer a{color:var(--mark)}
           btn.disabled = false; btn.textContent = 'Send my answer';
           return fail('That email address does not look right.');
         }
-        var right = /trump/i.test(answer);
-        document.getElementById('verdict').textContent = right ? 'Correct.' : 'Not quite, but here you go.';
+        var right = /trump|donald/i.test(answer);
+        document.getElementById('verdict').textContent = right ? 'Correct.' : 'Not him, but have the review anyway.';
         form.style.display = 'none';
         document.getElementById('done').style.display = 'block';
         window.scrollTo({ top: 0, behavior: 'smooth' });
