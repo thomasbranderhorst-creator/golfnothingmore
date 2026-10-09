@@ -23,17 +23,23 @@
 body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:1.0625rem;line-height:1.6;
 margin:0;padding-inline:16px;padding-block:3rem;display:flex;min-height:100svh;align-items:center}
 .wrap{max-width:30rem;margin:0 auto;text-align:center}
-.eyebrow{font-family:var(--display);font-size:.68rem;font-weight:600;letter-spacing:.14em;
-text-transform:uppercase;color:var(--dim);margin:0}
+.eyebrow{font-family:var(--display);font-size:.7rem;font-weight:700;letter-spacing:.16em;
+text-transform:uppercase;color:var(--accent);margin:0}
 h1{font-family:var(--display);font-weight:700;font-size:clamp(1.7rem,6vw,2.2rem);line-height:1.08;
 letter-spacing:-.02em;margin:.5rem 0 0}
 p{margin:1rem 0 0}
-a.go{display:block;width:100%;max-width:22rem;margin:1.8rem auto 0;background:var(--mark);
-color:var(--paper);text-decoration:none;padding:1.1rem 1.4rem;border-radius:999px;
-font-family:var(--display);font-weight:700;font-size:1.2rem}
-.steps{text-align:left;margin:1.8rem auto 0;max-width:24rem;padding:0;list-style:none}
-.steps li{padding:.7rem 0;border-top:1px solid var(--rule);font-size:1rem}
+a.go{display:block;width:100%;max-width:22rem;margin:1.9rem auto 0;background:var(--mark);
+color:var(--paper);text-decoration:none;padding:1.15rem 1.4rem;border-radius:999px;
+font-family:var(--display);font-weight:700;font-size:1.2rem;
+box-shadow:0 10px 24px -12px rgba(20,81,47,.75)}
+a.go:hover{background:#0f3f24}
+.steps{counter-reset:s;text-align:left;margin:1.9rem auto 0;max-width:25rem;list-style:none;
+background:var(--panel);border:1px solid var(--rule);border-radius:14px;padding:.4rem 1.2rem}
+.steps li{position:relative;padding:.95rem 0 .95rem 3rem;border-top:1px solid var(--rule);font-size:1rem}
 .steps li:first-child{border-top:none}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:.95rem;
+width:2rem;height:2rem;border-radius:999px;background:var(--accent);color:#fff;
+font-family:var(--display);font-weight:700;font-size:.95rem;display:grid;place-items:center}
 .steps b{font-family:var(--display);font-weight:600}
 .fine{font-size:.9rem;color:var(--dim)}
 footer{margin-top:2.4rem;border-top:1px solid var(--rule);padding-top:1rem;font-size:.85rem;color:var(--dim)}
@@ -43,9 +49,9 @@ footer a{color:var(--mark)}
 <body>
 <div class="wrap">
 
-<p class="eyebrow">Golf, nothing more</p>
+<p class="eyebrow">The answer</p>
 <h1>It was Donald Trump</h1>
-<p>Thanks for playing. Now the more interesting swing: yours.</p>
+<p>Nice one, that was the easy swing. Now the one that actually matters: yours.</p>
 
 <ul class="steps">
   <li><b>Film two or three swings</b> on your phone, from down the line, the way you see it on TV.</li>
@@ -56,7 +62,7 @@ footer a{color:var(--mark)}
 <a class="go" href="https://get.sandbag-golf.com/voice-analyze/gnm" target="_blank" rel="noopener"
    onclick="try{plausible('Go',{props:{brand:'sandbag',page:'swing-quiz',src:'thanks'}})}catch(e){}">Get your free lesson</a>
 
-<p class="fine">Free, and there is nothing to cancel.</p>
+<p class="fine">Completely free, and there is nothing to cancel.</p>
 
 <footer>
   <p><a href="https://golfnothingmore.com/">golfnothingmore.com</a></p>
