@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<title>Golf deals &middot; Golf, nothing more</title>
-<meta property="og:title" content="Golf deals">
-<meta property="og:description" content="No Amazon deals today. The shops we send people to all year round are below.">
+<title>Member deals &middot; Golf, nothing more</title>
+<meta property="og:title" content="Member deals">
+<meta property="og:description" content="Thirteen things worth buying, with the member code next to each one.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://golfnothingmore.com/og/deals-all.jpg">
 <meta property="og:image:width" content="1200">
@@ -14,6 +14,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+<link rel="preconnect" href="https://prd-sfcc.callawaygolf.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,300;6..72,400&display=swap">
 <script defer src="https://plausible.io/js/pa-jfuoECYdUyseGoZYZfrYs.js"></script>
 <script>
@@ -22,46 +24,60 @@
 </script>
 <style>
 :root{--bg:#EDEFEA;--panel:#F7F8F4;--fg:#101A15;--dim:#5C6A61;--rule:#D6CEBA;--mark:#14512F;
---accent:#B8651A;--warn:#F6EADB;
+--accent:#B8651A;--warn:#F6EADB;--cream:#F2EAD5;
 --display:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;--body:"Newsreader",Georgia,serif}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1511;--panel:#141D18;--fg:#E6EDE6;
---dim:#97A69C;--rule:#2A3630;--mark:#8FC9A8;--accent:#E0974C;--warn:#1F2119;color-scheme:dark}}
+--dim:#97A69C;--rule:#2A3630;--mark:#8FC9A8;--accent:#E0974C;--warn:#1F2119;--cream:#1C2419;color-scheme:dark}}
 :root[data-theme="dark"]{--bg:#0E1511;--panel:#141D18;--fg:#E6EDE6;--dim:#97A69C;--rule:#2A3630;
---mark:#8FC9A8;--accent:#E0974C;--warn:#1F2119;color-scheme:dark}
+--mark:#8FC9A8;--accent:#E0974C;--warn:#1F2119;--cream:#1C2419;color-scheme:dark}
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:1rem;line-height:1.55;
 margin:0;padding-inline:16px;padding-block:2rem 3rem}
-.wrap{max-width:46rem;margin:0 auto}
+.wrap{max-width:52rem;margin:0 auto}
 .eyebrow{font-family:var(--display);font-size:.68rem;font-weight:600;letter-spacing:.14em;
 text-transform:uppercase;color:var(--dim);margin:0}
 h1{font-family:var(--display);font-weight:700;font-size:clamp(1.8rem,6vw,2.5rem);line-height:1.05;
 letter-spacing:-.02em;margin:.4rem 0 0}
-.note{background:var(--warn);border-left:3px solid var(--accent);padding:.9rem 1.1rem;margin:1.4rem 0 0;
-font-size:.95rem}
-.note p{margin:0} .note p+p{margin-top:.45rem}
-section{margin-top:2.2rem}
-h2{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 .2rem;padding-bottom:.45rem;
-border-bottom:2px solid var(--fg)}
-.sub{font-size:.93rem;color:var(--dim);margin:.5rem 0 .8rem}
-a.mine{display:grid;grid-template-columns:1fr auto;gap:.1rem 1rem;padding:.85rem .2rem;
-border-top:1px solid var(--rule);text-decoration:none;color:inherit}
-a.mine:first-of-type{border-top:none}
-a.mine:hover,a.mine:focus-visible{background:var(--panel);outline:none}
-.nm{grid-column:1;font-family:var(--display);font-weight:600;font-size:1rem;line-height:1.3;
+.lede{font-size:1.05rem;margin:.7rem 0 0;max-width:34rem}
+.note{background:var(--warn);border-left:3px solid var(--accent);padding:.9rem 1.1rem;margin:1.4rem 0 0;font-size:.95rem}
+.note p{margin:0}
+
+.shop{margin-top:2.6rem}
+.shop>h2{font-family:var(--display);font-weight:700;font-size:1.2rem;margin:0;letter-spacing:-.01em}
+.codeline{display:flex;flex-wrap:wrap;align-items:baseline;gap:.5rem .7rem;
+margin:.45rem 0 1rem;padding-bottom:.6rem;border-bottom:2px solid var(--fg)}
+.code{font-family:var(--display);font-weight:700;font-size:.82rem;letter-spacing:.08em;
+background:var(--cream);color:var(--mark);border:1px solid var(--rule);padding:.2rem .5rem}
+.codewhat{font-size:.92rem;color:var(--dim)}
+
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem}
+@media (min-width:34rem){.grid{grid-template-columns:repeat(3,1fr);gap:1.1rem}}
+a.prod{display:flex;flex-direction:column;text-decoration:none;color:inherit;
+background:var(--panel);border:1px solid var(--rule);transition:border-color .12s}
+a.prod:hover,a.prod:focus-visible{outline:none;border-color:var(--mark)}
+.shot{display:block;background:#fff;aspect-ratio:1;display:grid;place-items:center;padding:.5rem;
+border-bottom:1px solid var(--rule)}
+.shot img{max-width:100%;max-height:100%;width:auto;height:auto;display:block}
+.shot.noimg{background:var(--cream)}
+.shot.noimg img{display:none}
+.meta{display:flex;flex-direction:column;flex:1 1 auto;padding:.65rem .7rem .75rem}
+.pname{display:block;font-family:var(--display);font-weight:600;font-size:.9rem;line-height:1.25;
 letter-spacing:-.005em}
-.why{grid-column:1;font-size:.93rem;color:var(--dim)}
-.go{grid-column:2;grid-row:1;font-family:var(--display);font-size:.7rem;letter-spacing:.06em;
-text-transform:uppercase;color:var(--accent);white-space:nowrap}
-@media (max-width:420px){.go{display:none}}
+.pspec{display:block;font-size:.82rem;color:var(--dim);margin-top:.12rem}
+.px{display:flex;align-items:baseline;gap:.4rem;margin-top:auto;padding-top:.5rem;font-family:var(--display);flex-wrap:wrap}
+.was{font-size:.82rem;color:var(--dim);text-decoration:line-through}
+.from{font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--dim)}
+.now{font-weight:700;font-size:1rem;color:var(--mark)}
+
 .card{display:block;text-decoration:none;color:inherit;background:var(--panel);
-border:1px solid var(--rule);border-left:3px solid var(--mark);padding:1.1rem 1.25rem;margin:1.6rem 0 0}
+border:1px solid var(--rule);border-left:3px solid var(--mark);padding:1.1rem 1.25rem;margin:2rem 0 0}
 .card:hover,.card:focus-visible{outline:none;border-left-color:var(--accent)}
 .card h3{font-family:var(--display);font-size:1.1rem;font-weight:700;margin:0}
 .card p{margin:.35rem 0 0;font-size:.95rem;color:var(--dim)}
 .card .cta{display:inline-block;margin-top:.7rem;font-family:var(--display);font-size:.75rem;
 font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--mark)}
 .signup{background:var(--panel);border:1px solid var(--rule);border-left:3px solid var(--mark);
-padding:1.2rem 1.25rem;margin:2rem 0 0}
+padding:1.2rem 1.25rem;margin:1.6rem 0 0}
 .signup h3{font-family:var(--display);font-size:1.02rem;font-weight:600;margin:0 0 .35rem}
 .signup p{margin:0 0 .9rem;font-size:.95rem;color:var(--dim)}
 .signup form{display:flex;gap:.5rem;flex-wrap:wrap}
@@ -79,33 +95,119 @@ footer a{color:var(--mark)} footer p{margin:0 0 .5rem}
 <body>
 <div class="wrap">
 <header>
-  <p class="eyebrow">Golf, nothing more &middot; Deals</p>
-  <h1>No special deals today</h1>
+  <p class="eyebrow">Golf, nothing more &middot; Member deals</p>
+  <h1>Thirteen things worth buying</h1>
+  <p class="lede">Four shops we deal with directly. The code sits above each row, and the price under each item is what you pay once you have typed it in.</p>
   <div class="note">
-    <p>We only put a deals list up when there is actually something worth driving across town for, which in practice means Prime Day and the weeks around Black Friday. The next big one is Friday 27 November.</p>
-    <p>What is below runs all year. These are the shops we send people to when they ask, and they are the same ones whatever the date says.</p>
+    <p>No Amazon on this page. Every shop here is one we have an arrangement with, which is why there is a code that works instead of a pretend discount.</p>
   </div>
 </header>
 
-<section>
-  <h2>Where we send people</h2>
-  <p class="sub">Affiliate links. You pay the same, we earn a small cut, and nothing is here that we would not point a member to anyway.</p>
-
-  <a class="mine" href="/go/callaway/?src=deals" rel="nofollow sponsored"><span class="nm">Callaway</span><span class="why">New gear, and their own sale section is usually the first place a price drops</span><span class="go">Callaway &rarr;</span></a>
-  <a class="mine" href="/go/callaway-preowned/?src=deals" rel="nofollow sponsored"><span class="nm">Callaway Pre-Owned</span><span class="why">Certified used clubs, the cheapest way into a current model</span><span class="go">Callaway Pre-Owned &rarr;</span></a>
-  <a class="mine" href="/go/twoguyswithballs/?src=deals" rel="nofollow sponsored"><span class="nm">Two Guys with Balls</span><span class="why">Used balls sorted by condition, the cheap way to play a premium ball</span><span class="go">Two Guys with Balls &rarr;</span></a>
-  <a class="mine" href="/go/shotscope/?src=deals" rel="nofollow sponsored"><span class="nm">Shot Scope</span><span class="why">GPS watches and shot tracking, distances without the laser</span><span class="go">Shot Scope &rarr;</span></a>
-  <a class="mine" href="/go/bender/?src=deals" rel="nofollow sponsored"><span class="nm">Bender Gloves</span><span class="why">Gloves, and the one thing in the bag that wears out on a schedule. Code GNM15 takes 15% off</span><span class="go">Bender Gloves &rarr;</span></a>
-  <a class="mine" href="/go/ogio/?src=deals" rel="nofollow sponsored"><span class="nm">OGIO</span><span class="why">Bags, cart bags and travel covers</span><span class="go">OGIO &rarr;</span></a>
-  <a class="mine" href="/go/thestack/?src=deals" rel="nofollow sponsored"><span class="nm">The Stack</span><span class="why">Speed training system for more clubhead speed</span><span class="go">The Stack &rarr;</span></a>
-  <a class="mine" href="/go/eatdrinksleepgolf/?src=deals" rel="nofollow sponsored"><span class="nm">Eat Drink Sleep Golf</span><span class="why">Apparel and gifts for people who think about golf more than is reasonable</span><span class="go">Eat Drink Sleep Golf &rarr;</span></a>
+<section class="shop">
+  <h2>Shot Scope</h2>
+  <div class="codeline"><span class="code">GOLFNOTHINGMORE</span><span class="codewhat">15% off, no minimum</span></div>
+  <div class="grid">
+    <a class="prod" href="https://shotscope.com/us/shop/products/golf-gps-watches/v5/?rfsn=9338707.a94a6d9" rel="nofollow sponsored" target="_blank"
+       data-p="V5 GPS Watch" data-b="shotscope">
+      <span class="shot"><img src="https://shotscope.com/us/wp-content/uploads/sites/3/2025/01/v5-card-image.png" alt="V5 GPS Watch"
+        loading="lazy" decoding="async" onerror="this.closest('.shot').classList.add('noimg')"></span>
+      <span class="meta"><span class="pname">V5 GPS Watch</span><span class="pspec">GPS watch with automatic shot tracking</span>
+        <span class="px"><span class="was">$249.99</span><span class="now">$212.49</span></span></span></a>
+    <a class="prod" href="https://shotscope.com/us/shop/products/golf-launch-monitors/lm1-launch-monitor/?rfsn=9338707.a94a6d9" rel="nofollow sponsored" target="_blank"
+       data-p="LM1 Launch Monitor" data-b="shotscope">
+      <span class="shot"><img src="https://shotscope.com/us/wp-content/uploads/sites/3/2026/02/LM1-Category-Page-Image.webp" alt="LM1 Launch Monitor"
+        loading="lazy" decoding="async" onerror="this.closest('.shot').classList.add('noimg')"></span>
+      <span class="meta"><span class="pname">LM1 Launch Monitor</span><span class="pspec">Launch monitor for the range and indoors</span>
+        <span class="px"><span class="was">$199.99</span><span class="now">$169.99</span></span></span></a>
+    <a class="prod" href="https://shotscope.com/us/shop/products/golf-rangefinders/pro-l2/?rfsn=9338707.a94a6d9" rel="nofollow sponsored" target="_blank"
+       data-p="PRO L2 Rangefinder" data-b="shotscope">
+      <span class="shot"><img src="https://shotscope.com/us/wp-content/uploads/sites/3/2025/01/pro-l2-card-image.png" alt="PRO L2 Rangefinder"
+        loading="lazy" decoding="async" onerror="this.closest('.shot').classList.add('noimg')"></span>
+      <span class="meta"><span class="pname">PRO L2 Rangefinder</span><span class="pspec">Laser rangefinder</span>
+        <span class="px"><span class="was">$149.99</span><span class="now">$127.49</span></span></span></a>
+  </div>
 </section>
 
-<a class="card" href="/member-codes-7k3mq92x/">
-  <h3>Member discount codes</h3>
-  <p>The codes that are live right now, with what each one is good for. No Amazon, no expiry games.</p>
-  <span class="cta">See the codes &rarr;</span>
-</a>
+<section class="shop">
+  <h2>Bender Gloves</h2>
+  <div class="codeline"><span class="code">GNM15</span><span class="codewhat">15% off, any glove</span></div>
+  <div class="grid">
+    <a class="prod" href="https://www.bendergloves.com/products/golf-glove-usa-mesh?sca_ref=12581941.ei5YZbokKYhiz" rel="nofollow sponsored" target="_blank"
+       data-p="USA American Flag Mesh" data-b="bender">
+      <span class="shot"><img src="https://cdn.shopify.com/s/files/1/1083/6722/files/usa-american-flag-mesh-golf-glove-9776107.png?v=1784438355&amp;width=500" alt="USA American Flag Mesh"
+        loading="lazy" decoding="async" onerror="this.closest('.shot').classList.add('noimg')"></span>
+      <span class="meta"><span class="pname">USA American Flag Mesh</span><span class="pspec">Mesh back, flag print</span>
+        <span class="px"><span class="was">$20.00</span><span class="now">$17.00</span></span></span></a>
+    <a class="prod" href="https://www.bendergloves.com/products/white-icon-elite-accent?sca_ref=12581941.ei5YZbokKYhiz" rel="nofollow sponsored" target="_blank"
+       data-p="Jordan Elite Accent" data-b="bender">
+      <span class="shot"><img src="https://cdn.shopify.com/s/files/1/1083/6722/products/white-icon-elite-accent-golf-glove-830958.jpg?v=1701876525&amp;width=500" alt="Jordan Elite Accent"
+        loading="lazy" decoding="async" onerror="this.closest('.shot').classList.add('noimg')"></span>
+      <span class="meta"><span class="pname">Jordan Elite Accent</span><span class="pspec">White, accent icon</span>
+        <span class="px"><span class="was">$20.00</span><span class="now">$17.00</span></span></span></a>
+    <a class="prod" href="https://www.bendergloves.com/products/argyle-diamond-spandex-color-golf-glove?sca_ref=12581941.ei5YZbokKYhiz" rel="nofollow sponsored" target="_blank"
+       data-p="Argyle Spandex" data-b="bender">
+      <span class="shot"><img src="https://cdn.shopify.com/s/files/1/1083/6722/products/argyle-spandex-golf-glove-321445.jpg?v=1701876500&amp;width=500" alt="Argyle Spandex"
+        loading="lazy" decoding="async" onerror="this.closest('.shot').classList.add('noimg')"></span>
+      <span class="meta"><span class="pname">Argyle Spandex</span><span class="pspec">Spandex back, argyle print</span>
+        <span class="px"><span class="was">$20.00</span><span class="now">$17.00</span></span></span></a>
+    <a class="prod" href="https://www.bendergloves.com/products/golf-glove-digital-gray-mesh?sca_ref=12581941.ei5YZbokKYhiz" rel="nofollow sponsored" target="_blank"
+       data-p="Gray Digital Camo Mesh" data-b="bender">
+      <span class="shot"><img src="https://cdn.shopify.com/s/files/1/1083/6722/files/gray-digital-camo-mesh-golf-glove-7496613.png?v=1784438353&amp;width=500" alt="Gray Digital Camo Mesh"
+        loading="lazy" decoding="async" onerror="this.closest('.shot').classList.add('noimg')"></span>
+      <span class="meta"><span class="pname">Gray Digital Camo Mesh</span><span class="pspec">Mesh back, digital camo</span>
+        <span class="px"><span class="was">$20.00</span><span class="now">$17.00</span></span></span></a>
+  </div>
+</section>
+
+<section class="shop">
+  <h2>Two Guys with Balls</h2>
+  <div class="codeline"><span class="code">NOTHINGMORE15</span><span class="codewhat">15% off your first order</span></div>
+  <div class="grid">
+    <a class="prod" href="https://twoguyswithballs.com/used-pro-v1/?balls=12467" rel="nofollow sponsored" target="_blank"
+       data-p="Titleist Pro V1, used" data-b="balls">
+      <span class="shot"><img src="https://b747209.assetcdn.net/2.0/747209/wp-content/uploads/titleist-pro-v1-2025-used-400x400.jpg?lossy=0&amp;strip=1&amp;webp=1" alt="Titleist Pro V1, used"
+        loading="lazy" decoding="async" onerror="this.closest('.shot').classList.add('noimg')"></span>
+      <span class="meta"><span class="pname">Titleist Pro V1, used</span><span class="pspec">Sorted by condition</span>
+        <span class="px"><span class="from">From</span><span class="now">$9.99</span></span></span></a>
+    <a class="prod" href="https://twoguyswithballs.com/callaway-chrome-soft-used-golf-balls/?balls=12467" rel="nofollow sponsored" target="_blank"
+       data-p="Callaway Chrome Soft, used" data-b="balls">
+      <span class="shot"><img src="https://b747209.assetcdn.net/2.0/747209/wp-content/uploads/callaway-chrome-soft-used-400x400.jpg?lossy=0&amp;strip=1&amp;webp=1" alt="Callaway Chrome Soft, used"
+        loading="lazy" decoding="async" onerror="this.closest('.shot').classList.add('noimg')"></span>
+      <span class="meta"><span class="pname">Callaway Chrome Soft, used</span><span class="pspec">Sorted by condition</span>
+        <span class="px"><span class="from">From</span><span class="now">$8.99</span></span></span></a>
+    <a class="prod" href="https://twoguyswithballs.com/used-tp5-tp5x-golf-balls/?balls=12467" rel="nofollow sponsored" target="_blank"
+       data-p="TaylorMade TP5 and TP5x, used" data-b="balls">
+      <span class="shot"><img src="https://b747209.assetcdn.net/2.0/747209/wp-content/uploads/taylormade-tp5-2024-used-400x400.jpg?lossy=0&amp;strip=1&amp;webp=1" alt="TaylorMade TP5 and TP5x, used"
+        loading="lazy" decoding="async" onerror="this.closest('.shot').classList.add('noimg')"></span>
+      <span class="meta"><span class="pname">TaylorMade TP5 and TP5x, used</span><span class="pspec">Sorted by condition</span>
+        <span class="px"><span class="from">From</span><span class="now">$12.99</span></span></span></a>
+  </div>
+</section>
+
+<section class="shop">
+  <h2>New and noteworthy</h2>
+  <div class="codeline"><span class="codewhat">Callaway USA 250, a limited run. No code on these, they are here because they are new.</span></div>
+  <div class="grid">
+    <a class="prod" href="https://prf.hn/click/camref:1100l6um3X/[p_id:1110l49436]/destination:https%3A%2F%2Fwww.callawaygolf.com%2Fgolf-clubs%2Fdrivers%2Fdrivers-2026-quantum-triple-diamond-max-usa-250.html" rel="nofollow sponsored" target="_blank"
+       data-p="USA 250 Quantum Triple Diamond Max" data-b="callaway">
+      <span class="shot"><img src="https://prd-sfcc.callawaygolf.com/dw/image/v2/AADH_PRD/on/demandware.static/-/Sites-CGI-ItemMaster/en_US/v1792388406237/sits/drivers-2026-quantum-triple-diamond-max-usa-250/drivers-2026-quantum-triple-diamond-max-usa-250___1.png?sw=500" alt="USA 250 Quantum Triple Diamond Max"
+        loading="lazy" decoding="async" onerror="this.closest('.shot').classList.add('noimg')"></span>
+      <span class="meta"><span class="pname">USA 250 Quantum Triple Diamond Max</span><span class="pspec">Driver, limited run</span>
+        <span class="px"><span class="from">From</span><span class="now">$699.99</span></span></span></a>
+    <a class="prod" href="https://prf.hn/click/camref:1100l6um3X/[p_id:1110l49436]/destination:https%3A%2F%2Fwww.callawaygolf.com%2Fgolf-clubs%2Fdrivers%2Fdrivers-2026-quantum-max-usa-250.html" rel="nofollow sponsored" target="_blank"
+       data-p="USA 250 Quantum Max" data-b="callaway">
+      <span class="shot"><img src="https://prd-sfcc.callawaygolf.com/dw/image/v2/AADH_PRD/on/demandware.static/-/Sites-CGI-ItemMaster/en_US/v1792388406237/sits/drivers-2026-quantum-max-usa-250/drivers-2026-quantum-max-usa-250___1.png?sw=500" alt="USA 250 Quantum Max"
+        loading="lazy" decoding="async" onerror="this.closest('.shot').classList.add('noimg')"></span>
+      <span class="meta"><span class="pname">USA 250 Quantum Max</span><span class="pspec">Driver, limited run</span>
+        <span class="px"><span class="from">From</span><span class="now">$649.99</span></span></span></a>
+    <a class="prod" href="https://prf.hn/click/camref:1100l6um3X/[p_id:1110l49436]/destination:https%3A%2F%2Fwww.callawaygolf.com%2Fgolf-clubs%2Fwedges%2Fwedges-2026-opus-sp-chrome-usa-250.html" rel="nofollow sponsored" target="_blank"
+       data-p="USA 250 Opus SP Wedges" data-b="callaway">
+      <span class="shot"><img src="https://prd-sfcc.callawaygolf.com/dw/image/v2/AADH_PRD/on/demandware.static/-/Sites-CGI-ItemMaster/en_US/v1792388406237/sits/wedges-2026-opus-sp-chrome-usa-250/wedges-2026-opus-sp-chrome-usa-250___1.png?sw=500" alt="USA 250 Opus SP Wedges"
+        loading="lazy" decoding="async" onerror="this.closest('.shot').classList.add('noimg')"></span>
+      <span class="meta"><span class="pname">USA 250 Opus SP Wedges</span><span class="pspec">Wedge, limited run</span>
+        <span class="px"><span class="now">$219.99</span></span></span></a>
+  </div>
+</section>
 
 <a class="card" href="/travel/">
   <h3>Golf trips and tournament tickets</h3>
@@ -131,13 +233,18 @@ footer a{color:var(--mark)} footer p{margin:0 0 .5rem}
 </div>
 
 <footer>
-  <p>These are affiliate links. We earn a small commission if you buy, at no extra cost to you.</p>
-  <p>Spotted a dead link? Say so in the group and we will pull it.</p>
+  <p>These are affiliate links. You pay the same, we earn a small commission if you buy.</p>
+  <p>Prices are the US ones and were checked on 19 October 2026. Spotted a dead link or a price that has moved? Say so in the group and we will fix it.</p>
   <p><a href="https://golfnothingmore.com/">golfnothingmore.com</a></p>
 </footer>
 </div>
 <script>
 var PAGE='deals';
+document.querySelectorAll('a.prod').forEach(function(a){
+  a.addEventListener('click',function(){
+    try{plausible('Product click',{props:{product:a.dataset.p,partner:a.dataset.b}});}catch(e){}
+  });
+});
 (function(){
   var valid=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
   document.querySelectorAll('.signup-form').forEach(function(f){
