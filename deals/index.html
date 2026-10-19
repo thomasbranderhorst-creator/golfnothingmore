@@ -89,11 +89,14 @@ font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--mark)}
 padding:1.2rem 1.25rem;margin:1.6rem 0 0}
 .signup h3{font-family:var(--display);font-size:1.02rem;font-weight:600;margin:0 0 .35rem}
 .signup p{margin:0 0 .9rem;font-size:.95rem;color:var(--dim)}
-.signup form{display:flex;gap:.5rem;flex-wrap:wrap}
-.signup input[type=email]{flex:1 1 13rem;min-width:0;font:inherit;font-size:1rem;padding:.65rem .8rem;
-border:1px solid var(--rule);border-radius:6px;background:var(--bg);color:var(--fg)}
+.signup form{display:flex;gap:.55rem;flex-wrap:wrap}
+.signup input[type=email],.signup input[type=text]{flex:1 1 13rem;min-width:0;font:inherit;
+font-size:1rem;padding:.65rem .8rem;border:1px solid var(--rule);border-radius:6px;
+background:var(--bg);color:var(--fg)}
+.signup input[type=text]{flex:1 1 100%}
 .signup button{font-family:var(--display);font-weight:600;font-size:.95rem;border:0;border-radius:6px;
 padding:.65rem 1.1rem;background:var(--mark);color:var(--bg);cursor:pointer}
+.signup .fine{margin:.75rem 0 0;font-size:.85rem;color:var(--dim)}
 .signup button:disabled{opacity:.6;cursor:default}
 .confirm{margin:.8rem 0 0;font-size:.95rem;color:var(--mark)}
 .confirm.is-error{color:var(--accent)}
@@ -222,9 +225,12 @@ footer a{color:var(--mark)} footer p{margin:0 0 .5rem}
 </a>
 
 <div class="signup">
-  <h3>Want the deals list in your mail when there is one?</h3>
-  <p>We mail when there is something worth mailing about. That is a few times a year, not a few times a week.</p>
+  <h3>Tell us what to go after</h3>
+  <p>Is there a brand or a piece of kit you want a Golf, nothing more code for? Put it below. We ask the shops we already deal with, and we let you know if we land it.</p>
   <form class="signup-form" action="https://assets.mailerlite.com/jsonp/2623605/forms/198071517381133550/subscribe" method="post" novalidate>
+    <label for="wish-1" style="position:absolute;left:-9999px;">Brand or item you want a code for</label>
+    <input type="text" id="wish-1" name="fields[wish]" maxlength="120"
+      placeholder="Brand or item, for example Ping irons" autocomplete="off">
     <label for="email-1" style="position:absolute;left:-9999px;">Email address</label>
     <input type="email" id="email-1" name="fields[email]" placeholder="you@example.com" autocomplete="email" required>
     <input type="hidden" name="ml-submit" value="1">
@@ -234,8 +240,9 @@ footer a{color:var(--mark)} footer p{margin:0 0 .5rem}
       <label for="hp-1">Leave this field empty</label>
       <input type="text" id="hp-1" name="gnm_hp" tabindex="-1" autocomplete="off">
     </div>
-    <button type="submit">Send me the deals</button>
+    <button type="submit">Send it in</button>
   </form>
+  <p class="fine">Leaving your email puts you on the deals list. We mail a few times a year, not a few times a week.</p>
 </div>
 
 <footer>
@@ -289,8 +296,12 @@ document.querySelectorAll('a.prod').forEach(function(a){
         .then(function(d){
           var fe=d&&d.errors&&d.errors.fields&&d.errors.fields.email;
           if(d&&d.success===false&&fe){btn.disabled=false;btn.textContent=lbl;return say('That email address does not look right.',true);}
-          f.style.display='none'; say('You are on the list.');
-          try{plausible('Signup',{props:{page:PAGE}});}catch(e){}
+          f.style.display='none';
+          var fine=box.querySelector('.fine'); if(fine) fine.remove();
+          var w=f.querySelector('input[name="fields[wish]"]');
+          var wished=!!(w&&w.value.trim());
+          say(wished?'Got it. We will go and ask.':'You are on the list.');
+          try{plausible('Signup',{props:{page:PAGE,wish:wished?'yes':'no'}});}catch(e){}
         })
         .catch(function(){btn.disabled=false;btn.textContent=lbl;say('Something went wrong on our end. Try again in a minute.',true);});
     });
