@@ -124,6 +124,14 @@
 
   .back:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
 
+  ul.go { list-style: none; padding: 0; margin: 0 0 1.6rem; }
+  ul.go li { padding: 0 0 1.1rem; }
+  ul.go li::before { content: none; }
+  ul.go li span { display: block; margin-top: .3rem; font-size: .97rem; color: var(--soft); }
+
+  p a { color: var(--green); text-decoration: none; border-bottom: 1px solid currentColor; }
+  p a:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
+
   footer {
     margin-top: 3.5rem;
     border-top: 1px solid var(--line);
@@ -163,10 +171,16 @@
 
   <p>If an offer is ever not worth your time, reply and tell us. We read every reply, and it is the fastest way to make this better.</p>
 
-  <h2>While you wait</h2>
-  <p>Not everything needs a code. A few of the offers we run are open to anyone, and they are on one page: <a href="/partners/">deals worth knowing about</a>. The members-only codes are the ones that arrive by email.</p>
+  <h2>Start here</h2>
+  <p>You do not have to wait for the first email. Everything that is live right now sits on three pages.</p>
 
-  <p><a class="back" href="/partners/">See what's open to everyone</a></p>
+  <ul class="go">
+    <li><a class="back" href="/member-codes-7k3mq92x/">The member codes</a><span>Every discount code that is live, what each one is good for, and when it ends. This is the page the email points at, so keep it.</span></li>
+    <li><a class="back" href="/deals/">Deals</a><span>What we have found worth posting, including the Amazon lists we put up around Prime Day and Black Friday.</span></li>
+    <li><a class="back" href="/travel/">Golf trips and tournament tickets</a><span>Fourteen tournaments with dates and what a day ticket starts at.</span></li>
+  </ul>
+
+  <p>Not everything needs a code. A few offers are open to anyone and those are on <a href="/partners/">deals worth knowing about</a>.</p>
 
   <footer>
     <a href="https://www.facebook.com/groups/Golf.nothing.more">The Facebook group</a>
