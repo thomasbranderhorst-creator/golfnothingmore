@@ -44,11 +44,20 @@ letter-spacing:-.02em;margin:.4rem 0 0}
 
 .shop{margin-top:2.6rem}
 .shop>h2{font-family:var(--display);font-weight:700;font-size:1.2rem;margin:0;letter-spacing:-.01em}
-.codeline{display:flex;flex-wrap:wrap;align-items:baseline;gap:.5rem .7rem;
-margin:.45rem 0 1rem;padding-bottom:.6rem;border-bottom:2px solid var(--fg)}
-.code{font-family:var(--display);font-weight:700;font-size:.82rem;letter-spacing:.08em;
-background:var(--cream);color:var(--mark);border:1px solid var(--rule);padding:.2rem .5rem}
+.codeline{display:flex;flex-wrap:wrap;align-items:center;gap:.45rem .7rem;
+margin:.45rem 0 1rem;padding-bottom:.7rem;border-bottom:2px solid var(--fg)}
+.codelabel{flex:0 0 100%;font-family:var(--display);font-size:.65rem;font-weight:700;
+letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.1rem}
+button.code{display:inline-flex;align-items:center;gap:.45rem;cursor:pointer;
+font-family:var(--display);font-weight:700;font-size:.86rem;letter-spacing:.08em;
+background:var(--cream);color:var(--mark);border:1px solid var(--mark);border-radius:4px;
+padding:.32rem .6rem;transition:background .12s,color .12s}
+button.code:hover,button.code:focus-visible{background:var(--mark);color:var(--bg);outline:none}
+button.code svg{width:13px;height:13px;flex:0 0 auto}
+button.code.copied{background:var(--mark);color:var(--bg)}
 .codewhat{font-size:.92rem;color:var(--dim)}
+.codedone{font-family:var(--display);font-size:.72rem;font-weight:700;letter-spacing:.08em;
+text-transform:uppercase;color:var(--mark)}
 
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem}
 @media (min-width:34rem){.grid{grid-template-columns:repeat(3,1fr);gap:1.1rem}}
@@ -97,12 +106,12 @@ footer a{color:var(--mark)} footer p{margin:0 0 .5rem}
 <header>
   <p class="eyebrow">Golf, nothing more &middot; Member deals</p>
   <h1>Thirteen things worth buying</h1>
-  <p class="lede">Four shops we deal with directly. The code sits above each row, and the price under each item is what you pay once you have typed it in.</p>
+  <p class="lede">Four shops we deal with directly. Each one set up a discount code for this group, so tap a code to copy it, use it at checkout, and the price under each item is what you pay.</p>
 </header>
 
 <section class="shop">
   <h2>Shot Scope</h2>
-  <div class="codeline"><span class="code">GOLFNOTHINGMORE</span><span class="codewhat">15% off, no minimum</span></div>
+  <div class="codeline"><span class="codelabel">Golf, nothing more discount code</span><button type="button" class="code" data-code="GOLFNOTHINGMORE" aria-label="Copy discount code GOLFNOTHINGMORE">GOLFNOTHINGMORE<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button><span class="codedone" role="status" aria-live="polite"></span><span class="codewhat">15% off, no minimum</span></div>
   <div class="grid">
     <a class="prod" href="https://shotscope.com/us/shop/products/golf-gps-watches/v5/?rfsn=9338707.a94a6d9" rel="nofollow sponsored" target="_blank"
        data-p="V5 GPS Watch" data-b="shotscope">
@@ -127,7 +136,7 @@ footer a{color:var(--mark)} footer p{margin:0 0 .5rem}
 
 <section class="shop">
   <h2>Bender Gloves</h2>
-  <div class="codeline"><span class="code">GNM15</span><span class="codewhat">15% off, any glove</span></div>
+  <div class="codeline"><span class="codelabel">Golf, nothing more discount code</span><button type="button" class="code" data-code="GNM15" aria-label="Copy discount code GNM15">GNM15<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button><span class="codedone" role="status" aria-live="polite"></span><span class="codewhat">15% off, any glove</span></div>
   <div class="grid">
     <a class="prod" href="https://www.bendergloves.com/products/golf-glove-usa-mesh?sca_ref=12581941.ei5YZbokKYhiz" rel="nofollow sponsored" target="_blank"
        data-p="USA American Flag Mesh" data-b="bender">
@@ -158,7 +167,7 @@ footer a{color:var(--mark)} footer p{margin:0 0 .5rem}
 
 <section class="shop">
   <h2>Two Guys with Balls</h2>
-  <div class="codeline"><span class="code">NOTHINGMORE15</span><span class="codewhat">15% off your first order</span></div>
+  <div class="codeline"><span class="codelabel">Golf, nothing more discount code</span><button type="button" class="code" data-code="NOTHINGMORE15" aria-label="Copy discount code NOTHINGMORE15">NOTHINGMORE15<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button><span class="codedone" role="status" aria-live="polite"></span><span class="codewhat">15% off your first order</span></div>
   <div class="grid">
     <a class="prod" href="https://twoguyswithballs.com/used-pro-v1/?balls=12467" rel="nofollow sponsored" target="_blank"
        data-p="Titleist Pro V1, used" data-b="balls">
@@ -237,6 +246,27 @@ footer a{color:var(--mark)} footer p{margin:0 0 .5rem}
 </div>
 <script>
 var PAGE='deals';
+document.querySelectorAll('button.code').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var c=btn.dataset.code, done=btn.parentNode.querySelector('.codedone');
+    function ok(){
+      btn.classList.add('copied');
+      if(done){done.textContent='Copied';}
+      try{plausible('Code copy',{props:{code:c}});}catch(e){}
+      setTimeout(function(){btn.classList.remove('copied');if(done)done.textContent='';},1800);
+    }
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(c).then(ok,fallback);
+    } else { fallback(); }
+    function fallback(){
+      var t=document.createElement('textarea');t.value=c;
+      t.setAttribute('readonly','');t.style.cssText='position:absolute;left:-9999px';
+      document.body.appendChild(t);t.select();
+      try{document.execCommand('copy');ok();}catch(e){if(done)done.textContent='Copy it by hand';}
+      document.body.removeChild(t);
+    }
+  });
+});
 document.querySelectorAll('a.prod').forEach(function(a){
   a.addEventListener('click',function(){
     try{plausible('Product click',{props:{product:a.dataset.p,partner:a.dataset.b}});}catch(e){}
