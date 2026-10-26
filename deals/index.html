@@ -296,7 +296,7 @@ document.querySelectorAll('button.code').forEach(function(btn){
     function ok(){
       btn.classList.add('copied');
       if(done){done.textContent='Copied';}
-      try{plausible('Code copy',{props:{code:c}});}catch(e){}
+      try{plausible('Copy '+c);}catch(e){}
       setTimeout(function(){btn.classList.remove('copied');if(done)done.textContent='';},1800);
     }
     if(navigator.clipboard&&navigator.clipboard.writeText){
@@ -313,7 +313,7 @@ document.querySelectorAll('button.code').forEach(function(btn){
 });
 document.querySelectorAll('a.prod').forEach(function(a){
   a.addEventListener('click',function(){
-    try{plausible('Product click',{props:{product:a.dataset.p,partner:a.dataset.b}});}catch(e){}
+    try{plausible('Click '+a.dataset.b);}catch(e){}
   });
 });
 (function(){
@@ -338,7 +338,7 @@ document.querySelectorAll('a.prod').forEach(function(a){
           var w=f.querySelector('input[name="fields[wish]"]');
           var wished=!!(w&&w.value.trim());
           say(wished?'Got it. We will go and ask.':'You are on the list.');
-          try{plausible('Signup',{props:{page:PAGE,wish:wished?'yes':'no'}});}catch(e){}
+          try{plausible(wished?'Signup wish':'Signup');}catch(e){}
         })
         .catch(function(){btn.disabled=false;btn.textContent=lbl;say('Something went wrong on our end. Try again in a minute.',true);});
     });

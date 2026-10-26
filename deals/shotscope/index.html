@@ -81,6 +81,8 @@ letter-spacing:-.005em}
 .card{display:block;text-decoration:none;color:inherit;background:var(--panel);
 border:1px solid var(--rule);border-left:3px solid var(--mark);padding:1.1rem 1.25rem;margin:2rem 0 0}
 .card:hover,.card:focus-visible{outline:none;border-left-color:var(--accent)}
+.card.now{border-left-color:var(--accent);background:var(--warn)}
+.card.now:hover,.card.now:focus-visible{border-left-color:var(--mark)}
 .card h3{font-family:var(--display);font-size:1.1rem;font-weight:700;margin:0}
 .card p{margin:.35rem 0 0;font-size:.95rem;color:var(--dim)}
 .card .cta{display:inline-block;margin-top:.7rem;font-family:var(--display);font-size:.75rem;
@@ -137,6 +139,19 @@ footer a{color:var(--mark)} footer p{margin:0 0 .5rem}
   </div>
 </section>
 
+<a class="card now" id="cgpo" data-until="2026-10-27T06:00:00Z"
+   href="/go/callaway-preowned/?src=deals" rel="nofollow sponsored" target="_blank">
+  <h3>Callaway Pre-Owned, on sale until Monday</h3>
+  <p>Up to 35% off clubs, and up to 55% off the Elyte family. No code needed, the prices on their site are already down. Ends 26 October. Clubs only, so no balls, bags or complete sets.</p>
+  <span class="cta">See the sale &rarr;</span>
+</a>
+
+<a class="card" href="https://www.facebook.com/groups/1146403484724038" target="_blank" rel="noopener">
+  <h3>Golf, nothing more | deals</h3>
+  <p>Our private group. Every live code sits in one pinned post at the top, and that is where new ones show up.</p>
+  <span class="cta">Join the group &rarr;</span>
+</a>
+
 <a class="card" href="/deals/">
   <h3>The rest of the deals</h3>
   <p>Three more shops with their own codes, plus tournament tickets.</p>
@@ -165,19 +180,23 @@ footer a{color:var(--mark)} footer p{margin:0 0 .5rem}
 </div>
 
 <footer>
-  <p>Prices are the US ones and were checked on 19 October 2026. Spotted a dead link or a price that has moved? Say so in the group and we will fix it.</p>
-  <p><a href="https://golfnothingmore.com/">golfnothingmore.com</a></p>
+  <p>Prices are the US ones and were checked on 23 October 2026. Spotted a dead link or a price that has moved? Say so in the group and we will fix it.</p>
+  <p><a href="/articles/">Articles</a> &middot; <a href="https://golfnothingmore.com/">golfnothingmore.com</a></p>
 </footer>
 </div>
 <script>
 var PAGE='deals-shotscope';
+(function(){
+  var c=document.getElementById('cgpo');
+  if(c && new Date() >= new Date(c.dataset.until)) c.remove();
+})();
 document.querySelectorAll('button.code').forEach(function(btn){
   btn.addEventListener('click',function(){
     var c=btn.dataset.code, done=btn.parentNode.querySelector('.codedone');
     function ok(){
       btn.classList.add('copied');
       if(done){done.textContent='Copied';}
-      try{plausible('Code copy',{props:{code:c}});}catch(e){}
+      try{plausible('Copy '+c);}catch(e){}
       setTimeout(function(){btn.classList.remove('copied');if(done)done.textContent='';},1800);
     }
     if(navigator.clipboard&&navigator.clipboard.writeText){
@@ -194,7 +213,7 @@ document.querySelectorAll('button.code').forEach(function(btn){
 });
 document.querySelectorAll('a.prod').forEach(function(a){
   a.addEventListener('click',function(){
-    try{plausible('Product click',{props:{product:a.dataset.p,partner:a.dataset.b}});}catch(e){}
+    try{plausible('Click '+a.dataset.b);}catch(e){}
   });
 });
 (function(){
@@ -219,7 +238,7 @@ document.querySelectorAll('a.prod').forEach(function(a){
           var w=f.querySelector('input[name="fields[wish]"]');
           var wished=!!(w&&w.value.trim());
           say(wished?'Got it. We will go and ask.':'You are on the list.');
-          try{plausible('Signup',{props:{page:PAGE,wish:wished?'yes':'no'}});}catch(e){}
+          try{plausible(wished?'Signup wish':'Signup');}catch(e){}
         })
         .catch(function(){btn.disabled=false;btn.textContent=lbl;say('Something went wrong on our end. Try again in a minute.',true);});
     });
