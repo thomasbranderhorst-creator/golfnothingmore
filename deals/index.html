@@ -78,6 +78,18 @@ letter-spacing:-.005em}
 .from{font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--dim)}
 .now{font-weight:700;font-size:1rem;color:var(--mark)}
 
+.amzcat{font-family:var(--display);font-size:.68rem;font-weight:700;letter-spacing:.14em;
+text-transform:uppercase;color:var(--accent);margin:1.5rem 0 .35rem}
+.amzcat.first{margin-top:0}
+.amznote{font-size:.85rem;color:var(--dim);margin:0 0 .4rem}
+ul.amzlist{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+ul.amzlist li{border-bottom:1px solid var(--rule)}
+a.amz{display:flex;align-items:baseline;justify-content:space-between;gap:.9rem;
+text-decoration:none;color:inherit;padding:.62rem .3rem}
+a.amz:hover,a.amz:focus-visible{outline:none;background:var(--panel)}
+a.amz .an{font-size:.92rem;line-height:1.3}
+a.amz .px{margin:0;padding:0;flex:0 0 auto}
+
 .card{display:block;text-decoration:none;color:inherit;background:var(--panel);
 border:1px solid var(--rule);border-left:3px solid var(--mark);padding:1.1rem 1.25rem;margin:2rem 0 0}
 .card:hover,.card:focus-visible{outline:none;border-left-color:var(--accent)}
@@ -111,8 +123,106 @@ footer a{color:var(--mark)} footer p{margin:0 0 .5rem}
 <header>
   <p class="eyebrow">Golf, nothing more</p>
   <h1>Deals</h1>
-  <p class="lede">Tap a code, use it at checkout, and the price shown is what you pay.</p>
+  <p class="lede">This week's Amazon deals are at the top and need no code. Below them are our own codes. Tap one, use it at checkout, and the price shown is what you pay.</p>
 </header>
+
+<section class="shop">
+  <h2>This week on Amazon</h2>
+  <div class="codeline"><span class="codewhat">No code needed, these are Amazon&#x27;s own sale prices and they move fast. The prices below are the US ones. Outside the US Amazon sends you to your own store, where the price will be different.</span></div>
+  <h3 class="amzcat first">Top deals</h3>
+  <ul class="amzlist">
+    <li><a class="amz" href="https://link.amazon/B0hEzbMD5" rel="nofollow sponsored" target="_blank"
+      ><span class="an">Performance Golf 357 Fairway Hybrid</span><span class="px"><span class="was">$300</span><span class="now">$249</span></span></a></li>
+    <li><a class="amz" href="https://link.amazon/B09FPBWQL" rel="nofollow sponsored" target="_blank"
+      ><span class="an">Titleist Tour Soft Prior Generation Golf Balls</span><span class="px"><span class="was">$40</span><span class="now">$35</span></span></a></li>
+    <li><a class="amz" href="https://link.amazon/B0ep7AqC4" rel="nofollow sponsored" target="_blank"
+      ><span class="an">PUMA Men&#x27;s Camino 2.0 Pant</span><span class="px"><span class="was">$70</span><span class="now">$38</span></span></a></li>
+    <li><a class="amz" href="https://link.amazon/B0aVmKvKk" rel="nofollow sponsored" target="_blank"
+      ><span class="an">Golf Swing and Grip Trainer with Arm Band</span><span class="px"><span class="was">$35</span><span class="now">$19</span></span></a></li>
+    <li><a class="amz" href="https://link.amazon/B05CA8pKb" rel="nofollow sponsored" target="_blank"
+      ><span class="an">Findway Golf Stand Bag</span><span class="px"><span class="was">$57</span><span class="now">$44</span></span></a></li>
+  </ul>
+  <h3 class="amzcat">Clubs</h3>
+  <ul class="amzlist">
+    <li><a class="amz" href="https://link.amazon/B0cdNXbUW" rel="nofollow sponsored" target="_blank"
+      ><span class="an">Wilson DYNAPWR Men&#x27;s Hybrid Golf Clubs</span><span class="px"><span class="was">$250</span><span class="now">$150</span></span></a></li>
+    <li><a class="amz" href="https://link.amazon/B03Uxlnqu" rel="nofollow sponsored" target="_blank"
+      ><span class="an">Mizuno Pro T3 Wedges</span><span class="px"><span class="was">$180</span><span class="now">$130</span></span></a></li>
+    <li><a class="amz" href="https://link.amazon/B05PYINKt" rel="nofollow sponsored" target="_blank"
+      ><span class="an">Srixon ZXi RKT Men&#x27;s LS Driver</span><span class="px"><span class="was">$650</span><span class="now">$553</span></span></a></li>
+    <li><a class="amz" href="https://link.amazon/B0hWPjkUN" rel="nofollow sponsored" target="_blank"
+      ><span class="an">TaylorMade 2025 P790 Iron Set</span><span class="px"><span class="was">$1,340</span><span class="now">$1,179</span></span></a></li>
+  </ul>
+  <h3 class="amzcat">Balls</h3>
+  <ul class="amzlist">
+    <li><a class="amz" href="https://link.amazon/B0gy2hmpo" rel="nofollow sponsored" target="_blank"
+      ><span class="an">Srixon Q-Star Tour Divide Golf Balls</span><span class="px"><span class="was">$40</span><span class="now">$28</span></span></a></li>
+    <li><a class="amz" href="https://link.amazon/B04PZtiSg" rel="nofollow sponsored" target="_blank"
+      ><span class="an">TaylorMade Tour Response Golf Balls</span><span class="px"><span class="was">$46</span><span class="now">$40</span></span></a></li>
+    <li><a class="amz" href="https://link.amazon/B0eBq1f8P" rel="nofollow sponsored" target="_blank"
+      ><span class="an">Callaway Chrome Soft 2026 Golf Balls</span><span class="px"><span class="was">$60</span><span class="now">$50</span></span></a></li>
+    <li><a class="amz" href="https://link.amazon/B02N1yeRb" rel="nofollow sponsored" target="_blank"
+      ><span class="an">48 Used Golf Balls, Recycled Premium Brands Assorted Mix</span><span class="px"><span class="was">$49</span><span class="now">$40</span></span></a></li>
+    <li><a class="amz" href="https://link.amazon/B0cIL4J4Q" rel="nofollow sponsored" target="_blank"
+      ><span class="an">Callaway Supersoft Golf Balls</span><span class="px"><span class="from">On sale</span></span></a></li>
+  </ul>
+  <h3 class="amzcat">Rangefinders</h3>
+  <ul class="amzlist">
+    <li><a class="amz" href="https://link.amazon/B0hXspcqB" rel="nofollow sponsored" target="_blank"
+      ><span class="an">QuickRiseX 1700 Yard Golf Rangefinder with Slope</span><span class="px"><span class="was">$140</span><span class="now">$90</span></span></a></li>
+    <li><a class="amz" href="https://link.amazon/B0adlCLhH" rel="nofollow sponsored" target="_blank"
+      ><span class="an">Flagfront 1300 Yard Golf Rangefinder with Slope Switch</span><span class="px"><span class="was">$90</span><span class="now">$60</span></span></a></li>
+    <li><a class="amz" href="https://link.amazon/B0jej2ou4" rel="nofollow sponsored" target="_blank"
+      ><span class="an">Hoorola 1200 Yard Golf Rangefinder with Slope</span><span class="px"><span class="was">$110</span><span class="now">$60</span></span></a></li>
+  </ul>
+  <h3 class="amzcat">Shoes</h3>
+  <p class="amznote">Other sizes and colours can cost more.</p>
+  <ul class="amzlist">
+    <li><a class="amz" href="https://link.amazon/B0cEHQzS3" rel="nofollow sponsored" target="_blank"
+      ><span class="an">FootJoy Qualifier Golf Shoes</span><span class="px"><span class="was">$140</span><span class="now">$78</span></span></a></li>
+    <li><a class="amz" href="https://link.amazon/B044hH7d8" rel="nofollow sponsored" target="_blank"
+      ><span class="an">adidas Men&#x27;s Tour360 24 Golf Shoes</span><span class="px"><span class="was">$200</span><span class="now">$120</span></span></a></li>
+    <li><a class="amz" href="https://link.amazon/B0atxiS3n" rel="nofollow sponsored" target="_blank"
+      ><span class="an">adidas Men&#x27;s S2G 26 Textile Golf Shoes</span><span class="px"><span class="was">$100</span><span class="now">$60</span></span></a></li>
+  </ul>
+  <h3 class="amzcat">Apparel</h3>
+  <ul class="amzlist">
+    <li><a class="amz" href="https://link.amazon/B00N4YxJl" rel="nofollow sponsored" target="_blank"
+      ><span class="an">Obla Men&#x27;s Long Sleeve Golf Polo</span><span class="px"><span class="was">$30</span><span class="now">$20</span></span></a></li>
+    <li><a class="amz" href="https://link.amazon/B0hZbpub2" rel="nofollow sponsored" target="_blank"
+      ><span class="an">adidas Men&#x27;s Core Lightweight 1/2 Zip Pullover</span><span class="px"><span class="was">$70</span><span class="now">$42</span></span></a></li>
+    <li><a class="amz" href="https://link.amazon/B02dWfe74" rel="nofollow sponsored" target="_blank"
+      ><span class="an">COOFANDY Men&#x27;s Quarter Zip Pullover Sweatshirt</span><span class="px"><span class="was">$40</span><span class="now">$24</span></span></a></li>
+    <li><a class="amz" href="https://link.amazon/B0dPehjzI" rel="nofollow sponsored" target="_blank"
+      ><span class="an">Pudolla Men&#x27;s Fleece Lined Golf Pants</span><span class="px"><span class="was">$48</span><span class="now">$40</span></span></a></li>
+    <li><a class="amz" href="https://link.amazon/B0aJOZFRF" rel="nofollow sponsored" target="_blank"
+      ><span class="an">Libin Men&#x27;s Golf Pants</span><span class="px"><span class="was">$35</span><span class="now">$24</span></span></a></li>
+    <li><a class="amz" href="https://link.amazon/B0g8tXyYj" rel="nofollow sponsored" target="_blank"
+      ><span class="an">G Gradual Women&#x27;s Fleece Lined Golf Pants</span><span class="px"><span class="was">$46</span><span class="now">$37</span></span></a></li>
+    <li><a class="amz" href="https://link.amazon/B00J9A4Xi" rel="nofollow sponsored" target="_blank"
+      ><span class="an">CHAOREN Men&#x27;s Tactical Belt</span><span class="px"><span class="was">$20</span><span class="now">$10</span></span></a></li>
+  </ul>
+  <h3 class="amzcat">Simulators and launch monitors</h3>
+  <ul class="amzlist">
+    <li><a class="amz" href="https://link.amazon/B07OT0etE" rel="nofollow sponsored" target="_blank"
+      ><span class="an">Uneekor Eye MINI Launch Monitor and Simulator</span><span class="px"><span class="was">$4,500</span><span class="now">$2,999</span></span></a></li>
+    <li><a class="amz" href="https://link.amazon/B0hWDfbWL" rel="nofollow sponsored" target="_blank"
+      ><span class="an">Rapsodo Mobile Launch Monitor Golf Simulator</span><span class="px"><span class="was">$200</span><span class="now">$129</span></span></a></li>
+    <li><a class="amz" href="https://link.amazon/B08pMaCGl" rel="nofollow sponsored" target="_blank"
+      ><span class="an">Golf Chipping Game Set</span><span class="px"><span class="was">$130</span><span class="now">$70</span></span></a></li>
+  </ul>
+  <h3 class="amzcat">Everything else</h3>
+  <ul class="amzlist">
+    <li><a class="amz" href="https://link.amazon/B02IRbqk1" rel="nofollow sponsored" target="_blank"
+      ><span class="an">Jiskan Pro Golf Care Kit System</span><span class="px"><span class="was">$30</span><span class="now">$21</span></span></a></li>
+    <li><a class="amz" href="https://link.amazon/B01JrPn1m" rel="nofollow sponsored" target="_blank"
+      ><span class="an">Palladium 10 Ft Indoor and Outdoor Golf Putting Mat</span><span class="px"><span class="was">$120</span><span class="now">$70</span></span></a></li>
+    <li><a class="amz" href="https://link.amazon/B0b6t3m3P" rel="nofollow sponsored" target="_blank"
+      ><span class="an">Red Rooster Premium Golf Glove</span><span class="px"><span class="was">$35</span><span class="now">$28</span></span></a></li>
+    <li><a class="amz" href="https://link.amazon/B047RHLbd" rel="nofollow sponsored" target="_blank"
+      ><span class="an">Newfly 3-Wheel Golf Push Cart, one-button fold</span><span class="px"><span class="was">$300</span><span class="now">$240</span></span></a></li>
+  </ul>
+</section>
 
 <section class="shop">
   <h2>Bender Gloves</h2>
@@ -280,7 +390,7 @@ footer a{color:var(--mark)} footer p{margin:0 0 .5rem}
 </div>
 
 <footer>
-  <p>Prices are the US ones and were checked on 23 October 2026. Spotted a dead link or a price that has moved? Say so in the group and we will fix it.</p>
+  <p>Prices are the US ones and were checked on 26 October 2026. Spotted a dead link or a price that has moved? Say so in the group and we will fix it.</p>
   <p><a href="/articles/">Articles</a> &middot; <a href="https://golfnothingmore.com/">golfnothingmore.com</a></p>
 </footer>
 </div>
@@ -314,6 +424,11 @@ document.querySelectorAll('button.code').forEach(function(btn){
 document.querySelectorAll('a.prod').forEach(function(a){
   a.addEventListener('click',function(){
     try{plausible('Click '+a.dataset.b);}catch(e){}
+  });
+});
+document.querySelectorAll('a.amz').forEach(function(a){
+  a.addEventListener('click',function(){
+    try{plausible('Click amazon');}catch(e){}
   });
 });
 (function(){
