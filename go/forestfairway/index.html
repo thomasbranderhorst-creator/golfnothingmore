@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer-when-downgrade">
+<title>Going to Forest & Fairway…</title>
+<link rel="canonical" href="https://specials.forestandfairway.com">
+<noscript><meta http-equiv="refresh" content="0; url=https://specials.forestandfairway.com"></noscript>
+<style>body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,sans-serif;background:#EDEFEA;color:#101A15;margin:0;display:grid;place-items:center;min-height:100vh;padding:2rem;text-align:center}
+a{color:#14512F}p{max-width:26rem;line-height:1.6}
+a#go{display:block;width:100%;max-width:22rem;margin:1.6rem auto 0;box-sizing:border-box;
+background:#14512F;color:#F2EAD5;text-decoration:none;text-align:center;
+padding:1.25rem 1.5rem;border-radius:999px;font-weight:700;font-size:1.35rem;line-height:1.2}
+a#go:focus-visible{outline:3px solid #B8651A;outline-offset:3px}</style>
+<script defer src="https://plausible.io/js/pa-jfuoECYdUyseGoZYZfrYs.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+</head>
+<body>
+<p>Taking you to Forest & Fairway…<a id="go" href="https://specials.forestandfairway.com">Open it now</a></p>
+<script>
+(function(){
+  var URL_ = "https://specials.forestandfairway.com";
+  var BRAND = "forestfairway";
+  var src = "direct";
+  try {
+    var m = location.search.match(/[?&]src=([A-Za-z0-9_-]{1,32})/);
+    if (m) src = m[1].toLowerCase();
+  } catch (e) {}
+  var went = false;
+  function go(){ if (went) return; went = true; location.replace(URL_); }
+  setTimeout(go, 250);
+  try {
+    plausible('Go', { props: { brand: BRAND, page: 'go', src: src }, callback: go });
+  } catch (e) { go(); }
+
+  var sent = {};
+  function flag(step){
+    if (sent[step]) return; sent[step] = true;
+    try { plausible('Go fallback', { props: { brand: BRAND, src: src, step: step } }); } catch (e) {}
+  }
+  var left = false;
+  function away(){ left = true; }
+  document.addEventListener('visibilitychange', function(){ if (document.hidden) away(); });
+  window.addEventListener('pagehide', away);
+  setTimeout(function(){
+    if (!left && document.visibilityState !== 'hidden') flag('stuck');
+  }, 2500);
+  var btn = document.getElementById('go');
+  if (btn) {
+    btn.addEventListener('pointerdown', function(){ flag('tap'); });
+    btn.addEventListener('click', function(){ flag('tap'); });
+  }
+})();
+</script>
+</body>
+</html>
