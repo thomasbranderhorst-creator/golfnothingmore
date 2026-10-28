@@ -79,6 +79,9 @@ font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--mark)}
 a.go{display:inline-block;font-family:var(--display);font-weight:700;font-size:1.05rem;
 text-decoration:none;background:var(--mark);color:var(--paper);padding:.8rem 1.3rem;
 border-radius:999px;margin:.2rem 0 .5rem}
+a.go.alt{background:transparent;color:var(--mark);box-shadow:inset 0 0 0 2px var(--mark)}
+.asklines{display:flex;flex-wrap:wrap;gap:.5rem .7rem;margin:0}
+.askfine{font-size:.88rem;color:var(--dim);margin:.5rem 0 0}
 .askline{margin:1.6rem 0 .6rem}
 .signup{background:var(--panel);border:1px solid var(--rule);border-left:3px solid var(--mark);
 padding:1.2rem 1.25rem;margin:2rem 0 0}
@@ -115,7 +118,11 @@ footer p{margin:0 0 .5rem}
   </a>
 
   <p class="askline">Want to ask something now? Hanan at FanTrip knows what is available, what it costs and what happens if your plans change.</p>
-  <p><a class="go" href="/go/fantrip/?src=travel" rel="nofollow">Message Hanan on WhatsApp &rarr;</a></p>
+  <p class="asklines">
+    <a class="go" href="/go/fantrip/?src=travel" rel="nofollow">Message Hanan on WhatsApp &rarr;</a>
+    <a class="go alt" id="askmail" href="mailto:partners@golfnothingmore.com?subject=Golf%20trip%20question&amp;body=Which%20tournament%20or%20trip%2C%20how%20many%20of%20you%2C%20and%20roughly%20when%3F">Not on WhatsApp? Email us &rarr;</a>
+  </p>
+  <p class="askfine">Mail lands with us first and we put you straight through to Hanan. WhatsApp goes to him directly.</p>
 </header>
 
 <div class="signup">
@@ -138,7 +145,7 @@ footer p{margin:0 0 .5rem}
 <footer>
   <p>FanTrip pays us to run this. It costs you nothing extra, and if the honest answer to your question is that a trip is not worth it, we would rather you heard that too.</p>
   <p>Dates and prices checked 16 October 2026. Tournaments move and prices change, so check before you book.</p>
-  <p><a href="/deals/">Amazon golf deals</a> &middot; <a href="https://golfnothingmore.com/">golfnothingmore.com</a></p>
+  <p><a href="/deals/">Member deals</a> &middot; <a href="https://golfnothingmore.com/">golfnothingmore.com</a></p>
 </footer>
 </div>
 <script>
@@ -166,6 +173,8 @@ var PAGE='travel';
         .catch(function(){btn.disabled=false;btn.textContent=lbl;say('Something went wrong on our end. Try again in a minute.',true);});
     });
   });
+  var am=document.getElementById('askmail');
+  if(am){am.addEventListener('click',function(){try{plausible('Travel email');}catch(e){}});}
   document.querySelectorAll('a.trip').forEach(function(a){
     a.addEventListener('click',function(){
       try{plausible('Trip click',{props:{trip:a.getAttribute('data-trip'),kind:a.classList.contains('ask')?'ask':'tickets'}});}catch(e){}
