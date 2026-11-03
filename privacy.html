@@ -120,6 +120,53 @@
 </script>
 </head>
 <body>
+<!-- gnm-nav -->
+<style>
+.gnmnav{position:sticky;top:0;z-index:60;background:var(--bg,var(--paper,#F9F2E9));border-bottom:1px solid var(--rule,var(--line,#E3D9C6))}
+.gnmnav .in{max-width:1080px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:18px}
+.gnmnav a{color:var(--fg,var(--ink,#101A15));text-decoration:none}
+.gnmnav .brand{font:700 15px/1.2 "Archivo",system-ui,sans-serif;letter-spacing:.02em;white-space:nowrap;margin-right:auto}
+.gnmnav .links{display:flex;gap:20px;align-items:center}
+.gnmnav .links a{font:600 14px/1 "Archivo",system-ui,sans-serif;padding:6px 0;border-bottom:2px solid transparent}
+.gnmnav .links a:hover{border-bottom-color:var(--mark,var(--green,#14512F))}
+.gnmnav .links a[aria-current="page"]{border-bottom-color:var(--mark,var(--green,#14512F))}
+.gnmnav .burger{display:none;background:none;border:0;cursor:pointer;padding:8px;margin:-8px -8px -8px 0}
+.gnmnav .burger span{display:block;width:22px;height:2px;margin:4px 0;background:var(--fg,var(--ink,#101A15))}
+@media (max-width:760px){
+  .gnmnav .burger{display:block}
+  .gnmnav .links{position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:flex-start;gap:0;
+    background:var(--panel,var(--raise,#FDFAF4));border-bottom:1px solid var(--rule,var(--line,#E3D9C6));display:none}
+  .gnmnav.open .links{display:flex}
+  .gnmnav .links a{width:100%;padding:14px 20px;border-bottom:1px solid var(--rule,var(--line,#E3D9C6))}
+  .gnmnav .links a:hover,.gnmnav .links a[aria-current="page"]{border-bottom-color:var(--rule,var(--line,#E3D9C6));color:var(--mark,var(--green,#14512F))}
+}
+</style>
+<nav class="gnmnav" id="gnmnav">
+  <div class="in">
+    <a class="brand" href="/">Golf, nothing more.</a>
+    <button class="burger" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <div class="links">
+      <a href="/deals/">Member deals</a>
+      <a href="/partners/">Open to everyone</a>
+      <a href="/articles/">Articles</a>
+      <a href="/travel/">Travel</a>
+      <a href="/media-kit/">For brands</a>
+      <a href="https://www.facebook.com/groups/Golf.nothing.more">The group</a>
+    </div>
+  </div>
+</nav>
+<script>
+(function(){var n=document.getElementById('gnmnav');if(!n)return;
+var b=n.querySelector('.burger');
+b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+var p=location.pathname.replace(/index\.html$/,'');
+n.querySelectorAll('.links a').forEach(function(a){
+  var h=a.getAttribute('href');
+  if(h&&h.charAt(0)==='/'&&h!=='/'&&p.indexOf(h)===0)a.setAttribute('aria-current','page');
+});})();
+</script>
+<!-- /gnm-nav -->
+
 
 <div class="wrap">
 
