@@ -119,6 +119,67 @@ n.querySelectorAll('.links a').forEach(function(a){
   <span class="cta">Read it &rarr;</span>
 </a>
 
+<!-- gnm-signup -->
+<style>
+.gnmsignup{background:var(--panel);border:1px solid var(--rule);border-left:3px solid var(--mark);
+padding:1.3rem 1.35rem;margin:2.4rem 0 0}
+.gnmsignup h3{font-family:var(--display);font-size:1.08rem;font-weight:700;margin:0 0 .4rem}
+.gnmsignup p{margin:0 0 1rem;font-size:.97rem;color:var(--dim)}
+.gnmsignup form{display:flex;gap:.6rem;flex-wrap:wrap}
+.gnmsignup input[type=email]{flex:1 1 15rem;min-width:0;font:inherit;font-size:1rem;padding:.7rem .8rem;
+background:var(--bg);color:var(--fg);border:1px solid var(--rule);border-radius:0}
+.gnmsignup button{font-family:var(--display);font-weight:700;font-size:.95rem;padding:.7rem 1.1rem;
+background:var(--mark);color:var(--bg);border:0;cursor:pointer}
+.gnmsignup button:disabled{opacity:.6;cursor:default}
+.gnmsignup .fine{margin:.7rem 0 0;font-size:.82rem}
+.gnmsignup .confirm{margin:.8rem 0 0;font-size:.95rem;color:var(--mark)}
+.gnmsignup .confirm.is-error{color:var(--accent)}
+</style>
+<div class="gnmsignup">
+  <h3>Member codes in your inbox</h3>
+  <p>Golf brands give members of Golf, nothing more a discount the public can't get. Leave your email and every code we have arrives straight away.</p>
+  <form id="gnmsignupform" action="https://assets.mailerlite.com/jsonp/2623605/forms/198071517381133550/subscribe" method="post" novalidate>
+    <label for="gnmemail" style="position:absolute;left:-9999px;">Email address</label>
+    <input type="email" id="gnmemail" name="fields[email]" placeholder="you@example.com" autocomplete="email" required>
+    <input type="hidden" name="ml-submit" value="1">
+    <input type="hidden" name="anticsrf" value="true">
+    <input type="hidden" name="fields[signup_source]" value="articles">
+    <div aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;overflow:hidden;">
+      <label for="gnmhp">Leave this field empty</label>
+      <input type="text" id="gnmhp" name="gnm_hp" tabindex="-1" autocomplete="off">
+    </div>
+    <button type="submit" id="gnmsignupbtn">Send me the deals</button>
+  </form>
+  <p class="fine">Some offers earn us a commission. Unsubscribe any time.</p>
+</div>
+<script>
+(function(){
+  var form=document.getElementById('gnmsignupform'); if(!form) return;
+  var input=document.getElementById('gnmemail'), btn=document.getElementById('gnmsignupbtn');
+  var label=btn?btn.textContent:'', geldig=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  function say(tekst,fout){
+    var oud=form.parentNode.querySelector('.confirm'); if(oud) oud.parentNode.removeChild(oud);
+    var p=document.createElement('p'); p.className='confirm'+(fout?' is-error':'');
+    p.setAttribute('role','status'); p.textContent=tekst; form.parentNode.appendChild(p);
+  }
+  form.addEventListener('submit',function(e){
+    if(!window.fetch) return;
+    e.preventDefault();
+    var trap=document.getElementById('gnmhp');
+    if(trap&&trap.value){form.style.display='none';say('Almost there — check your inbox and click the confirmation link.');return;}
+    if(!geldig.test(input.value.trim())){say('That address does not look right. Have another go.',true);input.focus();return;}
+    if(btn){btn.disabled=true;btn.textContent='Sending…';}
+    fetch(form.action,{method:'POST',body:new FormData(form)})
+      .then(function(r){return r.json().catch(function(){return null;});})
+      .then(function(){form.style.display='none';
+        say('Almost there — check your inbox and click the confirmation link. That is the last thing we will ask of you.');})
+      .catch(function(){say('Something went wrong on our end. Try again in a minute, or email hello@golfnothingmore.com.',true);})
+      .then(function(){if(btn){btn.disabled=false;btn.textContent=label;}});
+  });
+})();
+</script>
+<!-- /gnm-signup -->
+
 <footer>
   <p><a href="/articles/">All articles</a> &middot; <a href="https://golfnothingmore.com/">golfnothingmore.com</a></p>
   <p>Golf, nothing more. Written for the 249,000 golfers in our Facebook group.</p>
