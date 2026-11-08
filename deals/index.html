@@ -174,6 +174,16 @@ n.querySelectorAll('.links a').forEach(function(a){
   <p class="lede">Our own discount codes at the shops we deal with. Tap a code, use it at checkout, and the price shown is what you pay.</p>
 </header>
 
+<section class="shop" data-until="2026-11-30T05:00:00Z">
+  <h2>Steadfast Golf</h2>
+  <div class="codeline"><span class="codelabel">Black Friday, ends 30 November</span><button type="button" class="code" data-code="BFCM30" aria-label="Copy discount code BFCM30">BFCM30<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button><span class="codedone" role="status" aria-live="polite"></span><span class="codewhat">30% off everything they sell. Shafts for drivers, mini drivers and fairway woods, built in North America. A Jupiter Lite driver shaft is $199.95 before the code and the bundles go up from there. They ship within North America only.</span></div>
+  <a class="card now" href="/go/steadfast/?src=deals" rel="nofollow sponsored" target="_blank">
+    <h3>Buying a shaft you have never hit</h3>
+    <p>That is the part that stops most people, so it is worth knowing what sits behind it. You get 100 days to send it back for your money, and a lifetime guarantee that replaces the shaft if it ever breaks. If you have been curious about a lighter shaft but not curious enough to pay full price to find out, this is the month.</p>
+    <span class="cta">See the shafts &rarr;</span>
+  </a>
+</section>
+
 <section class="shop">
   <h2>Bender Gloves</h2>
   <div class="codeline"><span class="codelabel">Golf, nothing more discount code</span><button type="button" class="code" data-code="GNM15" aria-label="Copy discount code GNM15">GNM15<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button><span class="codedone" role="status" aria-live="polite"></span><span class="codewhat">15% off, any glove</span></div>
@@ -347,8 +357,10 @@ n.querySelectorAll('.links a').forEach(function(a){
 <script>
 var PAGE='deals';
 (function(){
-  var c=document.getElementById('cgpo');
-  if(c && new Date() >= new Date(c.dataset.until)) c.remove();
+  var now=new Date();
+  document.querySelectorAll('[data-until]').forEach(function(c){
+    if(now >= new Date(c.dataset.until)) c.remove();
+  });
 })();
 document.querySelectorAll('button.code').forEach(function(btn){
   btn.addEventListener('click',function(){
