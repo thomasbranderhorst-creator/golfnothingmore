@@ -128,7 +128,7 @@ Here's what you signed up for, so there are no surprises later:
 
 We're two people: Chris, who started the Golf, nothing more group
 years ago, and Thomas, who now runs it day to day. The group is
-246,000 golfers and it stays exactly what it was. This list is the
+250,000 golfers and it stays exactly what it was. This list is the
 part where we go and find things worth buying.
 
 One question, and a real answer helps us more than you'd think:

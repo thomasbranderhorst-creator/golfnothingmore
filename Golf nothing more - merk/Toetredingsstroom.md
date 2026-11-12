@@ -119,7 +119,7 @@ Admin Assist → *Publiceer een welkomstpost* → één keer per week. Staat op 
 ```
 Welcome to everyone who joined this week.
 
-You've landed in a group of 246,000 golfers. Post your round, your
+You've landed in a group of 250,000 golfers. Post your round, your
 worst hole, your best excuse — nobody here minds a bad score, most of
 us are having one.
 
@@ -153,7 +153,7 @@ de groep is openbaar, dus deze tekst staat in Google.
 ```
 A worldwide group for amateur golfers: rules debates, gear talk,
 course photos, and the occasional round that goes horribly wrong.
-Running since 2013, 246,000 members and counting.
+Running since 2013, 250,000 members and counting.
 
 Everyone is welcome — scratch players, weekend hackers, and people
 who took it up last month. Post what you played, ask what you're

@@ -18,7 +18,7 @@ Hi,
 
 This isn't an ambassador application. It's just the only address I could find.
 
-I run Golf, nothing more, a Facebook group of 246,000 golfers, mostly in the US. We keep a members-only page of standing discount codes from brands we work with. No end date, no countdown.
+I run Golf, nothing more, a Facebook group of 250,000 golfers, mostly in the US. We keep a members-only page of standing discount codes from brands we work with. No end date, no countdown.
 
 I'd like Blue Tees on it.
 
@@ -43,7 +43,7 @@ Hi,
 
 Could you pass this to whoever handles partnerships?
 
-You give Golfers Unite a member offer. Their Facebook page has 594 followers. I run Golf, nothing more, a group of 246,000 golfers, mostly in the US, and I'd like the same arrangement.
+You give Golfers Unite a member offer. Their Facebook page has 594 followers. I run Golf, nothing more, a group of 250,000 golfers, mostly in the US, and I'd like the same arrangement.
 
 We keep a members-only page of standing discount codes. No end date, so members bookmark it and come back to it.
 
@@ -60,13 +60,13 @@ facebook.com/groups/Golf.nothing.more
 ---
 
 ## 3. Takomo — hello@takomogolf.com
-**Onderwerp:** A standing code for 246,000 golfers
+**Onderwerp:** A standing code for 250,000 golfers
 
 Hi,
 
 You're a partner at Golfers Unite, so you already know the model. Same idea, bigger room.
 
-Golf, nothing more is a Facebook group of 246,000 golfers, mostly in the US. We keep a members-only page of standing discount codes from brands we work with, with no end date.
+Golf, nothing more is a Facebook group of 250,000 golfers, mostly in the US. We keep a members-only page of standing discount codes from brands we work with, with no end date.
 
 I'd like Takomo on it. Your ambassador programme covers creators with a following. This is a different thing and it's one line of admin.
 
@@ -91,7 +91,7 @@ Hi Parker,
 
 Your site says partnerships and collaborations go to you, so here's one.
 
-I run Golf, nothing more, a Facebook group of 246,000 golfers, mostly in the US. We keep a members-only page of standing discount codes, so when someone asks where to get a rangefinder without overpaying, there's an answer.
+I run Golf, nothing more, a Facebook group of 250,000 golfers, mostly in the US. We keep a members-only page of standing discount codes, so when someone asks where to get a rangefinder without overpaying, there's an answer.
 
 I'd like Pinned on it.
 
@@ -116,7 +116,7 @@ Hi,
 
 Could you forward this to whoever handles partnerships?
 
-I run Golf, nothing more, a Facebook group of 246,000 golfers, mostly in the US. We keep a members-only page of standing discount codes from brands we work with.
+I run Golf, nothing more, a Facebook group of 250,000 golfers, mostly in the US. We keep a members-only page of standing discount codes from brands we work with.
 
 I'd like Found Golf Balls on it, and I'd rather have you there than a premium brand. A recycled dozen at your price fits this group better than a $55 sleeve.
 
@@ -135,11 +135,11 @@ facebook.com/groups/Golf.nothing.more
 ---
 
 ## 6. The Stack System — info@thestacksystem.com
-**Onderwerp:** A standing code for 246,000 golfers
+**Onderwerp:** A standing code for 250,000 golfers
 
 Hi,
 
-I run Golf, nothing more, a Facebook group of 246,000 golfers, mostly in the US. We keep a members-only page of standing discount codes from brands we work with, with no end date.
+I run Golf, nothing more, a Facebook group of 250,000 golfers, mostly in the US. We keep a members-only page of standing discount codes from brands we work with, with no end date.
 
 I'd like The Stack on it. Most of what gets posted about gaining distance in a group this size is nonsense, which is why I'm writing to you and not to someone selling a training aid off a TikTok ad.
 
