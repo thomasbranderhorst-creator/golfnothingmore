@@ -3,25 +3,25 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Golf, nothing more maakt content voor golfmerken die in Nederland actief zijn, en brengt die bij golfers: in Nederland met een eigen serie op Nederlandse banen, daarbuiten met een golfgroep van 249.000 leden.">
+<meta name="description" content="We maken golfcontent, testen die op 249.000 golfers in onze eigen community, en zetten de versie die werkte in bij jouw klanten.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="nl_NL">
 <meta property="og:url" content="https://golfnothingmore.com/nl/">
-<meta property="og:title" content="Jouw golfmerk in beeld, in Nederland en daarbuiten">
-<meta property="og:description" content="Content, een eigen serie op Nederlandse banen, en bereik onder 249.000 golfers wereldwijd.">
+<meta property="og:title" content="Golfcontent die werkt, getest op 249.000 golfers">
+<meta property="og:description" content="Testen, maken, inzetten en meten. Een golfmediabedrijf uit Nederland met een eigen community van 249.000 golfers.">
 <meta property="og:image" content="https://golfnothingmore.com/hero.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://golfnothingmore.com/nl/">
 <link rel="alternate" hreflang="nl" href="https://golfnothingmore.com/nl/">
 <link rel="alternate" hreflang="en" href="https://golfnothingmore.com/">
+<link rel="alternate" hreflang="x-default" href="https://golfnothingmore.com/">
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/favicon-512.png" sizes="512x512" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<title>Golf, nothing more · Golfmedia voor merken in Nederland</title>
+<title>Golf, nothing more · Golfcontent die werkt</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Archivo:wght@400;500;600;700&display=swap">
-
 <style>
   :root {
     --paper:#F9F2E9; --raise:#FDFAF4; --ink:#101A15; --soft:#37473E;
@@ -154,30 +154,24 @@
   footer a { color:var(--muted); }
   footer a:hover { color:var(--ink); }
 
-  /* ---------- Nederlandse pagina's ---------- */
-  th.cat { width:9.8rem; }
-  @media (max-width:34rem) { th.cat { width:6.4rem; } }
+  th.cat { width:10.5rem; }
+  @media (max-width:34rem) { th.cat { width:6.6rem; } }
   .ways { display:grid; grid-template-columns:repeat(2,1fr); gap:0 2.4rem; border-top:1px solid var(--ink); }
+  .ways.three { grid-template-columns:repeat(3,1fr); }
   .way { padding:1.5rem 0 1.4rem; border-bottom:1px solid var(--hair); }
   .way .num { display:block; margin-bottom:.3rem; }
   .way h3 { font-family:var(--display); font-weight:500; font-size:1.25rem; margin:0 0 .45rem; line-height:1.2; }
   .way p { margin:0; font-size:.95rem; color:var(--soft); line-height:1.55; }
+  @media (max-width:52rem) { .ways.three { grid-template-columns:1fr; } }
   @media (max-width:44rem) { .ways { grid-template-columns:1fr; } }
   .cta-row { display:flex; flex-wrap:wrap; gap:.8rem 1.6rem; align-items:center; margin-top:1.3rem; }
   .cta-row .btn-line { margin-top:0; }
   .text-link { font-size:.95rem; font-weight:600; color:var(--green); }
-
-  .reels { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin:1.1rem 0 0; }
-  .reel { margin:0; }
-  .reel video, .reel .frame { display:block; width:100%; aspect-ratio:9/16; border:1px solid var(--line); background:var(--raise); }
-  .reel video { object-fit:cover; background:#000; }
-  .reel .frame { border-style:dashed; display:grid; place-items:center; text-align:center; font-family:var(--display); font-size:.8rem; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
-  .reel figcaption { font-size:.82rem; color:var(--muted); margin-top:.45rem; line-height:1.4; }
-  @media (max-width:40rem) { .reels { grid-template-columns:repeat(2,1fr); } }
-  .ways.three { grid-template-columns:repeat(3,1fr); }
-  @media (max-width:52rem) { .ways.three { grid-template-columns:1fr; } }
-
-  .reels-block:not(:has(video)) { display:none; }
+  .gnmnav .links a.lang { border:1px solid var(--line); border-radius:999px; padding:6px 11px; }
+  @media (max-width:760px) { .gnmnav .links a.lang { border:0; border-bottom:1px solid var(--line); border-radius:0; padding:14px 20px; } }
+  section[id], div[id] { scroll-margin-top:4.5rem; }
+  .pkg .item { grid-template-columns:1fr 11rem; }
+  @media (max-width:44rem) { .pkg .item { grid-template-columns:1fr; } }
 </style>
 <!-- Privacy-friendly analytics by Plausible -->
 <script async src="https://plausible.io/js/pa-jfuoECYdUyseGoZYZfrYs.js"></script>
@@ -187,7 +181,7 @@
 </script>
 </head>
 <body>
-<!-- gnm-nav-nl -->
+<!-- gnm-nav-site -->
 <style>
 .gnmnav{position:sticky;top:0;z-index:60;background:var(--bg,var(--paper,#F9F2E9));border-bottom:1px solid var(--rule,var(--line,#E3D9C6))}
 .gnmnav .in{max-width:1080px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:18px}
@@ -213,12 +207,11 @@
     <a class="brand" href="/nl/">Golf, nothing more.</a>
     <button class="burger" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <div class="links">
-      <a href="/nl/">Voor golfmerken</a>
+      <a href="/nl/#hoe">Hoe het werkt</a>
+      <a href="/nl/#pakketten">Pakketten</a>
       <a href="/nl/golfbanen/">Voor golfbanen</a>
-      <a href="/nl/media-kit/">Mediakit</a>
-      <a href="https://www.facebook.com/groups/Golf.nothing.more">De groep</a>
       <a href="mailto:partners@golfnothingmore.com?subject=Samenwerking">Contact</a>
-      <a href="/" lang="en" hreflang="en">English</a>
+      <a class="lang" href="/" lang="en" hreflang="en">English</a>
     </div>
   </div>
 </nav>
@@ -226,50 +219,181 @@
 (function(){var n=document.getElementById('gnmnav');if(!n)return;
 var b=n.querySelector('.burger');
 b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+n.querySelectorAll('.links a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open');b.setAttribute('aria-expanded',false)})});
 var p=location.pathname.replace(/index\.html$/,'');
-n.querySelectorAll('.links a').forEach(function(a){
-  if(a.getAttribute('href')===p)a.setAttribute('aria-current','page');
-});})();
+n.querySelectorAll('.links a').forEach(function(a){if(a.getAttribute('href')===p)a.setAttribute('aria-current','page');});})();
 </script>
-<!-- /gnm-nav-nl -->
+<!-- /gnm-nav-site -->
 
 <div class="wrap">
 
   <header>
     <picture><source srcset="/logo-dark.png" media="(prefers-color-scheme: dark)"><img class="mark" src="/logo-3d.png" width="296" height="300" alt="" decoding="async"></picture>
-    <p class="label">Golfmediabedrijf uit Nederland</p>
-    <h1>Jouw golfmerk in beeld, in Nederland en&nbsp;daarbuiten.</h1>
-    <p class="lede">Golf, nothing more is een golfmediabedrijf uit Nederland. We maken content voor golfmerken die in Nederland actief zijn, zelf of met een gespecialiseerd golfbureau. <b>En we brengen die bij golfers</b>: in Nederland met onze eigen serie op Nederlandse banen, daarbuiten met een golfgroep van 249.000 leden, golfcreators en onze eigen kanalen.</p>
+    <p class="label">Golfmedia uit Nederland</p>
+    <h1>Golfcontent die werkt, getest op 249.000&nbsp;golfers.</h1>
+    <p class="lede">We maken golfcontent, testen die in onze eigen community van 249.000 golfers, en zetten de versie die werkte in bij jouw klanten. <b>Eén partner van het eerste idee tot de cijfers achteraf.</b></p>
 
     <div class="facts">
       <div class="fact"><b>249.000</b><span>golfers in onze groep</span></div>
-      <div class="fact"><b>54%</b><span>van ons publiek woont in de Verenigde Staten</span></div>
-      <div class="fact"><b>4</b><span>eigen kanalen naast de groep</span></div>
-      <div class="fact"><b>2013</b><span>zo lang bestaat onze golfgroep al</span></div>
+      <div class="fact"><b>136.000</b><span>weergaven in de groep, elke dag</span></div>
+      <div class="fact"><b>54%</b><span>daarvan woont in de Verenigde Staten</span></div>
+      <div class="fact"><b>1.100</b><span>leden die dagelijks posten of reageren</span></div>
     </div>
 
     <a class="btn-mail" href="mailto:partners@golfnothingmore.com?subject=Samenwerking&amp;body=Hoi%20Thomas%2C%0A%0AWij%20zijn%20">partners@golfnothingmore.com</a>
-    <p class="mailnote">Vertel wat je verkoopt en wat je wilt bereiken. Binnen twee werkdagen hoor je wat we zouden doen en wat het kost.</p>
+    <p class="mailnote">Vertel wat je verkoopt en wie je wilt bereiken. Binnen twee werkdagen hoor je wat we zouden doen en wat het kost.</p>
   </header>
 
-  <section>
-    <p class="label">Wat we voor je doen</p>
-    <h2>Drie dingen, los of samen</h2>
-    <div class="ways three">
+  <section id="hoe">
+    <p class="label">Hoe het werkt</p>
+    <h2>Testen, maken, inzetten, meten</h2>
+    <div class="ways">
       <div class="way">
         <span class="num">01</span>
-        <h3>Content voor je eigen kanalen</h3>
-        <p>Reels, foto's en posts, door ons gemaakt op de baan en op de range. Voor professionelere productie, zoals een productvideo of een shoot op locatie, werken we samen met een extern bureau dat gespecialiseerd is in golfcontent. Jij houdt één aanspreekpunt.</p>
+        <h3>Testen</h3>
+        <p>Voordat iemand budget uitgeeft, zetten we twee of drie versies van je boodschap in onze groep en meten we waar golfers op reageren. Je test loopt tegen maanden aan eigen metingen, dus je weet wat goed is.</p>
       </div>
       <div class="way">
         <span class="num">02</span>
-        <h3>Je product in onze serie</h3>
-        <p>In <i>Speel een hole met ons</i> spelen we elke aflevering op een andere Nederlandse baan, en een van ons leert het spel nog. Wat we op camera gebruiken, gebruiken we echt: je schoenen, je handschoen, je trolley. Alleen als we er zelf achter staan, en altijd herkenbaar als samenwerking.</p>
+        <h3>Maken</h3>
+        <p>Content in de toon van onze eigen kanalen, door ons gemaakt op de baan en de range. Voor professionelere productie, zoals een productvideo of een shoot op locatie, kunnen we een gespecialiseerde golfcontentstudio inschakelen. Jij houdt één aanspreekpunt.</p>
       </div>
       <div class="way">
         <span class="num">03</span>
-        <h3>Bereik buiten Nederland</h3>
-        <p>Verkoop je ook in het buitenland, of wil je dat? Ons publiek zit voor het grootste deel in de Verenigde Staten, het Verenigd Koninkrijk, Australië en Canada. Daar bereik je ze met de groep, golfcreators, onze maillijst en betaalde promotie op onze kanalen.</p>
+        <h3>Inzetten</h3>
+        <p>De versie die werkte gaat naar waar je klanten zitten: golfcreators met een klikbare link, onze ledenmail, de groep zelf, en betaalde posts op onze eigen kanalen.</p>
+      </div>
+      <div class="way">
+        <span class="num">04</span>
+        <h3>Meten</h3>
+        <p>Elk kanaal krijgt een eigen link of code. Achteraf krijg je de cijfers per kanaal, ook als ze tegenvielen.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="test">
+    <p class="label">Waarom eerst testen</p>
+    <h2>Dezelfde groep reageert op de ene post dertig keer meer dan op de andere</h2>
+    <p class="body">We meten elke post in de groep op het aantal opmerkingen per 1.000 mensen die hem zien. Na verloop van tijd vertelt dat iets wat geen bureau weet: <b>hoe golfers op een soort boodschap reageren voordat je betaalt om hem te laten zien.</b></p>
+    <figure>
+      <table class="chart">
+        <caption>Opmerkingen per 1.000 weergaven, per soort post</caption>
+        <tbody>
+          <tr><th class="cat" scope="row">Materiaalkeuze</th><td><div class="track"><div class="bar" style="width:100%"></div></div></td><td class="val">59,7</td></tr>
+          <tr><th class="cat" scope="row">Dilemma</th><td><div class="track"><div class="bar" style="width:70.7%"></div></div></td><td class="val">42,2</td></tr>
+          <tr><th class="cat" scope="row">Identiteit</th><td><div class="track"><div class="bar" style="width:57.1%"></div></div></td><td class="val">34,1</td></tr>
+          <tr><th class="cat" scope="row">Regelvraag</th><td><div class="track"><div class="bar" style="width:50.3%"></div></div></td><td class="val">30,0</td></tr>
+          <tr><th class="cat" scope="row">Dit of dat</th><td><div class="track"><div class="bar" style="width:46.2%"></div></div></td><td class="val">27,6</td></tr>
+          <tr><th class="cat" scope="row">Invulzin</th><td><div class="track"><div class="bar" style="width:38.0%"></div></div></td><td class="val">22,7</td></tr>
+          <tr><th class="cat" scope="row">Afstand</th><td><div class="track"><div class="bar" style="width:37.4%"></div></div></td><td class="val">22,3</td></tr>
+          <tr><th class="cat" scope="row">Aankondiging</th><td><div class="track"><div class="bar" style="width:3.4%"></div></div></td><td class="val">2,0</td></tr>
+        </tbody>
+      </table>
+      <figcaption class="source">Onze eigen metingen op posts in de groep, 2026. Een materiaalkeuze is een vraag als "Zou je X proberen voordat je Y koopt?". Een aankondiging vertelt mensen iets nieuws.</figcaption>
+    </figure>
+    <p class="body" style="margin-top:1.4rem">Het duidelijkste voorbeeld is van onszelf. Onze eerste post vanaf onze pagina, op 18 september 2026, was een aankondiging met een link. Die bereikte 250 mensen. Een paar dagen later plaatsten we een foto en een vraag, zonder iets om op te klikken. Die bereikte 3.300 mensen in het eerste uur, en 14.852 mensen en 101 opmerkingen in drie dagen. Zelfde pagina, zelfde groep. Dat verschil vindt een test, voordat je budget het vindt.</p>
+  </section>
+
+  <section id="pakketten" class="pkg">
+    <p class="label">Pakketten</p>
+    <h2>Drie manieren om te beginnen</h2>
+    <div class="stream">
+      <div class="stream-head"><span class="num">01</span><h3>Test</h3></div>
+      <div class="item">
+        <div>
+          <h4>Een eerste meting van je boodschap</h4>
+          <p>Een briefing uit onze eigen data over hoe golfers op jouw categorie reageren. Twee of drie versies van je boodschap als posts in de groep, onder je eigen naam en herkenbaar als partner. Daarna een analyse van welke werkte, en waarom.</p>
+          <p>De snelste manier om te ontdekken of je iets aan ons hebt.</p>
+        </div>
+        <div class="price open">
+          <b>Per test</b>
+          <span>Prijs op aanvraag.</span>
+        </div>
+      </div>
+    </div>
+    <div class="stream">
+      <div class="stream-head"><span class="num">02</span><h3>Campagne</h3></div>
+      <div class="item">
+        <div>
+          <h4>Rond een lancering of de start van het seizoen</h4>
+          <p>Alles uit de test, en daarna de content bij de boodschap die won, gemaakt door ons of een studio. Eén post van een golfcreator met een link naar je site, een vermelding in onze ledenmail, en posts in de groep. Aan het eind een rapport per kanaal.</p>
+        </div>
+        <div class="price open">
+          <b>Per campagne</b>
+          <span>Prijs op aanvraag.</span>
+        </div>
+      </div>
+    </div>
+    <div class="stream">
+      <div class="stream-head"><span class="num">03</span><h3>Doorlopend</h3></div>
+      <div class="item">
+        <div>
+          <h4>Voor merken die zichtbaar willen blijven</h4>
+          <p>Elke maand nieuwe content, een vaste plek in de groep met tot drie posts per week en vooraf goedgekeurde toegang, en een maandrapport met wat je de volgende keer anders doet.</p>
+          <p>Telkens drie maanden, omdat je van één post die slecht valt niets leert.</p>
+        </div>
+        <div class="price open">
+          <b>Per maand</b>
+          <span>Minimaal drie maanden. Prijs op aanvraag.</span>
+        </div>
+      </div>
+    </div>
+    <p class="body" style="margin-top:1.6rem"><b>Ook los:</b> contentproductie, posts of stories van een van onze creators, en een plek in onze serie <i>Speel een hole met ons</i>, waarin we op Nederlandse banen spelen en een van ons het spel nog leert. Wat we daar gebruiken, gebruiken we echt.</p>
+  </section>
+
+  <section id="kanalen">
+    <p class="label">Waar het draait</p>
+    <h2>Vier kanalen, en hoe groot ze echt zijn</h2>
+    <div class="stream">
+      <div class="stream-head"><span class="num">01</span><h3>De groep</h3></div>
+      <div class="item">
+        <div>
+          <h4>249.000 golfers op Facebook</h4>
+          <p>Sinds 2013, en een van de grootste communities van amateurgolfers ter wereld. Leden verkopen hier niets: geen affiliatelinks, geen "stuur me een bericht". Daarom valt een herkenbare partnerpost hier op.</p>
+        </div>
+        <div class="price">
+          <b>Ons grootste kanaal</b>
+          <span>Gemiddeld 136.000 weergaven per dag.</span>
+        </div>
+      </div>
+    </div>
+    <div class="stream">
+      <div class="stream-head"><span class="num">02</span><h3>Golfcreators</h3></div>
+      <div class="item">
+        <div>
+          <h4>Een klein netwerk op Instagram en TikTok</h4>
+          <p>Creators met vooral een Amerikaans en Brits publiek. Eén aanspreekpunt, een vaste prijs per reel of story, en elke post gemarkeerd als betaalde samenwerking. Een story kan een klikbare link bevatten, dus dit is de route als je kliks of downloads zoekt.</p>
+        </div>
+        <div class="price open">
+          <b>Per reel of story</b>
+          <span>Vaste prijs per creator.</span>
+        </div>
+      </div>
+    </div>
+    <div class="stream">
+      <div class="stream-head"><span class="num">03</span><h3>Ledenmail</h3></div>
+      <div class="item">
+        <div>
+          <h4>Golfers die om aanbiedingen vroegen</h4>
+          <p>Onze mail aan golfers die zich aanmeldden voor ledendeals, groeiend met ongeveer tien mensen per dag. Geschikt voor een scherpe aanbieding met een einddatum.</p>
+        </div>
+        <div class="price open">
+          <b>Klein en groeiend</b>
+          <span>Vraag ons het aantal van deze week.</span>
+        </div>
+      </div>
+    </div>
+    <div class="stream">
+      <div class="stream-head"><span class="num">04</span><h3>Onze eigen kanalen</h3></div>
+      <div class="item">
+        <div>
+          <h4>Instagram, TikTok, X en Facebook</h4>
+          <p>We zijn zelf ook golfcreators. Sinds september 2026 maken we eigen content: een golfgroep runnen terwijl een van ons het spel nog aan het leren is. Deze kanalen zijn jong, dus een betaalde post haalt zijn bereik daar uit het budget en nog niet uit onze volgers. Dat zeggen we liever vooraf.</p>
+        </div>
+        <div class="price open">
+          <b>Budget plus een vergoeding</b>
+          <span>Per post of per campagne.</span>
+        </div>
       </div>
     </div>
   </section>
@@ -279,16 +403,15 @@ n.querySelectorAll('.links a').forEach(function(a){
       <p class="label">Eerlijk over Nederland</p>
       <h2>Ons Nederlandse publiek groeit nog</h2>
       <p>Het grootste deel van ons publiek zit buiten Nederland. Ons Nederlandse bereik is klein, en dat zeggen we liever vooraf dan dat je het achteraf ontdekt.</p>
-      <p><b>Zo bouwen we het op.</b> Elke aflevering van onze serie speelt op een andere Nederlandse baan, en die baan deelt hem met zijn leden. Hoe meer banen meedoen, hoe groter het Nederlandse publiek dat de volgende aflevering ziet.</p>
-      <p>Zoek je vooral Nederlandse golfers, dan krijg je nu dus content die je zelf kunt inzetten, en een plek in een serie die groeit. Geen groot bereik dat we nog niet hebben.</p>
-      <p>Heb je een golfbaan? <a href="/nl/golfbanen/">Daar hebben we een eigen pagina voor &rarr;</a></p>
+      <p><b>Zo bouwen we het op.</b> Elke aflevering van <i>Speel een hole met ons</i> speelt op een andere Nederlandse baan, en die baan deelt hem met zijn leden. Hoe meer banen meedoen, hoe groter het Nederlandse publiek dat de volgende aflevering ziet.</p>
+      <p>Zoek je vooral Nederlandse golfers, dan krijg je nu content die je zelf kunt inzetten, en een plek in een serie die groeit. Heb je een golfbaan? <a href="/nl/golfbanen/">Daar hebben we een eigen pagina voor &rarr;</a></p>
     </div>
   </section>
 
-  <section>
-    <p class="label">Ons publiek buiten Nederland</p>
-    <h2>De Nederlandse golfmarkt is klein. Die van onze leden niet.</h2>
-    <p class="body">Meer dan de helft van onze leden woont in de Verenigde Staten. Samen met het Verenigd Koninkrijk, Australië en Canada is dat drie kwart van de groep. Het zijn precies de markten waar een merk uit Nederland normaal een lokale partij of een fors advertentiebudget voor nodig heeft.</p>
+  <section id="publiek">
+    <p class="label">Het publiek</p>
+    <h2>Wie we bereiken</h2>
+    <p class="body">De beste data over ons publiek komt uit de groep. 83% is man, drie op de vier zijn 35 of ouder, en meer dan de helft woont in de Verenigde Staten. Golf heeft seizoenen: in september zat de groep op 178.000 weergaven per dag, in oktober op 100.000.</p>
     <figure>
       <table class="chart">
         <caption>Leden per land</caption>
@@ -300,28 +423,50 @@ n.querySelectorAll('.links a').forEach(function(a){
           <tr><th class="cat" scope="row">Overig</th><td><div class="track"><div class="bar" style="width:44.7%"></div></div></td><td class="val">59.937 <small>· 24%</small></td></tr>
         </tbody>
       </table>
-      <figcaption class="source">Groepsstatistieken van Facebook, 3 september tot en met 1 november 2026. "Overig" is elk land buiten de eerste vier.</figcaption>
+      <figcaption class="source">Groepsstatistieken van Facebook, 3 september tot en met 1 november 2026.</figcaption>
     </figure>
-    <div class="cta-row">
-      <a class="text-link" href="/nl/media-kit/">Alle manieren en cijfers in de mediakit &rarr;</a>
-    </div>
+    <figure>
+      <table class="chart">
+        <caption>Aandeel leden per leeftijdsgroep</caption>
+        <tbody>
+          <tr><th class="cat" scope="row">18–24</th><td><div class="track"><div class="bar" style="width:16.4%"></div></div></td><td class="val">4,0%</td></tr>
+          <tr><th class="cat" scope="row">25–34</th><td><div class="track"><div class="bar" style="width:77.1%"></div></div></td><td class="val">19,0%</td></tr>
+          <tr><th class="cat" scope="row">35–44</th><td><div class="track"><div class="bar" style="width:100%"></div></div></td><td class="val">24,7%</td></tr>
+          <tr><th class="cat" scope="row">45–54</th><td><div class="track"><div class="bar" style="width:76.9%"></div></div></td><td class="val">19,0%</td></tr>
+          <tr><th class="cat" scope="row">55–64</th><td><div class="track"><div class="bar" style="width:68.4%"></div></div></td><td class="val">16,9%</td></tr>
+          <tr><th class="cat" scope="row">65+</th><td><div class="track"><div class="bar" style="width:65.2%"></div></div></td><td class="val">16,1%</td></tr>
+        </tbody>
+      </table>
+      <figcaption class="source">Groepsstatistieken van Facebook, zelfde periode. Mannen en vrouwen samen. De groep onder de 18 is 0,2% en staat er niet in.</figcaption>
+    </figure>
   </section>
 
-  <section>
-    <p class="label">Wat je van ons mag verwachten</p>
-    <h2>Eerlijke cijfers, ook als ze tegenvallen</h2>
+  <section id="vragen">
+    <p class="label">Wat we terugvragen</p>
+    <h2>Wat we van jou vragen</h2>
     <div class="asks">
-      <div class="ask"><p><b>We laten alleen zien wat we zelf gebruikt hebben.</b> Een product waar we niet achter staan, komt niet in beeld. Dat beschermt jouw naam net zo goed als de onze.</p></div>
-      <div class="ask"><p><b>Geen bereikgaranties.</b> Onze eigen posts haalden in oktober 2026 tussen de 2.800 en 38.100 mensen. Wie je een vast bereik belooft, gokt.</p></div>
-      <div class="ask"><p><b>Alles is herkenbaar als samenwerking.</b> Geen verkapte reclame, niet in de serie en niet in de groep.</p></div>
-      <div class="ask"><p><b>Je ziet wat het opleverde.</b> Elk kanaal krijgt een eigen link of code, en achteraf krijg je de cijfers, ook als ze tegenvielen.</p></div>
+      <div class="ask"><p><b>Een helder doel.</b> Verkopen in de Verenigde Staten, downloads van je app, naamsbekendheid in het Verenigd Koninkrijk. Het doel bepaalt welke content en welke kanalen.</p></div>
+      <div class="ask"><p><b>Je product in handen.</b> Als wij de content maken, willen we het zelf gebruikt hebben. We laten golfers niets zien waar we zelf niet achter staan.</p></div>
+      <div class="ask"><p><b>Een eigen link of code per kanaal, en de cijfers terug.</b> Wij kunnen niet in je kassa kijken, en we vragen het liever dan dat we gokken.</p></div>
+      <div class="ask"><p><b>Niets wat zich voordoet als iets anders.</b> Alles wat betaald is, is herkenbaar als betaald. Dat beschermt jouw naam net zo goed als de onze.</p></div>
     </div>
   </section>
 
-  <section>
+  <section id="onbekend">
+    <div class="frank">
+      <p class="label">Rechte antwoorden</p>
+      <h2>Wat we je nog niet kunnen vertellen</h2>
+      <p><b>Wat een creatorcampagne of onze eigen kanalen opleveren.</b> Allebei zijn ze nieuw. We hebben er nog geen campagnecijfers van, en tot die er zijn beloven we geen aantallen.</p>
+      <p><b>Hoe groot de maillijst is.</b> Die is in september 2026 begonnen. Mail ons en we noemen het getal van die week in plaats van het af te ronden.</p>
+      <p><b>Bereik is geen aandacht.</b> We hebben posts gemeten die duizenden mensen bereikten en geen enkele reactie kregen. Wij verkopen reactie, geen vertoningen, en daarom zijn onze eerste tarieven introductietarieven.</p>
+      <p><b>Wat onze leden spelen en uitgeven.</b> Facebook verzamelt het niet en een ledenonderzoek staat nog gepland. Wie je voor een publiek van deze omvang een handicapprofiel voorrekent, gokt.</p>
+    </div>
+  </section>
+
+  <section id="merken">
     <p class="label">Tot nu toe</p>
     <h2>Merken waar we mee werken</h2>
-    <p class="body">Sommige huren ons in voor een campagne, zoals het Nederlandse Forest &amp; Fairway. Andere geven onze leden een code die het publiek niet krijgt. Bij weer andere zitten we in het affiliateprogramma en geven we door wat de moeite waard is.</p>
+    <p class="body">Sommige huren ons in voor een campagne, zoals het Nederlandse Forest &amp; Fairway. Andere geven onze leden een code die het publiek niet krijgt. Bij weer andere zitten we in het affiliateprogramma en geven we door wat de moeite waard is. We zeggen er elke keer bij welke het is.</p>
     <ul class="brands">
       <li>Forest &amp; Fairway<span>campagne</span></li>
       <li>Shot Scope<span>ledencode</span></li>
@@ -338,18 +483,14 @@ n.querySelectorAll('.links a').forEach(function(a){
   <section>
     <p class="label">Beginnen</p>
     <h2>Zo begint het</h2>
-    <p class="body">Mail ons wat je verkoopt en wat je wilt bereiken. Binnen twee werkdagen krijg je een voorstel op één pagina, met wat volgens ons werkt en wat het kost. Bellen kan ook, gewoon in het Nederlands.</p>
-    <div class="cta-row">
-      <a class="btn-line" href="mailto:partners@golfnothingmore.com?subject=Samenwerking">partners@golfnothingmore.com</a>
-      <a class="text-link" href="/nl/media-kit/">De volledige mediakit &rarr;</a>
-    </div>
+    <p class="body">Mail ons wat je verkoopt en wie je wilt bereiken. Binnen twee werkdagen krijg je een voorstel op één pagina: welke content, welke kanalen en wat het kost. Bellen kan ook, gewoon in het Nederlands.</p>
+    <a class="btn-line" href="mailto:partners@golfnothingmore.com?subject=Samenwerking">partners@golfnothingmore.com</a>
   </section>
 
   <footer>
     <span class="name">Golf, nothing more.</span>
-    <a href="/nl/">Voor golfmerken</a>
     <a href="/nl/golfbanen/">Voor golfbanen</a>
-    <a href="/nl/media-kit/">Mediakit</a>
+    <a href="/deals/">Ledendeals</a>
     <a href="https://www.facebook.com/groups/Golf.nothing.more">De groep op Facebook</a>
     <a href="/" lang="en" hreflang="en">English</a>
     <a href="/privacy.html">Privacy</a>

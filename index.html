@@ -3,360 +3,179 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Golf brands give members of Golf, nothing more a discount the public can't get. Leave your email and every code we have arrives straight away. One a month after that, plus a note when a new code lands.">
-<link rel="canonical" href="https://golfnothingmore.com/">
+<meta name="description" content="We make golf content, test it on 249,000 golfers in our own community, and put the version that worked in front of your customers.">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
 <meta property="og:url" content="https://golfnothingmore.com/">
-<meta property="og:title" content="Golf, nothing more">
-<meta property="og:description" content="Golf brands give this group a discount the public can't get. Every code we have arrives the moment you sign up.">
+<meta property="og:title" content="Golf content that works, tested on 249,000 golfers">
+<meta property="og:description" content="Test, make, run and report. A golf media company with its own community of 249,000 golfers.">
 <meta property="og:image" content="https://golfnothingmore.com/hero.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="favicon-512.png" sizes="512x512" type="image/png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<title>Golf, nothing more</title>
+<link rel="canonical" href="https://golfnothingmore.com/">
+<link rel="alternate" hreflang="en" href="https://golfnothingmore.com/">
+<link rel="alternate" hreflang="nl" href="https://golfnothingmore.com/nl/">
+<link rel="alternate" hreflang="x-default" href="https://golfnothingmore.com/">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-512.png" sizes="512x512" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>Golf, nothing more · Golf content that works</title>
+<script>
+  /* Oude aanmeldlinks (/?j=...) gaan naar de aanmeldpagina, die nu op /join/ staat. */
+  (function(){try{if(/[?&]j=/.test(location.search))location.replace('/join/'+location.search+location.hash);}catch(e){}})();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Archivo:wght@400;500;600;700&display=swap">
-
 <style>
   :root {
-    --paper:   #F9F2E9;
-    --raise:   #FDFAF4;
-    --ink:     #101A15;
-    --soft:    #37473E;
-    --muted:   #5C6A61;
-    --line:    #E3D9C6;
-    --hair:    #EFE7D9;
-    --green:   #14512F;
-    --on-green:#F2F5EF;
-
+    --paper:#F9F2E9; --raise:#FDFAF4; --ink:#101A15; --soft:#37473E;
+    --muted:#5C6A61; --line:#E3D9C6; --hair:#EFE7D9; --green:#14512F; --on-green:#F2F5EF;
+    --bar:#14512F; --bar-track:#DEE3D9;
     --display: "Archivo", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, sans-serif;
     --body: "Newsreader", Georgia, "Times New Roman", serif;
   }
-
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --paper: #0E1411; --raise: #151D18; --ink: #E9EEE8; --soft: #C0CBC2;
-      --muted: #8B9A91; --line: #26302A; --hair: #1D251F;
-      --green: #6FC594; --on-green: #0E1411;
+      --paper:#0E1411; --raise:#151D18; --ink:#E9EEE8; --soft:#C0CBC2;
+      --muted:#8B9A91; --line:#26302A; --hair:#1D251F; --green:#6FC594; --on-green:#0E1411;
+      --bar:#6FC594; --bar-track:#1F2A23;
     }
   }
-
   :root[data-theme="dark"] {
-    --paper: #0E1411; --raise: #151D18; --ink: #E9EEE8; --soft: #C0CBC2;
-    --muted: #8B9A91; --line: #26302A; --hair: #1D251F;
-    --green: #6FC594; --on-green: #0E1411;
+    --paper:#0E1411; --raise:#151D18; --ink:#E9EEE8; --soft:#C0CBC2;
+    --muted:#8B9A91; --line:#26302A; --hair:#1D251F; --green:#6FC594; --on-green:#0E1411;
+    --bar:#6FC594; --bar-track:#1F2A23;
   }
 
-  * { box-sizing: border-box; }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:var(--body); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  img { max-width:100%; }
+  .wrap { max-width:50rem; margin:0 auto; padding-block:4rem 5rem; padding-left:1.75rem; padding-right:1.75rem; }
 
-  body {
-    background: var(--paper);
-    color: var(--ink);
-    font-family: var(--body);
-    font-size: 16px;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
+  .label { font-size:.68rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); margin:0; }
+
+  header { display:flex; flex-direction:column; align-items:flex-start; gap:1.3rem; }
+  header > picture { display:block; line-height:0; margin-bottom:-.35rem; }
+  .mark { height:clamp(3rem,6vw,4.1rem); width:auto; display:block; }
+  h1 { font-family:var(--display); font-weight:600; font-size:clamp(2.4rem,6.5vw,4rem); line-height:1.03; letter-spacing:-.02em; margin:0; text-wrap:balance; }
+  .lede { font-size:clamp(1.05rem,2vw,1.22rem); line-height:1.55; color:var(--soft); max-width:36rem; margin:0; }
+  .lede b { color:var(--ink); font-weight:600; }
+  .stamp { font-size:.82rem; color:var(--muted); border-top:1px solid var(--line); padding-top:.85rem; margin:.4rem 0 0; }
+
+  .toc { display:flex; flex-wrap:wrap; gap:.4rem 1.4rem; margin:0; padding:0; list-style:none; font-size:.88rem; }
+  .toc a { color:var(--soft); text-decoration:none; border-bottom:1px solid var(--line); }
+  .toc a:hover { color:var(--ink); border-color:var(--ink); }
+
+  .facts { width:100%; margin-top:1rem; border-top:1px solid var(--ink); border-bottom:1px solid var(--line); display:grid; grid-template-columns:repeat(4,1fr); }
+  .fact { padding:1.35rem 1rem 1.35rem 0; display:flex; flex-direction:column; gap:.15rem; }
+  .fact + .fact { border-left:1px solid var(--hair); padding-left:1rem; }
+  .fact b { font-family:var(--display); font-size:clamp(1.65rem,3.6vw,2.2rem); font-weight:400; line-height:1.05; font-variant-numeric:tabular-nums; }
+  .fact > span { font-size:.78rem; color:var(--muted); line-height:1.4; }
+  @media (max-width:46rem) {
+    .facts { grid-template-columns:repeat(2,1fr); }
+    .fact:nth-child(3) { border-left:0; padding-left:0; border-top:1px solid var(--hair); }
+    .fact:nth-child(4) { border-top:1px solid var(--hair); }
   }
 
-  .wrap {
-    max-width: 60rem;
-    margin: 0 auto;
-    padding: 0 1.75rem;
+  section { padding:3.5rem 0 0; scroll-margin-top:1rem; }
+  h2 { font-family:var(--display); font-weight:400; font-size:clamp(1.6rem,3.4vw,2.1rem); line-height:1.15; margin:.4rem 0 1.2rem; text-wrap:balance; }
+  h3.sect { font-family:var(--display); font-weight:500; font-size:1.3rem; margin:2.4rem 0 .4rem; }
+  p.body { margin:0 0 1rem; color:var(--soft); max-width:36rem; font-size:.98rem; }
+  p.body:last-child { margin-bottom:0; }
+  p.body b { color:var(--ink); font-weight:600; }
+  a { color:var(--green); text-underline-offset:2px; }
+
+  /* ---------- grafieken ---------- */
+  figure { margin:1.2rem 0 0; }
+  table.chart { width:100%; border-collapse:collapse; }
+  table.chart caption { text-align:left; font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); padding-bottom:.7rem; border-bottom:1px solid var(--ink); }
+  table.chart th, table.chart td { padding:.42rem 0; vertical-align:middle; font-weight:400; text-align:left; }
+  table.chart tbody tr + tr th, table.chart tbody tr + tr td { border-top:2px solid var(--paper); }
+  th.cat { width:7rem; font-size:.88rem; color:var(--soft); white-space:nowrap; padding-right:1rem; }
+  td.val { width:6.5rem; text-align:right; font-size:.88rem; font-variant-numeric:tabular-nums; color:var(--ink); padding-left:1rem; white-space:nowrap; }
+  td.val small { color:var(--muted); }
+  .track { background:var(--bar-track); height:14px; width:100%; }
+  .bar { background:var(--bar); height:14px; border-radius:0 4px 4px 0; }
+  @media (max-width:34rem) {
+    th.cat { width:4.8rem; font-size:.8rem; padding-right:.6rem; white-space:normal; line-height:1.25; }
+    td.val { width:5.4rem; font-size:.8rem; padding-left:.6rem; }
   }
+  .source { font-size:.8rem; color:var(--muted); margin:.9rem 0 0; }
 
-  .label {
-    font-family: var(--body);
-    font-size: .68rem;
-    font-weight: 600;
-    letter-spacing: .18em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin: 0;
-  }
+  /* ---------- het aanbod ---------- */
+  .briefing { background:var(--raise); border-left:3px solid var(--green); padding:1.2rem 1.4rem; margin:0 0 2rem; }
+  .briefing p { margin:0; font-size:.93rem; color:var(--soft); line-height:1.55; max-width:38rem; }
+  .briefing p + p { margin-top:.6rem; }
+  .briefing b { color:var(--ink); font-weight:600; }
 
-  /* ---------- hero ---------- */
+  .stream { border-top:1px solid var(--ink); padding:1.6rem 0 .4rem; }
+  .stream-head { display:flex; gap:1rem; align-items:baseline; margin-bottom:.4rem; }
+  .num { font-family:var(--display); font-size:1rem; color:var(--muted); font-variant-numeric:tabular-nums; min-width:1.6rem; }
+  .stream-head h3 { font-family:var(--display); font-weight:500; font-size:1.4rem; margin:0; line-height:1.2; }
+  .stream > p.intro { margin:0 0 .7rem 2.6rem; font-size:.95rem; color:var(--soft); max-width:36rem; }
+  @media (max-width:44rem) { .stream > p.intro { margin-left:0; } }
 
-  .hero-inner > picture { display: block; line-height: 0; margin-bottom: -.35rem; }
+  .item { margin-left:2.6rem; padding:1.1rem 0 1.2rem; border-top:1px solid var(--hair); display:grid; grid-template-columns:1fr 12rem; gap:.5rem 2.2rem; align-items:start; }
+  .stream > .item:first-of-type { border-top:0; }
+  .stream > p.intro + .item { border-top:1px solid var(--hair); }
+  @media (max-width:44rem) { .item { margin-left:0; grid-template-columns:1fr; gap:.6rem; } }
+  .item h4 { font-size:1rem; font-weight:600; margin:0 0 .3rem; }
+  .item p b { color:var(--ink); font-weight:600; }
+  .item p { margin:0; font-size:.94rem; color:var(--soft); line-height:1.55; }
+  .item p + p { margin-top:.55rem; }
+  .price b { display:block; font-size:.95rem; font-weight:600; color:var(--ink); }
+  .price span { display:block; font-size:.84rem; color:var(--muted); margin-top:.15rem; line-height:1.45; }
+  .price.open b { color:var(--muted); font-weight:500; font-style:italic; }
 
-  .mark {
-    height: clamp(3rem, 6vw, 4.1rem);
-    width: auto;
-    display: block;
-  }
+  .asks { display:flex; flex-direction:column; }
+  .ask { padding:.85rem 0; border-bottom:1px solid var(--hair); }
+  .ask:first-child { border-top:1px solid var(--hair); }
+  .ask p { margin:0; font-size:.95rem; color:var(--soft); line-height:1.55; }
+  .ask p b { color:var(--ink); font-weight:600; }
 
-  header.hero { padding: 4.5rem 0 0; }
+  .frank { background:var(--raise); border-left:3px solid var(--green); padding:1.5rem 1.6rem; display:flex; flex-direction:column; gap:.85rem; }
+  .frank h2 { margin:0; font-size:clamp(1.4rem,3vw,1.75rem); }
+  .frank p { margin:0; font-size:.94rem; color:var(--soft); line-height:1.55; max-width:36rem; }
+  .frank p b { color:var(--ink); font-weight:600; }
 
-  .hero-inner { display: flex; flex-direction: column; align-items: flex-start; gap: 1.5rem; max-width: 44rem; }
+  .btn-mail { display:inline-block; margin:1.5rem 0 0; font-family:var(--body); font-size:1rem; font-weight:600; letter-spacing:.01em; color:var(--on-green); background:var(--green); text-decoration:none; padding:.85rem 1.5rem; }
+  .btn-mail:hover { background:var(--ink); color:var(--paper); }
+  .btn-mail:focus-visible { outline:2px solid var(--ink); outline-offset:2px; }
+  .mailnote { font-size:.85rem; line-height:1.5; color:var(--muted); margin:.7rem 0 0; max-width:34rem; }
+  @media (max-width:30rem) { .btn-mail { display:block; text-align:center; font-size:.95rem; padding:.85rem 1rem; } }
 
-  h1 {
-    font-family: var(--display);
-    font-weight: 600;
-    font-size: clamp(2.8rem, 8vw, 5.4rem);
-    line-height: 1.02;
-    letter-spacing: -.02em;
-    margin: 0;
-    text-wrap: balance;
-  }
+  .btn-line { display:inline-block; margin-top:1.3rem; font-size:.95rem; font-weight:600; color:var(--ink); text-decoration:none; border:1px solid var(--ink); padding:.75rem 1.3rem; }
+  .btn-line:hover { background:var(--ink); color:var(--paper); }
+  .btn-line:focus-visible { outline:2px solid var(--green); outline-offset:2px; }
 
-  .lede {
-    font-size: clamp(1.1rem, 2.1vw, 1.35rem);
-    line-height: 1.55;
-    color: var(--soft);
-    max-width: 36rem;
-    margin: 0;
-  }
+  .brands { display:flex; flex-wrap:wrap; gap:.55rem; margin:.3rem 0 0; padding:0; list-style:none; }
+  .brands li { font-size:.85rem; font-weight:600; color:var(--soft); border:1px solid var(--line); padding:.4rem .75rem; }
+  .brands li span { display:block; font-size:.7rem; font-weight:500; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-top:.15rem; }
 
-  .lede b { color: var(--ink); font-weight: 600; }
+  footer { margin-top:4rem; border-top:1px solid var(--line); padding:1.6rem 0 0; display:flex; flex-wrap:wrap; gap:.6rem 2rem; align-items:baseline; font-size:.85rem; color:var(--muted); }
+  footer .name { font-family:var(--display); font-size:1rem; color:var(--ink); }
+  footer a { color:var(--muted); }
+  footer a:hover { color:var(--ink); }
 
-  /* ---------- signup ---------- */
-
-  .signup {
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: .9rem;
-    max-width: 32rem;
-  }
-
-  form {
-    display: flex;
-    gap: .5rem;
-    flex-wrap: wrap;
-  }
-
-  input[type="email"] {
-    flex: 1 1 15rem;
-    min-width: 0;
-    font-family: var(--body);
-    font-size: 1rem;
-    color: var(--ink);
-    background: var(--raise);
-    border: 1px solid var(--line);
-    padding: .8rem .9rem;
-    border-radius: 0;
-  }
-
-  input[type="email"]::placeholder { color: var(--muted); }
-  input[type="email"]:focus-visible { outline: 2px solid var(--green); outline-offset: 1px; }
-
-  button {
-    font-family: var(--body);
-    font-size: .95rem;
-    font-weight: 600;
-    letter-spacing: .01em;
-    color: var(--on-green);
-    background: var(--green);
-    border: 1px solid var(--green);
-    padding: .8rem 1.35rem;
-    border-radius: 0;
-    cursor: pointer;
-  }
-
-  button:hover { opacity: .9; }
-  button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
-
-  .fineprint { font-size: .87rem; line-height: 1.55; color: var(--muted); margin: 0; }
-  .sidedoor { margin: 1.1rem 0 0; padding-top: 1.1rem; border-top: 1px solid var(--hair); font-size: .92rem; line-height: 1.55; color: var(--soft); }
-  .sidedoor a { color: var(--green); font-weight: 600; text-underline-offset: 3px; white-space: nowrap; }
-  .fineprint b { color: var(--soft); font-weight: 500; }
-
-  .confirm {
-    font-size: .95rem;
-    line-height: 1.5;
-    color: var(--green);
-    margin: 0;
-    font-weight: 500;
-    max-width: 30rem;
-  }
-
-  .confirm.is-error { color: #A3341C; }
-
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) .confirm.is-error { color: #E8896C; }
-  }
-
-  :root[data-theme="dark"] .confirm.is-error { color: #E8896C; }
-
-  button[disabled] { opacity: .6; cursor: default; }
-
-  /* ---------- hero photo ---------- */
-
-  .hero-shot {
-    margin: 3rem 0 0;
-    max-width: 42rem;
-  }
-
-  .hero-shot img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
-  /* ---------- facts ---------- */
-
-  .facts {
-    margin-top: 3.25rem;
-    border-top: 1px solid var(--ink);
-    border-bottom: 1px solid var(--line);
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 34rem;
-  }
-
-  .fact {
-    padding: 1.4rem 1.25rem 1.4rem 0;
-    display: flex;
-    flex-direction: column;
-    gap: .2rem;
-  }
-
-  .fact + .fact { border-left: 1px solid var(--hair); padding-left: 1.25rem; }
-
-  .fact b {
-    font-family: var(--display);
-    font-size: 2.4rem;
-    font-weight: 400;
-    line-height: 1.05;
-    font-variant-numeric: tabular-nums;
-    letter-spacing: -.01em;
-  }
-
-  .fact b small {
-    font-size: .45em;
-    font-weight: 400;
-    color: var(--muted);
-    letter-spacing: .02em;
-    margin-right: .12em;
-  }
-
-  .fact > span { font-size: .82rem; color: var(--muted); }
-
-  @media (max-width: 38rem) {
-    .facts { grid-template-columns: 1fr; }
-    .fact + .fact { border-left: 0; border-top: 1px solid var(--hair); padding-left: 0; }
-  }
-
-  /* ---------- sections ---------- */
-
-  section { padding: 3.75rem 0 0; }
-
-  h2 {
-    font-family: var(--display);
-    font-weight: 400;
-    font-size: clamp(1.7rem, 3.6vw, 2.3rem);
-    line-height: 1.15;
-    letter-spacing: -.01em;
-    margin: .5rem 0 1.75rem;
-    max-width: 26rem;
-    text-wrap: balance;
-  }
-
-  .items { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem 2.25rem; }
-  .items.pair { grid-template-columns: repeat(2, 1fr); max-width: 44rem; }
-
-  @media (max-width: 46rem) {
-    .items, .items.pair { grid-template-columns: 1fr; gap: 1.75rem; }
-  }
-
-  .item { display: flex; flex-direction: column; gap: .45rem; }
-
-  .item h3 {
-    font-size: 1rem;
-    font-weight: 600;
-    margin: 0;
-    padding-top: .8rem;
-    border-top: 1px solid var(--ink);
-  }
-
-  .item p { margin: 0; font-size: .93rem; line-height: 1.6; color: var(--soft); }
-
-  .soon .item h3 { border-top-color: var(--line); color: var(--soft); }
-
-  .note { font-size: .9rem; color: var(--muted); margin: 1.6rem 0 0; max-width: 34rem; }
-
-  /* ---------- partners ---------- */
-
-  .partners {
-    margin-top: 4rem;
-    border: 1px solid var(--line);
-    padding: 2.25rem 2rem;
-    display: grid;
-    grid-template-columns: 1.15fr 1fr;
-    gap: 2rem 3rem;
-    align-items: start;
-  }
-
-  @media (max-width: 46rem) {
-    .partners { grid-template-columns: 1fr; gap: 1.75rem; padding: 1.75rem 1.5rem; }
-  }
-
-  .partners h2 { margin: .5rem 0 .9rem; font-size: clamp(1.5rem, 3vw, 2rem); }
-  .partners p { margin: 0; color: var(--soft); font-size: .96rem; line-height: 1.6; }
-
-  .terms { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0; }
-
-  .terms li {
-    font-size: .92rem;
-    line-height: 1.55;
-    color: var(--soft);
-    padding: .7rem 0;
-    border-bottom: 1px solid var(--hair);
-  }
-
-  .terms li:first-child { border-top: 1px solid var(--hair); }
-  .terms li b { color: var(--ink); font-weight: 600; }
-
-  .btn-line {
-    display: inline-block;
-    margin-top: 1.2rem;
-    font-family: var(--body);
-    font-size: .93rem;
-    font-weight: 600;
-    color: var(--ink);
-    text-decoration: none;
-    border: 1px solid var(--ink);
-    padding: .7rem 1.2rem;
-  }
-
-  .btn-line:hover { background: var(--ink); color: var(--paper); }
-  .btn-line:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
-
-  .cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1.4rem; }
-  .text-link {
-    margin-top: 1.2rem;
-    font-family: var(--body);
-    font-size: .93rem;
-    font-weight: 600;
-    color: var(--green);
-    text-underline-offset: 3px;
-  }
-  .text-link:hover { color: var(--ink); }
-
-  /* ---------- rule ---------- */
-
-  /* ---------- footer ---------- */
-
-  footer {
-    margin-top: 4.5rem;
-    border-top: 1px solid var(--line);
-    padding: 1.6rem 0 3.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: .6rem 2rem;
-    align-items: baseline;
-    font-size: .85rem;
-    color: var(--muted);
-  }
-
-  footer .name { font-family: var(--display); font-size: 1rem; color: var(--ink); }
-  footer a { color: var(--muted); text-underline-offset: 2px; }
-  footer a:hover { color: var(--ink); }
-</style>
-<style>
-  body { margin: 0; }
-  img { max-width: 100%; }
+  th.cat { width:10.5rem; }
+  @media (max-width:34rem) { th.cat { width:6.6rem; } }
+  .ways { display:grid; grid-template-columns:repeat(2,1fr); gap:0 2.4rem; border-top:1px solid var(--ink); }
+  .ways.three { grid-template-columns:repeat(3,1fr); }
+  .way { padding:1.5rem 0 1.4rem; border-bottom:1px solid var(--hair); }
+  .way .num { display:block; margin-bottom:.3rem; }
+  .way h3 { font-family:var(--display); font-weight:500; font-size:1.25rem; margin:0 0 .45rem; line-height:1.2; }
+  .way p { margin:0; font-size:.95rem; color:var(--soft); line-height:1.55; }
+  @media (max-width:52rem) { .ways.three { grid-template-columns:1fr; } }
+  @media (max-width:44rem) { .ways { grid-template-columns:1fr; } }
+  .cta-row { display:flex; flex-wrap:wrap; gap:.8rem 1.6rem; align-items:center; margin-top:1.3rem; }
+  .cta-row .btn-line { margin-top:0; }
+  .text-link { font-size:.95rem; font-weight:600; color:var(--green); }
+  .gnmnav .links a.lang { border:1px solid var(--line); border-radius:999px; padding:6px 11px; }
+  @media (max-width:760px) { .gnmnav .links a.lang { border:0; border-bottom:1px solid var(--line); border-radius:0; padding:14px 20px; } }
+  section[id], div[id] { scroll-margin-top:4.5rem; }
+  .pkg .item { grid-template-columns:1fr 11rem; }
+  @media (max-width:44rem) { .pkg .item { grid-template-columns:1fr; } }
 </style>
 <!-- Privacy-friendly analytics by Plausible -->
 <script async src="https://plausible.io/js/pa-jfuoECYdUyseGoZYZfrYs.js"></script>
@@ -366,7 +185,7 @@
 </script>
 </head>
 <body>
-<!-- gnm-nav -->
+<!-- gnm-nav-site -->
 <style>
 .gnmnav{position:sticky;top:0;z-index:60;background:var(--bg,var(--paper,#F9F2E9));border-bottom:1px solid var(--rule,var(--line,#E3D9C6))}
 .gnmnav .in{max-width:1080px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:18px}
@@ -392,13 +211,11 @@
     <a class="brand" href="/">Golf, nothing more.</a>
     <button class="burger" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <div class="links">
-      <a href="/deals/">Member deals</a>
-      <a href="/partners/">Open to everyone</a>
-      <a href="/articles/">Articles</a>
-      <a href="/travel/">Travel</a>
-      <a href="/media-kit/">For brands</a>
-      <a href="https://www.facebook.com/groups/Golf.nothing.more">The group</a>
-      <a href="https://www.facebook.com/groups/golfnothingmoredeals">Deals group</a>
+      <a href="/#how">How it works</a>
+      <a href="/#packages">Packages</a>
+      <a href="/#audience">Audience</a>
+      <a href="mailto:partners@golfnothingmore.com?subject=Partnership%20enquiry">Contact</a>
+      <a class="lang" href="/nl/" lang="nl" hreflang="nl">Nederlands</a>
     </div>
   </div>
 </nav>
@@ -406,208 +223,275 @@
 (function(){var n=document.getElementById('gnmnav');if(!n)return;
 var b=n.querySelector('.burger');
 b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+n.querySelectorAll('.links a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open');b.setAttribute('aria-expanded',false)})});
 var p=location.pathname.replace(/index\.html$/,'');
-n.querySelectorAll('.links a').forEach(function(a){
-  var h=a.getAttribute('href');
-  if(h&&h.charAt(0)==='/'&&h!=='/'&&p.indexOf(h)===0)a.setAttribute('aria-current','page');
-});})();
+n.querySelectorAll('.links a').forEach(function(a){if(a.getAttribute('href')===p)a.setAttribute('aria-current','page');});})();
 </script>
-<!-- /gnm-nav -->
+<!-- /gnm-nav-site -->
 
 <div class="wrap">
 
-  <header class="hero">
-    <div class="hero-inner">
-      <picture><source srcset="logo-dark.png" media="(prefers-color-scheme: dark)"><img class="mark" src="logo-3d.png" width="296" height="300" alt="" decoding="async"></picture>
-      <p class="label">Member codes, straight to your inbox</p>
-      <h1>Golf, nothing&nbsp;more.</h1>
-      <p class="lede">Golf brands give members of Golf, nothing more <b>a discount the public can't get</b>. Leave your email and every code we have arrives straight away. After that we write when there is something worth sending: a new code, or whatever we've managed to get since.</p>
-
-      <div class="signup">
-        <form id="signup" action="https://assets.mailerlite.com/jsonp/2623605/forms/198071517381133550/subscribe" method="post" novalidate>
-          <label for="email" style="position:absolute;left:-9999px;">Email address</label>
-          <input type="email" id="email" name="fields[email]" placeholder="you@example.com" autocomplete="email" required>
-          <input type="hidden" name="ml-submit" value="1">
-          <input type="hidden" name="anticsrf" value="true">
-          <input type="hidden" name="fields[signup_source]" id="gnm_source" value="site">
-          <div aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;overflow:hidden;">
-            <label for="gnm_hp">Leave this field empty</label>
-            <input type="text" id="gnm_hp" name="gnm_hp" tabindex="-1" autocomplete="off">
-          </div>
-          <button type="submit" id="signupBtn">Send me the deals</button>
-        </form>
-        <p class="fineprint">Some offers earn us a commission. Unsubscribe any time.</p>
-        <p class="sidedoor">Not ready to hand over your email? A few of the offers are open to everyone, no code and no signup. <a href="/partners/">See those instead &rarr;</a></p>
-        <p class="sidedoor">Already on the list? <a href="/deals/">The member deals are here &rarr;</a></p>
-      </div>
-    </div>
-
-    <figure class="hero-shot">
-      <img src="hero.jpg" alt="A links course on a clifftop above the sea, with four golfers on a green in the evening light.">
-    </figure>
+  <header>
+    <picture><source srcset="/logo-dark.png" media="(prefers-color-scheme: dark)"><img class="mark" src="/logo-3d.png" width="296" height="300" alt="" decoding="async"></picture>
+    <p class="label">Golf media</p>
+    <h1>Golf content that works, tested on 249,000&nbsp;golfers.</h1>
+    <p class="lede">We make golf content, test it in our own community of 249,000 golfers, and put the version that worked in front of your customers. <b>One partner from the first idea to the numbers afterwards.</b></p>
 
     <div class="facts">
-      <div class="fact"><b><small>over</small><span id="memberCount" data-target="249000">249,000</span></b><span>members in the Facebook group</span></div>
+      <div class="fact"><b>249,000</b><span>golfers in our group</span></div>
+      <div class="fact"><b>136,000</b><span>views in the group, every day</span></div>
+      <div class="fact"><b>54%</b><span>of them in the United States</span></div>
+      <div class="fact"><b>1,100</b><span>members who post or comment daily</span></div>
     </div>
+
+    <a class="btn-mail" href="mailto:partners@golfnothingmore.com?subject=Partnership%20enquiry&amp;body=Hi%20Thomas%2C%0A%0AWe%20are%20">partners@golfnothingmore.com</a>
+    <p class="mailnote">Tell us what you sell and who you want to reach. Within two working days you hear what we would do and what it costs.</p>
   </header>
 
-  <section>
-    <p class="label">What you get</p>
-    <h2>Two things.</h2>
-    <div class="items pair">
-      <div class="item">
-        <h3>Offers worth opening</h3>
-        <p>Every offer has to give members something the public doesn't get: a discount, extra lessons, early access. A link at the normal price is an advert, and it doesn't go in. The codes we already have are yours the moment you sign up. New ones go out in the email first and reach the members page a week later.</p>
+  <section id="how">
+    <p class="label">How it works</p>
+    <h2>Test, make, run, report</h2>
+    <div class="ways">
+      <div class="way">
+        <span class="num">01</span>
+        <h3>Test</h3>
+        <p>Before anyone spends a budget, we put two or three versions of your message in our group and measure which one golfers respond to. Your test runs against months of our own measurements, so you know what good looks like.</p>
       </div>
-      <div class="item">
-        <h3>Nothing else</h3>
-        <p>No daily mail, no sequence, no "just checking in". We write when a new code lands or when we have something worth passing on, and not at all when there is nothing.</p>
+      <div class="way">
+        <span class="num">02</span>
+        <h3>Make</h3>
+        <p>Content in the voice of our own channels, made by us on the course and the range. For more polished work, such as product video or a shoot on location, we can bring in a specialist golf content studio. You keep one point of contact.</p>
+      </div>
+      <div class="way">
+        <span class="num">03</span>
+        <h3>Run</h3>
+        <p>The version that worked goes where your customers are: golf creators with a clickable link, our member email, the group itself, and promoted posts on our own channels.</p>
+      </div>
+      <div class="way">
+        <span class="num">04</span>
+        <h3>Report</h3>
+        <p>Every channel gets its own link or code. Afterwards you get the numbers per channel, including the ones that disappointed.</p>
       </div>
     </div>
   </section>
 
-  <div class="partners">
-    <div>
-      <p class="label">For brands</p>
-      <h2>Reach golfers who asked to hear from you</h2>
-      <p>Our subscribers come out of a 249,000-member community, but what you reach is the list: people who opted in because they want offers. It's new, so it's small and growing. Write to us and we'll tell you exactly how big it is this week, and how many of them open.</p>
-      <div class="cta-row">
-        <a class="btn-line" href="mailto:partners@golfnothingmore.com?subject=Partnership%20enquiry">partners@golfnothingmore.com</a>
-        <a class="text-link" href="/media-kit/">What we offer brands &rarr;</a>
+  <section id="test">
+    <p class="label">Why test first</p>
+    <h2>The same group answers some posts thirty times more than others</h2>
+    <p class="body">We measure every post in the group by how many comments it draws per 1,000 people who see it. Over time that tells you something no agency can: <b>how golfers respond to a type of message before you pay to show it to them.</b></p>
+    <figure>
+      <table class="chart">
+        <caption>Comments per 1,000 views, by type of post</caption>
+        <tbody>
+          <tr><th class="cat" scope="row">Gear choice</th><td><div class="track"><div class="bar" style="width:100%"></div></div></td><td class="val">59.7</td></tr>
+          <tr><th class="cat" scope="row">Dilemma</th><td><div class="track"><div class="bar" style="width:70.7%"></div></div></td><td class="val">42.2</td></tr>
+          <tr><th class="cat" scope="row">Identity</th><td><div class="track"><div class="bar" style="width:57.1%"></div></div></td><td class="val">34.1</td></tr>
+          <tr><th class="cat" scope="row">Rules question</th><td><div class="track"><div class="bar" style="width:50.3%"></div></div></td><td class="val">30.0</td></tr>
+          <tr><th class="cat" scope="row">This or that</th><td><div class="track"><div class="bar" style="width:46.2%"></div></div></td><td class="val">27.6</td></tr>
+          <tr><th class="cat" scope="row">Fill in the blank</th><td><div class="track"><div class="bar" style="width:38.0%"></div></div></td><td class="val">22.7</td></tr>
+          <tr><th class="cat" scope="row">Distance</th><td><div class="track"><div class="bar" style="width:37.4%"></div></div></td><td class="val">22.3</td></tr>
+          <tr><th class="cat" scope="row">Announcement</th><td><div class="track"><div class="bar" style="width:3.4%"></div></div></td><td class="val">2.0</td></tr>
+        </tbody>
+      </table>
+      <figcaption class="source">Our own measurements on posts in the group, 2026. A gear choice reads like "Would you try X before you buy Y?". An announcement is a post that tells people something new.</figcaption>
+    </figure>
+    <p class="body" style="margin-top:1.4rem">The clearest example is our own. Our first post from our page, on 18 September 2026, was an announcement with a link. It reached 250 people. A few days later we posted a photo and a question with nothing to click. It reached 3,300 people in its first hour, and 14,852 people and 101 comments in three days. Same page, same group. That gap is what a test finds before your budget does.</p>
+  </section>
+
+  <section id="packages" class="pkg">
+    <p class="label">Packages</p>
+    <h2>Three ways to start</h2>
+    <div class="stream">
+      <div class="stream-head"><span class="num">01</span><h3>Test</h3></div>
+      <div class="item">
+        <div>
+          <h4>A first read on your message</h4>
+          <p>A briefing from our own data on how golfers respond to your category. Two or three versions of your message as posts in the group, under your own name and labelled as partner content. Then an analysis of which one worked, and why.</p>
+          <p>The quickest way to find out whether we are any use to you.</p>
+        </div>
+        <div class="price open">
+          <b>Per test</b>
+          <span>Price on request.</span>
+        </div>
       </div>
     </div>
-    <ul class="terms">
-      <li><b>Commission, not banners.</b> On codes and deals we're paid on what members actually buy, so we only run things we think they'll want.</li>
-      <li><b>A real member offer.</b> Something the public doesn't get — a discount, extra sessions, early access. A link at the normal price isn't a deal.</li>
-      <li><b>Always labelled.</b> Every commercial post is marked as paid or as partner content. No moderator access, no sign-up forms, and nothing dressed up as a member’s own post.</li>
-      <li><b>Ask them something.</b> We measure every post in the group, and the ones that ask members a question get several times the response of the ones that announce. We'll help you shape it.</li>
+    <div class="stream">
+      <div class="stream-head"><span class="num">02</span><h3>Campaign</h3></div>
+      <div class="item">
+        <div>
+          <h4>Built around a launch or the start of the season</h4>
+          <p>Everything in the test, then the content to go with the winning message, made by us or a studio. One post from a golf creator with a link to your site, a mention in our member email, and posts in the group. A report per channel at the end.</p>
+        </div>
+        <div class="price open">
+          <b>Per campaign</b>
+          <span>Price on request.</span>
+        </div>
+      </div>
+    </div>
+    <div class="stream">
+      <div class="stream-head"><span class="num">03</span><h3>Ongoing</h3></div>
+      <div class="item">
+        <div>
+          <h4>For brands that want to stay in front of golfers</h4>
+          <p>New content every month, a standing place in the group with up to three posts a week and pre-approved access, and a monthly report with what to change next.</p>
+          <p>Three months at a time, because one post that lands badly teaches you nothing.</p>
+        </div>
+        <div class="price open">
+          <b>Monthly</b>
+          <span>Three months minimum. Price on request.</span>
+        </div>
+      </div>
+    </div>
+    <p class="body" style="margin-top:1.6rem"><b>Also on its own:</b> content production, and posts or stories from one of our creators.</p>
+  </section>
+
+  <section id="channels">
+    <p class="label">Where it runs</p>
+    <h2>Four channels, and how big each one really is</h2>
+    <div class="stream">
+      <div class="stream-head"><span class="num">01</span><h3>The group</h3></div>
+      <div class="item">
+        <div>
+          <h4>249,000 golfers on Facebook</h4>
+          <p>Running since 2013, and one of the largest amateur golf communities anywhere. Members do not sell in here: no affiliate links, no "DM me". That is why a labelled partner post stands out.</p>
+        </div>
+        <div class="price">
+          <b>Our biggest channel</b>
+          <span>136,000 views a day on average.</span>
+        </div>
+      </div>
+    </div>
+    <div class="stream">
+      <div class="stream-head"><span class="num">02</span><h3>Golf creators</h3></div>
+      <div class="item">
+        <div>
+          <h4>A small network on Instagram and TikTok</h4>
+          <p>Creators with mostly American and British audiences. One point of contact, a fixed price per reel or story, and every post labelled as a paid partnership. A story can carry a clickable link, so this is the route when you want clicks or downloads.</p>
+        </div>
+        <div class="price open">
+          <b>Per reel or story</b>
+          <span>Fixed price per creator.</span>
+        </div>
+      </div>
+    </div>
+    <div class="stream">
+      <div class="stream-head"><span class="num">03</span><h3>Member email</h3></div>
+      <div class="item">
+        <div>
+          <h4>Golfers who asked for offers</h4>
+          <p>Our email to golfers who signed up for member deals, growing by about ten people a day. Suited to a sharp offer with an end date.</p>
+        </div>
+        <div class="price open">
+          <b>Small and growing</b>
+          <span>Ask us for the number this week.</span>
+        </div>
+      </div>
+    </div>
+    <div class="stream">
+      <div class="stream-head"><span class="num">04</span><h3>Our own channels</h3></div>
+      <div class="item">
+        <div>
+          <h4>Instagram, TikTok, X and Facebook</h4>
+          <p>We are golf creators ourselves. Since September 2026 we post our own content: running a golf group while one of us is still learning the game. These channels are young, so a promoted post there gets its reach from the budget rather than from our following. We would rather say that than dress it up.</p>
+        </div>
+        <div class="price open">
+          <b>Budget plus a fee</b>
+          <span>Per post or campaign.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="audience">
+    <p class="label">Audience</p>
+    <h2>Who we reach</h2>
+    <p class="body">The best data on our audience comes from the group. 83% are men, three in four are 35 or older, and more than half live in the United States. Golf has seasons: the group averaged 178,000 views a day in September and 100,000 in October.</p>
+    <figure>
+      <table class="chart">
+        <caption>Members by country</caption>
+        <tbody>
+          <tr><th class="cat" scope="row">United States</th><td><div class="track"><div class="bar" style="width:100%"></div></div></td><td class="val">133,948 <small>· 54%</small></td></tr>
+          <tr><th class="cat" scope="row">United Kingdom</th><td><div class="track"><div class="bar" style="width:20.1%"></div></div></td><td class="val">26,982 <small>· 11%</small></td></tr>
+          <tr><th class="cat" scope="row">Australia</th><td><div class="track"><div class="bar" style="width:10.6%"></div></div></td><td class="val">14,263 <small>· 6%</small></td></tr>
+          <tr><th class="cat" scope="row">Canada</th><td><div class="track"><div class="bar" style="width:10%"></div></div></td><td class="val">13,431 <small>· 5%</small></td></tr>
+          <tr><th class="cat" scope="row">Elsewhere</th><td><div class="track"><div class="bar" style="width:44.7%"></div></div></td><td class="val">59,937 <small>· 24%</small></td></tr>
+        </tbody>
+      </table>
+      <figcaption class="source">Facebook group insights, 3 September to 1 November 2026.</figcaption>
+    </figure>
+    <figure>
+      <table class="chart">
+        <caption>Share of members by age</caption>
+        <tbody>
+          <tr><th class="cat" scope="row">18–24</th><td><div class="track"><div class="bar" style="width:16.4%"></div></div></td><td class="val">4.0%</td></tr>
+          <tr><th class="cat" scope="row">25–34</th><td><div class="track"><div class="bar" style="width:77.1%"></div></div></td><td class="val">19.0%</td></tr>
+          <tr><th class="cat" scope="row">35–44</th><td><div class="track"><div class="bar" style="width:100%"></div></div></td><td class="val">24.7%</td></tr>
+          <tr><th class="cat" scope="row">45–54</th><td><div class="track"><div class="bar" style="width:76.9%"></div></div></td><td class="val">19.0%</td></tr>
+          <tr><th class="cat" scope="row">55–64</th><td><div class="track"><div class="bar" style="width:68.4%"></div></div></td><td class="val">16.9%</td></tr>
+          <tr><th class="cat" scope="row">65+</th><td><div class="track"><div class="bar" style="width:65.2%"></div></div></td><td class="val">16.1%</td></tr>
+        </tbody>
+      </table>
+      <figcaption class="source">Facebook group insights, same period. Men and women combined. Under-18s are 0.2% and left out.</figcaption>
+    </figure>
+  </section>
+
+  <section id="ask">
+    <p class="label">In return</p>
+    <h2>What we ask of you</h2>
+    <div class="asks">
+      <div class="ask"><p><b>A clear goal.</b> Sales in the US, downloads of your app, getting known in the UK. The goal decides the content and the channels.</p></div>
+      <div class="ask"><p><b>Your product in our hands.</b> If we make the content, we want to have used it. We don't show golfers anything we wouldn't stand behind.</p></div>
+      <div class="ask"><p><b>Your own link or code per channel, and the numbers back.</b> We can't see your checkout, and we'd rather ask than guess.</p></div>
+      <div class="ask"><p><b>Nothing dressed up as something else.</b> Everything paid is labelled as paid. That protects your name as much as ours.</p></div>
+    </div>
+  </section>
+
+  <section id="unknown">
+    <div class="frank">
+      <p class="label">Straight answers</p>
+      <h2>What we can't tell you yet</h2>
+      <p><b>What a creator campaign or our own channels return.</b> Both are new. We don't have campaign numbers from them yet, and until we do we promise no figures.</p>
+      <p><b>How big the email list is.</b> It started in September 2026. Write to us and we'll tell you the number that week rather than round it up.</p>
+      <p><b>Reach is not attention.</b> We've measured posts that reached thousands of people and drew no reaction at all. We sell response, not impressions, and that is why our first rates are introductory.</p>
+      <p><b>What our members play and spend.</b> Facebook doesn't collect it and a member survey is still planned. Anyone quoting you a handicap profile for an audience this size is guessing.</p>
+    </div>
+  </section>
+
+  <section id="brands">
+    <p class="label">So far</p>
+    <h2>Brands we work with</h2>
+    <p class="body">Some hire us for a campaign. Some give our members a code the public doesn't get. With others we're in their affiliate programme and pass on what's worth passing on. We always say which.</p>
+    <ul class="brands">
+      <li>Forest &amp; Fairway<span>campaign</span></li>
+      <li>Shot Scope<span>member code</span></li>
+      <li>The Stack System<span>member code</span></li>
+      <li>Sandbag Golf<span>member code</span></li>
+      <li>Eat Drink Sleep Golf<span>member offer</span></li>
+      <li>Callaway<span>affiliate</span></li>
+      <li>Callaway Pre-Owned<span>affiliate</span></li>
+      <li>OGIO<span>affiliate</span></li>
     </ul>
-  </div>
+    <p class="body" style="margin-top:1.2rem">Being on this list doesn't mean a brand endorses us. It means we send them buyers and we're open about it.</p>
+  </section>
+
+  <section>
+    <p class="label">Next</p>
+    <h2>How this starts</h2>
+    <p class="body">Email us with what you sell and who you want to reach. Within two working days you get a proposal on one page: which content, which channels, and what it costs. A call is fine too.</p>
+    <a class="btn-line" href="mailto:partners@golfnothingmore.com?subject=Partnership%20enquiry">partners@golfnothingmore.com</a>
+  </section>
 
   <footer>
     <span class="name">Golf, nothing more.</span>
     <a href="/deals/">Member deals</a>
-    <a href="/media-kit/">Media kit</a>
-    <a href="/partners/">Deals worth knowing about</a>
+    <a href="/join/">Member codes by email</a>
     <a href="/articles/">Articles</a>
     <a href="https://www.facebook.com/groups/Golf.nothing.more">The group on Facebook</a>
-    <a href="https://www.facebook.com/groups/golfnothingmoredeals">The deals group</a>
-    <a href="mailto:hello@golfnothingmore.com">hello@golfnothingmore.com</a>
-    <a href="privacy.html">Privacy</a>
+    <a href="/nl/" lang="nl" hreflang="nl">Nederlands</a>
+    <a href="/privacy.html">Privacy</a>
   </footer>
 
 </div>
 
-<script>
-  (function () {
-    var form = document.getElementById('signup');
-    if (!form) return;
-    var input = document.getElementById('email');
-    var btn = document.getElementById('signupBtn');
-    var label = btn ? btn.textContent : '';
-    var valid = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-
-    // Waar kwam deze inschrijver vandaan? /intro zet ?j=intro in de URL.
-    (function () {
-      var field = document.getElementById('gnm_source');
-      if (!field) return;
-      try {
-        var m = /[?&]j=([A-Za-z0-9_-]{1,32})/.exec(window.location.search);
-        if (m) { field.value = m[1]; }
-      } catch (e) { /* laat 'site' staan */ }
-    })();
-
-    function say(text, isError) {
-      var old = form.parentNode.querySelector('.confirm');
-      if (old) old.parentNode.removeChild(old);
-      var msg = document.createElement('p');
-      msg.className = 'confirm' + (isError ? ' is-error' : '');
-      msg.setAttribute('role', 'status');
-      msg.textContent = text;
-      form.parentNode.appendChild(msg);
-    }
-
-    form.addEventListener('submit', function (e) {
-      if (!window.fetch) return; // laat de browser het formulier gewoon versturen
-      e.preventDefault();
-
-      // Honeypot: alleen bots vullen dit veld in. Doe alsof het gelukt is.
-      var trap = document.getElementById('gnm_hp');
-      if (trap && trap.value) {
-        form.style.display = 'none';
-        say('Almost there — check your inbox and click the confirmation link.');
-        return;
-      }
-
-      if (!valid.test(input.value.trim())) {
-        say('That address does not look right. Have another go.', true);
-        input.focus();
-        return;
-      }
-
-      if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
-
-      // MailerLite stuurt CORS-headers, dus we kunnen het antwoord echt lezen.
-      fetch(form.action, { method: 'POST', body: new FormData(form) })
-        .then(function (res) {
-          return res.json().catch(function () { return null; });
-        })
-        .then(function (data) {
-          var fieldErrors = data && data.errors && data.errors.fields && data.errors.fields.email;
-          if (data && data.success === false && fieldErrors) {
-            var first = String(fieldErrors[0] || '');
-            if (/valid email|required/i.test(first)) {
-              say('That address does not look right. Have another go.', true);
-              if (input) { input.focus(); }
-              return;
-            }
-            // Iets anders ging mis aan hun kant; toon de neutrale melding,
-            // maar laat het detail achter voor wie het wil weten.
-            if (window.console) { console.warn('signup:', first); }
-          }
-          form.style.display = 'none';
-          say('Almost there — check your inbox and click the confirmation link. That is the last thing we will ask of you.');
-        })
-        .catch(function () {
-          say('Something went wrong on our end. Try again in a minute, or email hello@golfnothingmore.com.', true);
-        })
-        .then(function () {
-          if (btn) { btn.disabled = false; btn.textContent = label; }
-        });
-    });
-  })();
-
-  (function () {
-    var el = document.getElementById('memberCount');
-    if (!el || !window.requestAnimationFrame) return;
-    var target = parseInt(el.getAttribute('data-target'), 10);
-    if (!target) return;
-    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reduce) return;
-    var fmt = function (n) { return n.toLocaleString('en-US'); };
-    var dur = 3200, done = false;
-    function run() {
-      if (done) return;
-      done = true;
-      var start = null;
-      el.textContent = fmt(0);
-      function step(ts) {
-        if (start === null) start = ts;
-        var p = Math.min((ts - start) / dur, 1);
-        var eased = 1 - Math.pow(1 - p, 3);
-        el.textContent = fmt(Math.round(target * eased));
-        if (p < 1) { requestAnimationFrame(step); } else { el.textContent = fmt(target); }
-      }
-      requestAnimationFrame(step);
-    }
-    if (!window.IntersectionObserver) { run(); return; }
-    var io = new IntersectionObserver(function (entries) {
-      for (var i = 0; i < entries.length; i++) {
-        if (entries[i].isIntersecting) { io.disconnect(); run(); return; }
-      }
-    }, { threshold: 0.6 });
-    io.observe(el);
-  })();
-</script>
 </body>
 </html>
