@@ -213,11 +213,36 @@
 .follow a:hover{background:var(--green,#14512F);border-color:var(--green,#14512F);color:#F2EAD5}
 .follow a:hover small{color:#F2EAD5}
 .follow a:focus-visible,.gnmnav .soc a:focus-visible{outline:2px solid var(--accent,#A85814);outline-offset:2px}
-@media (max-width:30rem){.follow a{flex:1 1 100%}}
+.hero{width:100%;display:flex;flex-direction:column;align-items:flex-start;gap:1.3rem}
+.hero-text{display:flex;flex-direction:column;align-items:flex-start;gap:1.3rem}
+.hero-reel{margin:0;width:min(12rem,55vw)}
+.hero-reel video{display:block;width:100%;height:auto;aspect-ratio:9/16;object-fit:cover;border-radius:1.2rem;background:#1d2a22;box-shadow:0 22px 44px -22px rgba(16,26,21,.55)}
+.hero-reel figcaption{font-size:.78rem;color:var(--muted);margin-top:.6rem;text-align:center}
+@media (min-width:64rem){
+ .hero{display:grid;grid-template-columns:minmax(0,1fr) 15rem;gap:3.5rem;align-items:center;width:calc(100% + 10rem)}
+ .hero-reel{width:100%}
+}
+.follow{width:100%}
+.follow .frow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.6rem}
+.follow a{justify-content:flex-start;padding:.75rem 1rem}
+.follow a > span{display:flex;flex-direction:column;line-height:1.25}
+@media (max-width:40rem){.follow .frow{grid-template-columns:1fr}}
+.casebox{background:var(--green);color:var(--on-green);padding:2.2rem 2rem 2.4rem}
+.casebox .label,.casebox h2,.casebox p.body,.casebox p.body b,.casebox .fact > span{color:inherit}
+.casebox .label,.casebox .fact > span{opacity:.8}
+.casebox .facts{border-top-color:currentColor;border-bottom-color:rgba(127,127,127,.35)}
+.casebox .fact + .fact{border-left-color:rgba(127,127,127,.35)}
+.casebox .btn-line{color:inherit;border-color:currentColor}
+.casebox .btn-line:hover{background:var(--on-green);color:var(--green)}
+@media (max-width:30rem){.casebox{padding:1.6rem 1.2rem 1.8rem}}
+.who{display:grid;grid-template-columns:minmax(0,16rem) minmax(0,1fr);gap:2.2rem;align-items:center}
+.who img{display:block;width:100%;height:auto;border-radius:.5rem}
+@media (max-width:40rem){.who{grid-template-columns:1fr}.who picture{max-width:20rem}}
 </style>
 <script>
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-soc]');if(!a)return;
 try{plausible('Social',{props:{network:a.getAttribute('data-soc'),place:a.getAttribute('data-place')}});}catch(_){}});
+(function(){try{if(matchMedia('(prefers-reduced-motion: reduce)').matches){document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('.hero-reel video').forEach(function(v){v.removeAttribute('autoplay');v.pause();v.controls=true;});});}}catch(_){}})();
 </script>
 
 <nav class="gnmnav" id="gnmnav">
@@ -248,10 +273,18 @@ n.querySelectorAll('.links a').forEach(function(a){if(a.getAttribute('href')===p
 <div class="wrap">
 
   <header>
+    <div class="hero">
+    <div class="hero-text">
     <picture><source srcset="/logo-dark.png" media="(prefers-color-scheme: dark)"><img class="mark" src="/logo-3d.png" width="296" height="300" alt="" decoding="async"></picture>
     <p class="label">Social media marketing voor golfmerken</p>
     <h1>Wij brengen je golfmerk bij golfers, wereldwijd.</h1>
     <p class="lede">Wij zijn een socialmediamarketingbedrijf voor golf. Jij hebt een product, een dienst of een digitale oplossing, en misschien ook al de content. Wij zorgen dat het gezien wordt: in onze eigen community van 250.000 golfers, in onze ledenmail, op onze sociale kanalen en via golfcreators. De meeste van die golfers wonen in de Verenigde Staten, het Verenigd Koninkrijk, Australië en Canada. <b>Nog geen content? Dan koppelen we je aan creators en studio's die het maken.</b></p>
+    </div>
+    <figure class="hero-reel">
+      <video src="/img/home/reel.mp4" poster="/img/home/reel-poster.jpg" width="540" height="960" autoplay muted loop playsinline preload="metadata" aria-label="Thomas en Chris, op de baan"></video>
+      <figcaption>Thomas en Chris, op de baan</figcaption>
+    </figure>
+    </div>
 
     <div class="facts">
       <div class="fact"><b>250.000</b><span>golfers in onze groep</span></div>
@@ -301,6 +334,7 @@ n.querySelectorAll('.links a').forEach(function(a){if(a.getAttribute('href')===p
   </section>
 
   <section id="case">
+    <div class="casebox">
     <p class="label">Een campagne</p>
     <h2>Forest &amp; Fairway: 250 kliks voor &euro;20</h2>
     <p class="body">Forest &amp; Fairway maakt vintage golfkunst op massief hout, in Nederland. In november 2026 draaiden we één reel voor ze op ons Instagram, gepromoot bij golfers met een budget van &euro;20, en een code voor ons publiek: 10 tot 20% korting op een selectie stukken.</p>
@@ -312,6 +346,18 @@ n.querySelectorAll('.links a').forEach(function(a){if(a.getAttribute('href')===p
     </div>
     <p class="body" style="margin-top:1.4rem"><b>Wat werkte:</b> de kliks. Eén op de veertig mensen die de reel zagen, ging naar hun site, voor acht cent per klik. <b>Wat niet werkte:</b> het gesprek. 12 likes en 2 opmerkingen, dus de reel werkte als advertentie, niet als iets waar mensen over praatten. We laten je liever allebei zien.</p>
     <a class="btn-line" href="https://www.instagram.com/p/DfQIyjdOsVb/" data-soc="instagram" data-place="case" rel="noopener" target="_blank">Bekijk de reel op Instagram</a>
+    </div>
+  </section>
+
+  <section id="wie">
+    <div class="who">
+      <picture><source srcset="/img/home/duo.webp" type="image/webp"><img src="/img/home/duo.jpg" width="800" height="1000" alt="Thomas en Chris in een golfkar" loading="lazy"></picture>
+      <div>
+        <p class="label">Wie we zijn</p>
+        <h2>Twee vrienden en een golfgroep</h2>
+        <p class="body">Thomas en Chris. Chris golft en haalde Thomas bij de groep, een community van golfers die al sinds 2013 bestaat. Thomas leert het spel nog, en sinds september 2026 kun je dat volgen op onze eigen kanalen.</p>
+      </div>
+    </div>
   </section>
 
   <section id="test">
