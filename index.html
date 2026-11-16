@@ -248,6 +248,19 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 try{plausible('Social',{props:{network:a.getAttribute('data-soc'),place:a.getAttribute('data-place')}});}catch(_){}});
 (function(){try{if(matchMedia('(prefers-reduced-motion: reduce)').matches){document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('.hero-reel video').forEach(function(v){v.removeAttribute('autoplay');v.pause();v.controls=true;});});}}catch(_){}})();
 </script>
+<style>
+.cases{display:grid;grid-template-columns:repeat(auto-fill,minmax(13rem,1fr));gap:1rem;margin-top:1.5rem}
+.casecard{display:flex;flex-direction:column;background:var(--raise);color:var(--ink);text-decoration:none;border-radius:.5rem;overflow:hidden;transition:transform .15s ease}
+.casecard:hover{transform:translateY(-2px)}
+.casecard img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center top;background:var(--hair)}
+.casecard .cc{padding:1rem 1.1rem 1.2rem;display:flex;flex-direction:column;gap:.4rem;flex:1}
+.casecard .cb{font-family:var(--display);font-weight:600;font-size:1.05rem;line-height:1.2}
+.casecard .cd{font-size:.88rem;color:var(--soft);line-height:1.45}
+.casecard .cg{margin-top:auto;padding-top:.5rem;font-weight:600;font-size:.92rem;color:var(--green)}
+.casecard:hover .cg{text-decoration:underline}
+.casecard:focus-visible{outline:2px solid var(--accent,#A85814);outline-offset:3px}
+@media (max-width:40rem){.cases{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:70%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.6rem;-webkit-overflow-scrolling:touch}.casecard{scroll-snap-align:start}.casecard:hover{transform:none}}
+</style>
 
 <nav class="gnmnav" id="gnmnav">
   <div class="in">
@@ -339,10 +352,12 @@ n.querySelectorAll('.links a').forEach(function(a){if(a.getAttribute('href')===p
 
   <section id="case">
     <div class="casebox">
-    <p class="label">A campaign</p>
-    <h2>Forest &amp; Fairway: vintage golf art, in front of golfers</h2>
-    <p class="body">Forest &amp; Fairway makes vintage golf art on solid wood, in the Netherlands. We ran a reel for them on our Instagram, promoted to golfers, with a code just for our audience.</p>
-    <a class="btn-line" href="https://www.instagram.com/p/DfQIyjdOsVb/" data-soc="instagram" data-place="case" rel="noopener" target="_blank">See the reel on Instagram</a>
+    <p class="label">Campaigns</p>
+    <h2>Some of the brands we put in front of golfers</h2>
+    <div class="cases">
+      <a class="casecard" href="https://www.instagram.com/p/DfQIyjdOsVb/" rel="noopener" target="_blank" data-soc="campaign" data-place="forestampfairway"><img src="/img/home/case-forestfairway.jpg" width="480" height="600" alt="Forest &amp; Fairway" loading="lazy"><span class="cc"><span class="cb">Forest &amp; Fairway</span><span class="cd">Vintage golf art on solid wood. A reel on our Instagram, promoted to golfers, with a code just for our audience.</span><span class="cg">See the campaign &rarr;</span></span></a>
+      <a class="casecard" href="https://www.instagram.com/golfnothingmore/" rel="noopener" target="_blank" data-soc="campaign" data-place="bendergloves"><img src="/img/home/case-bender.jpg" width="480" height="600" alt="Bender Gloves" loading="lazy"><span class="cc"><span class="cb">Bender Gloves</span><span class="cd">Golf gloves in loud colours. A standing code for our members: 15% off any glove with GNM15.</span><span class="cg">See the campaign &rarr;</span></span></a>
+    </div>
     </div>
   </section>
 

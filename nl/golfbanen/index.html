@@ -253,6 +253,19 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 try{plausible('Social',{props:{network:a.getAttribute('data-soc'),place:a.getAttribute('data-place')}});}catch(_){}});
 (function(){try{if(matchMedia('(prefers-reduced-motion: reduce)').matches){document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('.hero-reel video').forEach(function(v){v.removeAttribute('autoplay');v.pause();v.controls=true;});});}}catch(_){}})();
 </script>
+<style>
+.cases{display:grid;grid-template-columns:repeat(auto-fill,minmax(13rem,1fr));gap:1rem;margin-top:1.5rem}
+.casecard{display:flex;flex-direction:column;background:var(--raise);color:var(--ink);text-decoration:none;border-radius:.5rem;overflow:hidden;transition:transform .15s ease}
+.casecard:hover{transform:translateY(-2px)}
+.casecard img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center top;background:var(--hair)}
+.casecard .cc{padding:1rem 1.1rem 1.2rem;display:flex;flex-direction:column;gap:.4rem;flex:1}
+.casecard .cb{font-family:var(--display);font-weight:600;font-size:1.05rem;line-height:1.2}
+.casecard .cd{font-size:.88rem;color:var(--soft);line-height:1.45}
+.casecard .cg{margin-top:auto;padding-top:.5rem;font-weight:600;font-size:.92rem;color:var(--green)}
+.casecard:hover .cg{text-decoration:underline}
+.casecard:focus-visible{outline:2px solid var(--accent,#A85814);outline-offset:3px}
+@media (max-width:40rem){.cases{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:70%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.6rem;-webkit-overflow-scrolling:touch}.casecard{scroll-snap-align:start}.casecard:hover{transform:none}}
+</style>
 
 <nav class="gnmnav" id="gnmnav">
   <div class="in">
