@@ -266,6 +266,14 @@ try{plausible('Social',{props:{network:a.getAttribute('data-soc'),place:a.getAtt
 .casecard:focus-visible{outline:2px solid var(--accent,#A85814);outline-offset:3px}
 @media (max-width:40rem){.cases{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:70%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.6rem;-webkit-overflow-scrolling:touch}.casecard{scroll-snap-align:start}.casecard:hover{transform:none}}
 </style>
+<style>
+.memes{display:grid;grid-template-columns:repeat(auto-fill,minmax(12rem,1fr));gap:.9rem;margin-top:1.4rem}
+.memes a{display:block;border-radius:.6rem;overflow:hidden;line-height:0;box-shadow:0 14px 30px -20px rgba(16,26,21,.6);transition:transform .15s ease}
+.memes a:hover{transform:translateY(-2px) rotate(-.4deg)}
+.memes img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+.memes a:focus-visible{outline:2px solid var(--accent,#A85814);outline-offset:3px}
+@media (max-width:40rem){.memes{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:62%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.6rem}.memes a{scroll-snap-align:start}.memes a:hover{transform:none}}
+</style>
 
 <nav class="gnmnav" id="gnmnav">
   <div class="in">

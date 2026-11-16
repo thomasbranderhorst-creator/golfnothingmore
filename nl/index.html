@@ -257,6 +257,14 @@ try{plausible('Social',{props:{network:a.getAttribute('data-soc'),place:a.getAtt
 .casecard:focus-visible{outline:2px solid var(--accent,#A85814);outline-offset:3px}
 @media (max-width:40rem){.cases{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:70%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.6rem;-webkit-overflow-scrolling:touch}.casecard{scroll-snap-align:start}.casecard:hover{transform:none}}
 </style>
+<style>
+.memes{display:grid;grid-template-columns:repeat(auto-fill,minmax(12rem,1fr));gap:.9rem;margin-top:1.4rem}
+.memes a{display:block;border-radius:.6rem;overflow:hidden;line-height:0;box-shadow:0 14px 30px -20px rgba(16,26,21,.6);transition:transform .15s ease}
+.memes a:hover{transform:translateY(-2px) rotate(-.4deg)}
+.memes img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+.memes a:focus-visible{outline:2px solid var(--accent,#A85814);outline-offset:3px}
+@media (max-width:40rem){.memes{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:62%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.6rem}.memes a{scroll-snap-align:start}.memes a:hover{transform:none}}
+</style>
 
 <nav class="gnmnav" id="gnmnav">
   <div class="in">
@@ -366,6 +374,18 @@ n.querySelectorAll('.links a').forEach(function(a){if(a.getAttribute('href')===p
         <p class="body">Thomas en Chris. Chris golft en haalde Thomas bij de groep, een community van golfers die al sinds 2013 bestaat. Thomas leert het spel nog, en sinds september 2026 kun je dat volgen op onze eigen kanalen.</p>
       </div>
     </div>
+  </section>
+
+  <section id="toon">
+    <p class="label">Onze toon</p>
+    <h2>Zo zien onze kanalen eruit</h2>
+    <p class="body">Golf is moeilijk en een beetje belachelijk, en zo posten we ook. Dit is de toon waar jouw content naast draait.</p>
+    <div class="memes">
+      <a href="https://www.instagram.com/p/Del5CaGNjLM/" rel="noopener" target="_blank" data-soc="instagram" data-place="meme"><img src="/img/home/meme-1.jpg" width="480" height="600" alt="Meme: Me going from 0 to 100 on the golf addiction scale after I said, sure I'll give it a try." loading="lazy"></a>
+      <a href="https://www.instagram.com/p/DeRNP_NsEPF/" rel="noopener" target="_blank" data-soc="instagram" data-place="meme"><img src="/img/home/meme-2.jpg" width="480" height="600" alt="Meme: Me at a party when the conversation isn't about golf" loading="lazy"></a>
+      <a href="https://www.instagram.com/p/DfO6LdvN3qt/" rel="noopener" target="_blank" data-soc="instagram" data-place="meme"><img src="/img/home/meme-3.jpg" width="480" height="600" alt="Meme: Me pretending my bad round doesn't bother me" loading="lazy"></a>
+    </div>
+    <a class="btn-line" href="https://www.instagram.com/golfnothingmore/" rel="noopener" target="_blank" data-soc="instagram" data-place="tone">Meer op Instagram</a>
   </section>
 
   <section id="test">
