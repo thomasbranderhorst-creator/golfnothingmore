@@ -265,6 +265,9 @@ try{plausible('Social',{props:{network:a.getAttribute('data-soc'),place:a.getAtt
 .memes a:focus-visible{outline:2px solid var(--accent,#A85814);outline-offset:3px}
 @media (max-width:40rem){.memes{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:62%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.6rem}.memes a{scroll-snap-align:start}.memes a:hover{transform:none}}
 </style>
+<style>
+.posts .casecard{border:1px solid var(--line)}
+</style>
 
 <nav class="gnmnav" id="gnmnav">
   <div class="in">
@@ -386,6 +389,17 @@ n.querySelectorAll('.links a').forEach(function(a){if(a.getAttribute('href')===p
       <a href="https://www.instagram.com/p/DfO6LdvN3qt/" rel="noopener" target="_blank" data-soc="instagram" data-place="meme"><img src="/img/home/meme-3.jpg" width="480" height="600" alt="Meme: Me pretending my bad round doesn't bother me" loading="lazy"></a>
     </div>
     <a class="btn-line" href="https://www.instagram.com/golfnothingmore/" rel="noopener" target="_blank" data-soc="instagram" data-place="tone">Meer op Instagram</a>
+  </section>
+
+  <section id="groep">
+    <p class="label">Uit de groep</p>
+    <h2>Posts waar golfers op reageerden</h2>
+    <p class="body">Drie posts die het goed deden bij onze leden. Eén van een club, twee van onszelf.</p>
+    <div class="cases posts">
+      <a class="casecard" href="https://www.facebook.com/groups/Golf.nothing.more" rel="noopener" target="_blank" data-soc="grouppost" data-place="the26club"><img src="/img/home/post-26club.jpg" width="480" height="600" alt="The 26+ Club" loading="lazy"><span class="cc"><span class="cb">The 26+ Club</span><span class="cd">Een Britse golfvereniging voor beginners en hoge handicappers, op zoek naar nieuwe leden. 48 reacties in een halve dag.</span><span class="cg">Bekijk de groep &rarr;</span></span></a>
+      <a class="casecard" href="/7-iron/" data-soc="grouppost" data-place="howfardoyouhityour7i"><img src="/img/home/post-7iron.jpg" width="480" height="600" alt="How far do you hit your 7 iron?" loading="lazy"><span class="cc"><span class="cb">How far do you hit your 7 iron?</span><span class="cd">Onze eigen vraag. 677 antwoorden, die we naast de metingen van Shot Scope zetten.</span><span class="cg">Bekijk de uitkomst &rarr;</span></span></a>
+      <a class="casecard" href="https://www.facebook.com/groups/Golf.nothing.more" rel="noopener" target="_blank" data-soc="grouppost" data-place="postyourbestgolfcour"><img src="/img/home/post-photocontest.jpg" width="480" height="600" alt="Post your best golf course photo" loading="lazy"><span class="cc"><span class="cb">Post your best golf course photo</span><span class="cd">De beste werd onze omslagfoto van oktober. 1.080 reacties, en de prijs kostte niets.</span><span class="cg">Bekijk de groep &rarr;</span></span></a>
+    </div>
   </section>
 
   <section id="test">
