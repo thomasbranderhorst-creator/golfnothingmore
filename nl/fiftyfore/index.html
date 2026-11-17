@@ -19,7 +19,6 @@
 <link rel="icon" href="/favicon-512.png" sizes="512x512" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <title>Fifty Fore Club · Golf, nothing more</title>
-<meta name="robots" content="noindex">
 <style>
 .ff-hero{display:grid;gap:1.3rem}
 .ff-list{margin:0;padding:0;list-style:none;display:grid;gap:.9rem}
@@ -399,9 +398,51 @@ n.querySelectorAll('.links a').forEach(function(a){if(a.getAttribute('href')===p
     <p class="label">Aanmelden</p>
     <h2>Doe je mee?</h2>
     <p class="body">Gratis en vrijblijvend, in elke regio. Zodra er in jouw regio 20 aanmeldingen zijn, hoor je van ons.</p>
-    <div class="ff-closed">
-      <p class="body" style="margin:0"><b>De aanmeldingen gaan binnenkort open.</b> Wil je als eerste horen wanneer? Mail ons op <a href="mailto:hello@golfnothingmore.com?subject=Fifty%20Fore%20Club">hello@golfnothingmore.com</a>.</p>
-    </div>
+    <form class="ff-form" id="ffform" action="https://assets.mailerlite.com/jsonp/2623605/forms/204422861943736066/subscribe" method="post" novalidate>
+      <div class="ff-grid">
+        <label>Voornaam<input type="text" name="fields[name]" autocomplete="given-name" required></label>
+        <label>E-mailadres<input type="email" name="fields[email]" autocomplete="email" required></label>
+      </div>
+      <label>Telefoonnummer (voor WhatsApp)<input type="tel" name="fields[phone]" autocomplete="tel" placeholder="06 12345678" required></label>
+      <div class="ff-grid">
+        <label>Geslacht<select name="fields[geslacht]" required><option value="">Kies</option><option>Man</option><option>Vrouw</option><option>Zeg ik liever niet</option></select></label>
+        <label>Leeftijd<select name="fields[leeftijd]" required><option value="">Kies</option><option>18 tot 34</option><option>35 tot 44</option><option>45 tot 54</option><option>55 tot 64</option><option>65 of ouder</option></select></label>
+      </div>
+      <label>Hoe lang golf je al?<select name="fields[ervaring]" required><option value="">Kies</option><option>Ik begin net</option><option>Minder dan 1 jaar</option><option>1 tot 3 jaar</option><option>3 tot 10 jaar</option><option>Meer dan 10 jaar</option></select></label>
+      <label>Je handicap<select name="fields[handicap]" required><option value="">Kies</option><option>Nog geen GVB</option><option>54</option><option>36,1 tot 53,9</option><option>28,1 tot 36</option><option>28 of lager</option></select></label>
+      <label>In welke regio wil je spelen?<select name="fields[regio]" required><option value="">Kies je provincie</option><option>Groningen</option><option>Friesland</option><option>Drenthe</option><option>Overijssel</option><option>Flevoland</option><option>Gelderland</option><option>Utrecht</option><option>Noord-Holland</option><option>Zuid-Holland</option><option>Zeeland</option><option>Noord-Brabant</option><option>Limburg</option><option>Buiten Nederland</option></select></label>
+      <span class="check"><input type="checkbox" id="ffwa" name="fields[whatsapp_ok]" value="ja" required><label for="ffwa" style="display:inline;font-family:var(--body);font-weight:400">Jullie mogen me via WhatsApp een bericht sturen als mijn regio start. Word ik lid, dan kom ik in de WhatsApp-groepen, waar andere leden mijn telefoonnummer zien.</label></span>
+      <span class="check"><input type="checkbox" id="fforg" name="fields[organiseren]" value="ja"><label for="fforg" style="display:inline;font-family:var(--body);font-weight:400">Ik wil eventueel helpen om in mijn regio societydagen te organiseren.</label></span>
+      <span class="check"><input type="checkbox" id="ffdeals" name="fields[deals_optin]" value="ja"><label for="ffdeals" style="display:inline;font-family:var(--body);font-weight:400">Stuur me ook de ledendeals van Golf, nothing more: codes die het publiek niet krijgt.</label></span>
+      <input type="hidden" name="fields[signup_source]" value="fiftyfore">
+      <input type="hidden" name="ml-submit" value="1">
+      <input type="hidden" name="anticsrf" value="true">
+      <div aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;overflow:hidden;"><input type="text" id="ffhp" name="ff_hp" tabindex="-1" autocomplete="off"></div>
+      <button type="submit" id="ffbtn">Meld me aan</button>
+      <p class="ff-note">Aanmelden is gratis en je zit nergens aan vast. We gebruiken je gegevens alleen voor de Fifty Fore Club, en je e-mail voor de ledendeals als je dat hebt aangevinkt. Afmelden en uit een WhatsApp-groep stappen kan altijd. <a href="/privacy.html">Privacy</a></p>
+      <p class="ff-msg" id="ffmsg" role="status" aria-live="polite"></p>
+    </form>
+<script>
+(function(){var f=document.getElementById('ffform');if(!f||!window.fetch)return;var b=document.getElementById('ffbtn'),m=document.getElementById('ffmsg');
+function say(t,e){m.textContent=t;m.className='ff-msg'+(e?' err':'');}
+function v(n){var x=f.querySelector('[name="fields['+n+']"]');return x?x.value.trim():'';}
+f.addEventListener('submit',function(ev){ev.preventDefault();
+ if(document.getElementById('ffhp').value){f.innerHTML='';say('Bedankt! Je staat op de lijst.');return;}
+ if(!v('name')){say('Vul je voornaam even in.',true);return;}
+ if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v('email'))){say('Dat e-mailadres klopt niet helemaal.',true);return;}
+ if((v('phone').replace(/[^0-9]/g,'')).length<9){say('Vul je telefoonnummer in, dan kunnen we je toevoegen aan de WhatsApp-groep.',true);return;}
+ if(!v('geslacht')||!v('leeftijd')){say('Vul nog je geslacht en leeftijd in.',true);return;}
+ if(!v('ervaring')||!v('handicap')||!v('regio')){say('Vul nog in hoe lang je golft, je handicap en je regio.',true);return;}
+ if(!document.getElementById('ffwa').checked){say('Vink aan dat we je via WhatsApp mogen berichten. Zonder WhatsApp kun je helaas niet meedoen.',true);return;}
+ b.disabled=true;b.textContent='Versturen...';
+ fetch(f.action,{method:'POST',body:new FormData(f)}).then(function(r){return r.json().catch(function(){return null;});}).then(function(d){
+  if(d&&d.success===false){say('Er ging iets mis. Probeer het zo nog eens.',true);return;}
+  try{plausible('Fifty Fore aanmelding',{props:{regio:v('regio')}});}catch(_){}
+  f.querySelectorAll('label,.check,button,.ff-note,.ff-grid').forEach(function(x){x.style.display='none';});
+  say('Bedankt! Je staat op de lijst. Zodra er 20 golfers in jouw regio zijn, sturen we je een bericht.');
+ }).catch(function(){say('Er ging iets mis aan onze kant. Probeer het zo nog eens, of mail hello@golfnothingmore.com.',true);}).then(function(){b.disabled=false;b.textContent='Meld me aan';});
+});})();
+</script>
   </section>
 
   <footer>
