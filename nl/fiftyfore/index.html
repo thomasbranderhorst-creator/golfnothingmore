@@ -346,8 +346,9 @@ n.querySelectorAll('.links a').forEach(function(a){if(a.getAttribute('href')===p
     <h2>Eén club, een chapter per regio</h2>
     <ul class="ff-list">
       <li><b>1. Je meldt je gratis aan</b>Je geeft aan in welke regio je wilt spelen. Dat is vrijblijvend: je zit nog nergens aan vast.</li>
-      <li><b>2. Bij 20 aanmeldingen start je regio</b>Zodra er in een regio 20 golfers zijn aangemeld, openen we daar een chapter. Je krijgt dan een bericht van ons, en als je meedoet betaal je je eerste kwartaal.</li>
-      <li><b>3. Daarna gaat alles via WhatsApp</b>Je komt in de groep van je regio, met golfers uit de buurt, en in Fifty Fore Nederland, met alle leden. Daar plannen we de societydagen, stel je je vragen, en delen we elke maand tips voor beginners.</li>
+      <li><b>2. Bij 25 aanmeldingen krijg je een betaalverzoek</b>Zodra er in jouw regio 25 golfers zijn aangemeld, krijg je een bericht van ons met een betaalverzoek. Je kiest zelf: een half jaar of een heel jaar.</li>
+      <li><b>3. Bij 10 leden gaan we van start</b>Hebben binnen een maand 10 golfers betaald, dan openen we de WhatsApp-groep en plannen we meteen de eerste speeldag. Lukt dat niet, dan krijg je je geld terug.</li>
+      <li><b>4. Daarna gaat alles via WhatsApp</b>Je komt in de groep van je regio, met golfers uit de buurt, en in Fifty Fore Nederland, met alle leden. Daar plannen we de societydagen, stel je je vragen, en delen we elke maand tips voor beginners.</li>
       <li><b>Help je mee?</b>Een chapter loopt het best met iemand uit de buurt. Vink bij je aanmelding aan als je wilt helpen organiseren.</li>
     </ul>
   </section>
@@ -362,16 +363,18 @@ n.querySelectorAll('.links a').forEach(function(a){if(a.getAttribute('href')===p
       <li><b>Een maatje als je alleen komt</b>Ken je nog niemand? Dan koppelen we je aan een lid dat je die dag op weg helpt.</li>
       <li><b>Spelvormen voor elk niveau</b>Texas scramble, stableford, of gewoon een ronde zonder score. Niemand hoeft zich te schamen voor een 9 op een par 4.</li>
       <li><b>Spullen ruilen en verkopen</b>In de WhatsApp-groep: voor die driver die je nooit raakt, of die tas waar je uit gegroeid bent.</li>
+      <li><b>Voordeel als clublid</b>We werken aan kortingen op greenfees en andere voordelen voor leden. Zodra er iets rond is, hoor je het als eerste in de groep.</li>
       <li><b>Later: samen op golfreis</b>Als de club eenmaal loopt, plannen we samen een reis. In Nederland of over de grens.</li>
     </ul>
   </section>
 
   <section>
     <p class="label">Wat kost het?</p>
-    <h2>&euro;45 per kwartaal, zodra je regio start</h2>
+    <h2>&euro;75 per half jaar of &euro;125 per jaar</h2>
     <div class="ff-price">
-      <p class="body"><b>Aanmelden is gratis.</b> Je betaalt pas als er in jouw regio 20 aanmeldingen zijn en je besluit mee te doen.</p>
-      <p class="body"><b>Geen jaarcontract.</b> In de eerste week van elk kwartaal krijg je een betaalverzoek, en je kunt ook per kwartaal opzeggen. Een stuk laagdrempeliger dan meteen lid worden van een club.</p>
+      <p class="body"><b>Aanmelden is gratis.</b> Je betaalt pas als er in jouw regio 25 aanmeldingen zijn en je besluit mee te doen.</p>
+      <p class="body"><b>Geld terug als je regio niet start.</b> Hebben binnen een maand minder dan 10 golfers in jouw regio betaald, dan gaat het niet door en krijg je je geld terug.</p>
+      <p class="body"><b>Een heel jaar is het voordeligst.</b> &euro;125 in plaats van 2 keer &euro;75. Aan het eind van je periode krijg je een nieuw betaalverzoek. Verleng je niet, dan stopt je lidmaatschap en ga je uit de WhatsApp-groepen.</p>
       <p class="body" style="margin:0"><b>Je greenfee betaal je apart</b>, aan de baan, alleen als je meespeelt.</p>
     </div>
   </section>
@@ -397,7 +400,7 @@ n.querySelectorAll('.links a').forEach(function(a){if(a.getAttribute('href')===p
   <section id="aanmelden">
     <p class="label">Aanmelden</p>
     <h2>Doe je mee?</h2>
-    <p class="body">Gratis en vrijblijvend, in elke regio. Zodra er in jouw regio 20 aanmeldingen zijn, hoor je van ons.</p>
+    <p class="body">Gratis en vrijblijvend, in elke regio. Zodra er in jouw regio 25 aanmeldingen zijn, hoor je van ons.</p>
     <form class="ff-form" id="ffform" action="https://assets.mailerlite.com/jsonp/2623605/forms/204422861943736066/subscribe" method="post" novalidate>
       <div class="ff-grid">
         <label>Voornaam<input type="text" name="fields[name]" autocomplete="given-name" required></label>
@@ -439,7 +442,7 @@ f.addEventListener('submit',function(ev){ev.preventDefault();
   if(d&&d.success===false){say('Er ging iets mis. Probeer het zo nog eens.',true);return;}
   try{plausible('Fifty Fore aanmelding',{props:{regio:v('regio')}});}catch(_){}
   f.querySelectorAll('label,.check,button,.ff-note,.ff-grid').forEach(function(x){x.style.display='none';});
-  say('Bedankt! Je krijgt nu een mail van ons. Klik op de knop daarin om je aanmelding te bevestigen. Zodra er 20 golfers in jouw regio zijn, sturen we je een bericht via WhatsApp.');
+  say('Bedankt! Je krijgt nu een mail van ons. Klik op de knop daarin om je aanmelding te bevestigen. Zodra er 25 golfers in jouw regio zijn, sturen we je een bericht via WhatsApp.');
  }).catch(function(){say('Er ging iets mis aan onze kant. Probeer het zo nog eens, of mail hello@golfnothingmore.com.',true);}).then(function(){b.disabled=false;b.textContent='Meld me aan';});
 });})();
 </script>
