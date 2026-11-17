@@ -427,7 +427,7 @@ n.querySelectorAll('.links a').forEach(function(a){if(a.getAttribute('href')===p
 function say(t,e){m.textContent=t;m.className='ff-msg'+(e?' err':'');}
 function v(n){var x=f.querySelector('[name="fields['+n+']"]');return x?x.value.trim():'';}
 f.addEventListener('submit',function(ev){ev.preventDefault();
- if(document.getElementById('ffhp').value){f.innerHTML='';say('Bedankt! Je staat op de lijst.');return;}
+ if(document.getElementById('ffhp').value){f.innerHTML='';say('Bedankt! Check je mail om je aanmelding te bevestigen.');return;}
  if(!v('name')){say('Vul je voornaam even in.',true);return;}
  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v('email'))){say('Dat e-mailadres klopt niet helemaal.',true);return;}
  if((v('phone').replace(/[^0-9]/g,'')).length<9){say('Vul je telefoonnummer in, dan kunnen we je toevoegen aan de WhatsApp-groep.',true);return;}
@@ -439,7 +439,7 @@ f.addEventListener('submit',function(ev){ev.preventDefault();
   if(d&&d.success===false){say('Er ging iets mis. Probeer het zo nog eens.',true);return;}
   try{plausible('Fifty Fore aanmelding',{props:{regio:v('regio')}});}catch(_){}
   f.querySelectorAll('label,.check,button,.ff-note,.ff-grid').forEach(function(x){x.style.display='none';});
-  say('Bedankt! Je staat op de lijst. Zodra er 20 golfers in jouw regio zijn, sturen we je een bericht.');
+  say('Bedankt! Je krijgt nu een mail van ons. Klik op de knop daarin om je aanmelding te bevestigen. Zodra er 20 golfers in jouw regio zijn, sturen we je een bericht via WhatsApp.');
  }).catch(function(){say('Er ging iets mis aan onze kant. Probeer het zo nog eens, of mail hello@golfnothingmore.com.',true);}).then(function(){b.disabled=false;b.textContent='Meld me aan';});
 });})();
 </script>
