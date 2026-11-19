@@ -19,6 +19,7 @@
 <link rel="icon" href="/favicon-512.png" sizes="512x512" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <title>Fifty Fore Club · Golf, nothing more</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Dancing+Script:wght@700&display=swap">
 <style>
 .ff-hero{display:grid;gap:1.3rem}
 .ff-list{margin:0;padding:0;list-style:none;display:grid;gap:.9rem}
@@ -336,14 +337,67 @@ n.querySelectorAll('.links a').forEach(function(a){if(a.getAttribute('href')===p
 </script>
 <!-- /gnm-nav-site -->
 
+<style>
+body:has(.ffx){background:#124A2B}
+.ffx{--paper:#14512F;--raise:#1B5E38;--ink:#F7EEDB;--soft:#E9E0CB;--muted:#C9BD9C;--line:rgba(227,194,107,.35);--hair:rgba(227,194,107,.2);--green:#E3C26B;--on-green:#14512F;--gold:#E3C26B;--red:#E0543A;
+background:linear-gradient(180deg,#1C6139 0%,#14512F 40%,#124A2B 100%);color:var(--ink);position:relative;overflow:hidden}
+.ffx .wrap{max-width:58rem;padding-bottom:2rem}
+.ffx .label{color:var(--gold);letter-spacing:.2em}
+.ffx h2{color:var(--ink)}
+.ffx .body{color:var(--soft)}
+.ffx .body b{color:var(--ink)}
+.ffx a{color:var(--gold)}
+.ffx .lede{color:var(--soft)}
+.ffx .lede b{color:var(--ink)}
+.ff-hero2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,19rem);gap:2.5rem;align-items:center}
+.ff-herotext{display:flex;flex-direction:column;align-items:flex-start;gap:1.2rem}
+.ff-bord img{display:block;width:100%;height:auto;border-radius:.6rem;box-shadow:0 1.2rem 2.5rem rgba(0,0,0,.35);transform:rotate(1.5deg)}
+.ffh{display:flex;flex-direction:column;align-items:flex-start;margin:0}
+.ffh .s{font-family:"Dancing Script",cursive;font-weight:700;font-size:clamp(3.6rem,10vw,5.6rem);line-height:1;color:#F7EEDB;letter-spacing:0;text-shadow:0 .12rem 0 rgba(0,0,0,.18)}
+.ffh .c{font-family:"Cinzel",serif;font-weight:700;color:var(--gold);font-size:clamp(1.2rem,3vw,1.6rem);letter-spacing:.45em;margin-top:.5rem;display:flex;align-items:center;gap:.8rem}
+.ffh .c::before,.ffh .c::after{content:"";width:2.2rem;height:3px;background:var(--red);border-radius:2px}
+.ffx .btn-mail{background:var(--red);color:#FFF6EA;border-radius:.35rem;box-shadow:0 .2rem 0 rgba(0,0,0,.2)}
+.ffx .btn-mail:hover{background:#C9472F;color:#FFF6EA}
+.ffx .ff-list li{background:var(--raise);border-left:3px solid var(--gold)}
+.ffx .ff-list b{color:var(--ink)}
+.ffx .ff-list li{color:var(--soft)}
+.ffx .ff-price{background:var(--gold);color:#14512F;border-radius:.4rem}
+.ffx .ff-price p.body,.ffx .ff-price p.body b{color:#14512F}
+.ffx .ff-form{background:var(--raise);border:2px solid var(--gold);border-radius:.5rem}
+.ffx .ff-form label{color:var(--ink)}
+.ffx .ff-form input,.ffx .ff-form select{background:#F7EEDB;color:#14512F;border-color:#E3C26B;border-radius:.3rem}
+.ffx .ff-form button{background:var(--red);color:#FFF6EA;border-radius:.35rem}
+.ffx .ff-note{color:var(--muted)}
+.ffx .ff-msg{color:var(--gold)}
+.ffx .ff-msg.err{color:#FFB4A3}
+.ffx .who img{border-radius:.6rem}
+.ffx .mark{background:#F2EAD5;border-radius:50%;padding:.3rem}
+.ffx .ff-road li{color:var(--soft)}
+.ffx .ff-road b{color:var(--ink)}
+.ffx .ff-road li::before{background:rgba(227,194,107,.35)}
+.ffx .ff-road li.now::before{background:linear-gradient(90deg,var(--red) 0 1.4rem,rgba(227,194,107,.35) 1.4rem)}
+.ffx .ff-road .dot{background:#14512F;border-color:var(--gold)}
+.ffx .ff-road li.now .dot{background:var(--red);border-color:var(--red);box-shadow:0 0 0 6px rgba(224,84,58,.25)}
+.ffx .ff-road .here{background:var(--red);color:#FFF6EA}
+.ffx .ff-road .when{color:var(--gold)}
+.ffx footer{border-top-color:var(--line);color:var(--muted)}
+.ffx footer .name{color:var(--ink)}
+.ffx footer a{color:var(--soft)}
+.ff-land{display:block;width:100%;height:clamp(6rem,14vw,10rem)}
+@media (max-width:44rem){.ff-hero2{grid-template-columns:1fr}.ff-bord{max-width:16rem}.ffx .ff-road li.now::before{background:linear-gradient(180deg,var(--red) 0 1.4rem,rgba(227,194,107,.35) 1.4rem)}}
+</style>
+<div class="ffx">
 <div class="wrap">
 
-  <header>
+  <header class="ff-hero2">
+   <div class="ff-herotext">
     <picture><source srcset="/logo-dark.png" media="(prefers-color-scheme: dark)"><img class="mark" src="/logo-3d.png" width="296" height="300" alt="" decoding="async"></picture>
-    <p class="label">Een golfsociety van Golf, nothing more</p>
-    <h1>Fifty Fore Club</h1>
+    <p class="label">Iedere golfer begint op 54</p>
+    <h1 class="ffh"><span class="s">Fifty Fore</span><span class="c">Club</span></h1>
     <p class="lede">Een societyclub voor beginners, hoge handicappers en iedereen die vooral een leuke dag op de baan wil. <b>Samen golfen met mensen van jouw niveau, uit je eigen regio en de rest van Nederland.</b></p>
     <a class="btn-mail" href="#aanmelden">Meld je aan</a>
+   </div>
+   <picture class="ff-bord"><source srcset="/img/home/fiftyfore-bord.webp" type="image/webp"><img src="/img/home/fiftyfore-bord.jpg" width="720" height="1018" alt="Het bord van de Fifty Fore Club: een Nederlandse golfsociety voor beginners en hoge handicappers, nu open voor aanmeldingen"></picture>
   </header>
 
   <section>
@@ -383,11 +437,11 @@ n.querySelectorAll('.links a').forEach(function(a){if(a.getAttribute('href')===p
   </section>
 
   <section>
-    <p class="label">Wat krijg je als lid van een chapter?</p>
+    <p class="label">Wat krijg je als lid?</p>
     <h2>Dit zit erin</h2>
     <ul class="ff-list">
       <li><b>Twee WhatsApp-groepen</b>De groep van je regio en Fifty Fore Nederland. Elke maand tips voor beginners: wat je echt nodig hebt, regels die niemand je uitlegt, en banen waar beginners welkom zijn.</li>
-      <li><b>Elk kwartaal een societydag, en daartussen meer</b>De data staan ruim vooraf vast en wisselen tussen weekend en doordeweeks. We beginnen met landelijke speeldagen. Heeft je regio genoeg leden, dan komen er ook speeldagen bij jou in de buurt. Je schrijft je per speeldag in, met een maximum aantal spelers. Vol is vol, dan kom je op de wachtlijst. Daarnaast spelen we elke maand een kleiner moment, en spreek je in de groep zelf rondes af met mensen van jouw niveau.</li>
+      <li><b>Elk kwartaal een societydag, en daartussen meer</b>De data staan ruim vooraf vast en wisselen tussen weekend en doordeweeks. We beginnen met landelijke speeldagen. Heeft je regio genoeg leden, dan komen er ook speeldagen bij jou in de buurt. Je schrijft je per speeldag in, met een maximum aantal spelers. Vol is vol, dan kom je op de wachtlijst. Daarnaast spreek je in je regiogroep zelf rondes af met mensen van jouw niveau.</li>
       <li><b>Flights die al voor je klaarstaan</b>Wij reserveren de starttijden op de baan, jij hoeft alleen nog te komen. Je greenfee betaal je niet vooraf: die reken je zelf af bij de baan als je meespeelt.</li>
       <li><b>Een maatje als je alleen komt</b>Ken je nog niemand? Dan koppelen we je aan een lid dat je die dag op weg helpt.</li>
       <li><b>Voordeel als clublid</b>We werken aan kortingen op greenfees en andere voordelen voor leden. Zodra er iets rond is, hoor je het als eerste in de groep.</li>
@@ -496,6 +550,17 @@ f.addEventListener('submit',function(ev){ev.preventDefault();
     <a href="/privacy.html">Privacy</a>
   </footer>
 
+</div>
+<svg class="ff-land" viewBox="0 0 420 120" preserveAspectRatio="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 50 Q90 22 190 44 T420 34 V120 H0Z" fill="#2E7D4A"/>
+<circle cx="52" cy="38" r="12" fill="#1E6338"/><circle cx="70" cy="33" r="15" fill="#1E6338"/><circle cx="88" cy="40" r="10" fill="#1E6338"/>
+<circle cx="370" cy="31" r="13" fill="#1E6338"/><circle cx="388" cy="36" r="9" fill="#1E6338"/>
+<path d="M0 74 Q120 48 250 68 T420 60 V120 H0Z" fill="#4E9A5B"/>
+<path d="M0 94 Q140 78 300 92 T420 86 V120 H0Z" fill="#7DB86A"/>
+<path d="M0 108 Q160 98 420 106 V120 H0Z" fill="#A6D58A"/>
+<ellipse cx="318" cy="78" rx="38" ry="6" fill="#9FD27F"/><ellipse cx="324" cy="78" rx="2.6" ry="1.1" fill="#1E3A26"/>
+<line x1="324" y1="78" x2="324" y2="40" stroke="#F7EEDB" stroke-width="1.8"/><path d="M325 41 L345 47 L325 53Z" fill="#E0543A"/>
+</svg>
 </div>
 
 </body>
