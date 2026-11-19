@@ -463,6 +463,7 @@ n.querySelectorAll('.links a').forEach(function(a){if(a.getAttribute('href')===p
     </form>
 <script>
 (function(){var f=document.getElementById('ffform');if(!f||!window.fetch)return;var b=document.getElementById('ffbtn'),m=document.getElementById('ffmsg');
+var ffsrc='';try{var sm=location.search.match(/[?&]src=([A-Za-z0-9_-]{1,32})/);if(sm){ffsrc=sm[1].toLowerCase();f.querySelector('[name="fields[signup_source]"]').value='fiftyfore-'+ffsrc;}}catch(_){}
 function say(t,e){m.textContent=t;m.className='ff-msg'+(e?' err':'');}
 function v(n){var x=f.querySelector('[name="fields['+n+']"]');return x?x.value.trim():'';}
 f.addEventListener('submit',function(ev){ev.preventDefault();
@@ -476,7 +477,7 @@ f.addEventListener('submit',function(ev){ev.preventDefault();
  b.disabled=true;b.textContent='Versturen...';
  fetch(f.action,{method:'POST',body:new FormData(f)}).then(function(r){return r.json().catch(function(){return null;});}).then(function(d){
   if(d&&d.success===false){say('Er ging iets mis. Probeer het zo nog eens.',true);return;}
-  try{plausible('Fifty Fore aanmelding',{props:{regio:v('regio')}});}catch(_){}
+  try{plausible('Fifty Fore aanmelding',{props:{regio:v('regio'),src:ffsrc||'direct'}});}catch(_){}
   f.querySelectorAll('label,.check,button,.ff-note,.ff-grid').forEach(function(x){x.style.display='none';});
   say('Bedankt! Je krijgt nu een mail van ons. Klik op de knop daarin om je aanmelding te bevestigen. In januari laten we je weten of we van start gaan.');
  }).catch(function(){say('Er ging iets mis aan onze kant. Probeer het zo nog eens, of mail hello@golfnothingmore.com.',true);}).then(function(){b.disabled=false;b.textContent='Meld me aan';});
