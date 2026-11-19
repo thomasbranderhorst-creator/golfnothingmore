@@ -41,6 +41,23 @@
 @media (max-width:44rem){.ff-grid{grid-template-columns:1fr}}
 .ff-tag{display:inline-block;font:600 .7rem var(--display);letter-spacing:.1em;text-transform:uppercase;padding:.2rem .5rem;margin-bottom:.6rem;background:var(--green);color:var(--on-green)}
 .ff-tag.free{background:transparent;color:var(--green);border:1px solid var(--green)}
+.ff-road{list-style:none;margin:1.6rem 0 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative}
+.ff-road li{position:relative;padding:2.4rem .9rem 0 0;font-size:.92rem;line-height:1.45;color:var(--soft)}
+.ff-road li::before{content:"";position:absolute;top:.62rem;left:0;right:0;height:3px;background:var(--line)}
+.ff-road li.now::before{background:linear-gradient(90deg,var(--green) 0 1.4rem,var(--line) 1.4rem)}
+.ff-road li:last-child::before{right:auto;width:1.4rem}
+.ff-road .dot{position:absolute;top:0;left:0;width:1.35rem;height:1.35rem;border-radius:50%;background:var(--paper);border:3px solid var(--line);box-sizing:border-box;z-index:1}
+.ff-road li.now .dot{background:var(--green);border-color:var(--green);box-shadow:0 0 0 6px rgba(22,82,50,.18)}
+.ff-road .when{display:block;font:600 .7rem var(--display);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.25rem}
+.ff-road b{display:block;font-family:var(--display);font-weight:600;color:var(--ink);font-size:1rem;margin-bottom:.2rem}
+.ff-road .here{display:inline-block;margin-top:.5rem;font:600 .7rem var(--display);letter-spacing:.08em;text-transform:uppercase;padding:.2rem .5rem;background:var(--green);color:var(--on-green)}
+@media (max-width:44rem){
+.ff-road{grid-template-columns:none;gap:0}
+.ff-road li{padding:0 0 1.6rem 2.4rem}
+.ff-road li::before{top:0;bottom:0;left:.6rem;right:auto;width:3px;height:auto}
+.ff-road li.now::before{background:linear-gradient(180deg,var(--green) 0 1.4rem,var(--line) 1.4rem)}
+.ff-road li:last-child::before{height:1.4rem;bottom:auto;width:3px}
+}
 .ff-closed{background:var(--raise);border-left:3px solid var(--accent,#A85814);padding:1.2rem 1.3rem;max-width:34rem}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -328,6 +345,18 @@ n.querySelectorAll('.links a').forEach(function(a){if(a.getAttribute('href')===p
     <p class="lede">Een societyclub voor beginners, hoge handicappers en iedereen die vooral een leuke dag op de baan wil. <b>Samen golfen met mensen van jouw niveau, in je eigen regio.</b></p>
     <a class="btn-mail" href="#aanmelden">Meld je aan</a>
   </header>
+
+  <section>
+    <p class="label">Waar staan we?</p>
+    <h2>Van aanmelding naar eerste speeldag</h2>
+    <ol class="ff-road">
+      <li class="now"><span class="dot" aria-hidden="true"></span><span class="when">Nu</span><b>Aanmelden</b>Je meldt je gratis en vrijblijvend aan.<span class="here">We zijn hier</span></li>
+      <li><span class="dot" aria-hidden="true"></span><span class="when">Januari 2027</span><b>Kan het?</b>We kijken of er genoeg aanmeldingen zijn om te starten.</li>
+      <li><span class="dot" aria-hidden="true"></span><span class="when">Daarna</span><b>Betaalverzoeken</b>Gaan we door, dan krijg je een betaalverzoek. Komen er te weinig leden, dan krijg je je geld terug.</li>
+      <li><span class="dot" aria-hidden="true"></span><span class="when">Maart 2027</span><b>Eerste speeldagen</b>Landelijke speeldagen, voor alle leden.</li>
+      <li><span class="dot" aria-hidden="true"></span><span class="when">Later</span><b>Je eigen regio</b>Heeft een regio genoeg leden, dan krijgt die een eigen chapter met eigen speeldagen.</li>
+    </ol>
+  </section>
 
   <section>
     <p class="label">Waarom die naam?</p>
