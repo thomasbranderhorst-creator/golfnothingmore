@@ -303,7 +303,7 @@ try{plausible('Social',{props:{network:a.getAttribute('data-soc'),place:a.getAtt
 .memes{display:grid;grid-template-columns:repeat(auto-fill,minmax(12rem,1fr));gap:.9rem;margin-top:1.4rem}
 .memes a{display:block;border-radius:.6rem;overflow:hidden;line-height:0;box-shadow:0 14px 30px -20px rgba(16,26,21,.6);transition:transform .15s ease}
 .memes a:hover{transform:translateY(-2px) rotate(-.4deg)}
-.memes img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+.memes img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
 .memes a:focus-visible{outline:2px solid var(--accent,#A85814);outline-offset:3px}
 @media (max-width:40rem){.memes{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:62%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.6rem}.memes a{scroll-snap-align:start}.memes a:hover{transform:none}}
 </style>
@@ -316,12 +316,10 @@ try{plausible('Social',{props:{network:a.getAttribute('data-soc'),place:a.getAtt
     <a class="brand" href="/nl/">Golf, nothing more.</a>
     <button class="burger" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <div class="links">
-      <a href="/nl/#hoe">Hoe het werkt</a>
-      <a href="/nl/#pakketten">Pakketten</a>
-      <a href="/nl/golfbanen/">Voor golfbanen</a>
-      <a href="/nl/fiftyfore/">Fifty Fore Club</a>
-      <a href="mailto:partners@golfnothingmore.com?subject=Samenwerking">Contact</a>
-      <a class="lang" href="/" lang="en" hreflang="en">English</a>
+      <a href="/nl/fiftyfore/#hoe">Hoe het werkt</a>
+      <a href="/nl/fiftyfore/#prijs">Wat kost het?</a>
+      <a href="/nl/fiftyfore/#aanmelden">Aanmelden</a>
+      <a href="https://wa.me/31654157920?text=Hoi%20Thomas%2C%20ik%20heb%20een%20vraag%20over%20de%20Fifty%20Fore%20Club." rel="noopener" target="_blank" data-soc="whatsapp" data-place="fiftyfore-nav">Contact</a>
       <span class="soc"><a href="https://www.instagram.com/golfnothingmore/" data-soc="instagram" data-place="nav" aria-label="Instagram" rel="me noopener" target="_blank"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></a><a href="https://www.tiktok.com/@golfnothingmore" data-soc="tiktok" data-place="nav" aria-label="TikTok" rel="me noopener" target="_blank"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M16.6 5.8a4.3 4.3 0 0 1-1-2.8h-3.1v12.4a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V9.7a5.7 5.7 0 1 0 4.9 5.6V9a7.3 7.3 0 0 0 4.3 1.4V7.3a4.3 4.3 0 0 1-3.3-1.5z"/></svg></a><a href="https://www.facebook.com/golfnothingmoreofficial/" data-soc="facebook" data-place="nav" aria-label="Facebook" rel="me noopener" target="_blank"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z"/></svg></a></span>
 
     </div>
@@ -395,7 +393,7 @@ background:linear-gradient(180deg,#1C6139 0%,#14512F 40%,#124A2B 100%);color:var
    <div class="ff-herotext">
     <picture><source srcset="/logo-dark.png" media="(prefers-color-scheme: dark)"><img class="mark" src="/logo-3d.png" width="296" height="300" alt="" decoding="async"></picture>
     <p class="label">Iedere golfer begint met handicap 54</p>
-    <h1 class="ffh"><span class="s">Fifty Fore</span><span class="c">Club</span></h1>
+    <h1 class="ffh"><span class="s">Fifty Fore</span> <span class="c">Club</span></h1>
     <p class="lede">Een societyclub voor beginners, hoge handicappers en iedereen die vooral een leuke dag op de baan wil. <b>Samen golfen met mensen van jouw niveau, uit je eigen regio en de rest van Nederland.</b></p>
     <a class="btn-mail" href="#aanmelden">Meld je aan</a>
    </div>
@@ -426,7 +424,7 @@ background:linear-gradient(180deg,#1C6139 0%,#14512F 40%,#124A2B 100%);color:var
     <p class="body">Voor beginners, hoge handicappers, golfers die net hun GVB hebben, en betere golfers die vooral een leuke dag willen en het leuk vinden om beginnende golfers op weg te helpen.</p>
   </section>
 
-  <section>
+  <section id="hoe">
     <p class="label">Hoe het werkt</p>
     <h2>Eén club, landelijke speeldagen, een groep per regio</h2>
     <ul class="ff-list">
@@ -456,18 +454,18 @@ background:linear-gradient(180deg,#1C6139 0%,#14512F 40%,#124A2B 100%);color:var
     <p class="label">Huisregels</p>
     <h2>Twee afspraken voor de speeldagen</h2>
     <ul class="ff-list">
-      <li><b>Afmelden kan tot 7 dagen vooraf</b>Zeg je later af of kom je niet, dan betaal je je greenfee toch. Wij hebben je plek op de baan gereserveerd.</li>
+      <li><b>Afmelden kan tot 7 dagen vooraf</b>Zeg je later af of kom je niet, dan betaal je je greenfee toch, gewoon aan de baan. Wij hebben je plek daar gereserveerd.</li>
       <li><b>Buiten de boot gevallen? Dan heb je voorrang</b>Was een speeldag vol en stond je op de wachtlijst, dan krijg je bij de volgende speeldag als eerste een plek.</li>
     </ul>
   </section>
 
-  <section>
+  <section id="prijs">
     <p class="label">Wat kost het?</p>
-    <h2>&euro;79 per jaar als je je v&oacute;&oacute;r 1 januari aanmeldt</h2>
+    <h2>&euro;79 per jaar als je je v&oacute;&oacute;r 1 januari 2027 aanmeldt</h2>
     <div class="ff-price">
       <p class="body"><b>Aanmelden is gratis.</b> Je betaalt pas als we doorgaan en jij besluit mee te doen.</p>
       <p class="body"><b>Geld terug als we niet starten.</b> Komen er te weinig betalende leden, dan gaat het niet door en krijg je je geld terug. We doen het zo omdat dit ons eerste jaar is.</p>
-      <p class="body"><b>Introductieprijs.</b> Meld je je v&oacute;&oacute;r 1 januari aan, dan betaal je &euro;79 voor je eerste jaar. Wie zich later aanmeldt, betaalt &euro;99 per jaar.</p>
+      <p class="body"><b>Introductieprijs.</b> Meld je je v&oacute;&oacute;r 1 januari 2027 aan, dan betaal je &euro;79 voor je eerste jaar. Wie zich later aanmeldt, betaalt &euro;99 per jaar.</p>
       <p class="body"><b>Per jaar.</b> Aan het eind van je jaar krijg je een nieuw betaalverzoek. Verleng je niet, dan stopt je lidmaatschap en ga je uit de WhatsApp-groepen.</p>
       <p class="body" style="margin:0"><b>Je greenfee betaal je apart</b>, aan de baan, alleen als je meespeelt. Wij doen ons best om korting te regelen op de greenfees. Verdere kosten zoals golfcarts, ballen en drankjes zijn niet inbegrepen.</p>
     </div>
@@ -484,7 +482,7 @@ background:linear-gradient(180deg,#1C6139 0%,#14512F 40%,#124A2B 100%);color:var
     </div>
   </section>
 
-  <section>
+  <section id="vragen">
     <p class="label">Vragen?</p>
     <h2>Stuur Thomas een appje</h2>
     <p class="body">Twijfel je of het iets voor je is, of wil je iets weten voordat je je aanmeldt? Stuur een WhatsApp-bericht, dan krijg je antwoord van Thomas zelf.</p>
@@ -501,7 +499,7 @@ background:linear-gradient(180deg,#1C6139 0%,#14512F 40%,#124A2B 100%);color:var
   <section id="aanmelden">
     <p class="label">Aanmelden</p>
     <h2>Doe je mee?</h2>
-    <p class="body">Gratis en vrijblijvend, uit heel Nederland. Meld je je v&oacute;&oacute;r 1 januari aan, dan geldt de introductieprijs van &euro;79 per jaar. In januari hoor je van ons of we van start gaan.</p>
+    <p class="body">Gratis en vrijblijvend, uit heel Nederland. Meld je je v&oacute;&oacute;r 1 januari 2027 aan, dan geldt de introductieprijs van &euro;79 per jaar. In januari hoor je van ons of we van start gaan.</p>
     <form class="ff-form" id="ffform" action="https://assets.mailerlite.com/jsonp/2623605/forms/204422861943736066/subscribe" method="post" novalidate>
       <div class="ff-grid">
         <label>Voornaam<input type="text" name="fields[name]" autocomplete="given-name" required></label>
@@ -513,7 +511,7 @@ background:linear-gradient(180deg,#1C6139 0%,#14512F 40%,#124A2B 100%);color:var
         <label>Leeftijd<select name="fields[leeftijd]" required><option value="">Kies</option><option>18 tot 34</option><option>35 tot 44</option><option>45 tot 54</option><option>55 tot 64</option><option>65 of ouder</option></select></label>
       </div>
       <label>Hoe lang golf je al?<select name="fields[ervaring]" required><option value="">Kies</option><option>Ik begin net</option><option>Minder dan 1 jaar</option><option>1 tot 3 jaar</option><option>3 tot 10 jaar</option><option>Meer dan 10 jaar</option></select></label>
-      <label>Je handicap<select name="fields[handicap]" required><option value="">Kies</option><option>Nog geen GVB</option><option>54</option><option>36,1 tot 53,9</option><option>28,1 tot 36</option><option>28 of lager</option></select></label>
+      <label>Je handicap<select name="fields[handicap]" required><option value="">Kies</option><option>Nog geen GVB</option><option>54</option><option>36,1 tot 53,9</option><option>28,1 tot en met 36</option><option>28 of lager</option></select></label>
       <label>In welke regio woon je?<select name="fields[regio]" required><option value="">Kies je provincie</option><option>Groningen</option><option>Friesland</option><option>Drenthe</option><option>Overijssel</option><option>Flevoland</option><option>Gelderland</option><option>Utrecht</option><option>Noord-Holland</option><option>Zuid-Holland</option><option>Zeeland</option><option>Noord-Brabant</option><option>Limburg</option><option>Buiten Nederland</option></select></label>
       <span class="check"><input type="checkbox" id="ffwa" name="fields[whatsapp_ok]" value="ja" required><label for="ffwa" style="display:inline;font-family:var(--body);font-weight:400">Jullie mogen me via WhatsApp een bericht sturen als we van start gaan. Word ik lid, dan kom ik in de WhatsApp-groepen, waar andere leden mijn telefoonnummer zien.</label></span>
       <span class="check"><input type="checkbox" id="fforg" name="fields[organiseren]" value="ja"><label for="fforg" style="display:inline;font-family:var(--body);font-weight:400">Ik wil eventueel helpen om in mijn regio societydagen te organiseren.</label></span>
