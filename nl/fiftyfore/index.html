@@ -386,8 +386,19 @@ background:linear-gradient(180deg,#26355A 0%,#1F2A44 40%,#19223B 100%);color:var
 .ff-photos{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
 .ff-photos img{display:block;width:100%;height:auto;border-radius:.4rem;border:6px solid #F6EEDD;box-shadow:0 .8rem 1.6rem rgba(0,0,0,.35)}
 .ff-photos picture:nth-child(odd) img{transform:rotate(-1.5deg)}.ff-photos picture:nth-child(even) img{transform:rotate(1.5deg)}
+.ff-dl{margin:0;display:grid;gap:.9rem}
+.ff-dl div{background:var(--raise);border-left:3px solid var(--gold);padding:1rem 1.2rem}
+.ff-dl dt{font-weight:700;color:var(--ink);margin-bottom:.25rem}
+.ff-dl dd{margin:0;color:var(--soft);line-height:1.6}
+.ff-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.ffx .ff-cards a{display:block;background:var(--raise);border:2px solid var(--gold);border-radius:.5rem;padding:1.1rem 1.2rem;text-decoration:none;transition:transform .15s}
+.ffx .ff-cards a:hover{transform:translateY(-2px)}
+.ff-cards b{display:block;color:var(--gold);font-size:1.2rem;margin-bottom:.35rem}
+.ff-cards span{color:var(--soft);line-height:1.5}
+.ff-src{color:var(--muted)}.ff-src li{margin:.3rem 0}
+.ff-gidskop{display:flex;flex-direction:column;align-items:flex-start;gap:1rem}
 .ff-land{display:block;width:100%;height:clamp(6rem,14vw,10rem)}
-@media (max-width:44rem){.ff-photos{grid-template-columns:repeat(2,1fr)}.ff-hero2{grid-template-columns:1fr}.ff-bord{max-width:16rem}.ffx .ff-road li.now::before{background:linear-gradient(180deg,var(--red) 0 1.4rem,rgba(242,166,90,.35) 1.4rem)}}
+@media (max-width:44rem){.ff-cards{grid-template-columns:1fr}.ff-photos{grid-template-columns:repeat(2,1fr)}.ff-hero2{grid-template-columns:1fr}.ff-bord{max-width:16rem}.ffx .ff-road li.now::before{background:linear-gradient(180deg,var(--red) 0 1.4rem,rgba(242,166,90,.35) 1.4rem)}}
 </style>
 <div class="ffx">
 <div class="wrap">
@@ -470,6 +481,26 @@ background:linear-gradient(180deg,#26355A 0%,#1F2A44 40%,#19223B 100%);color:var
       <p class="body"><b>Introductieprijs.</b> Meld je je v&oacute;&oacute;r 1 januari 2027 aan, dan betaal je &euro;49 voor je eerste jaar.</p>
       <p class="body"><b>Per jaar.</b> Aan het eind van je jaar krijg je een nieuw betaalverzoek. Verleng je niet, dan stopt je lidmaatschap en ga je uit de WhatsApp-groepen.</p>
       <p class="body" style="margin:0"><b>Je greenfee betaal je apart</b>, aan de baan, alleen als je meespeelt. Wij doen ons best om korting te regelen op de greenfees. Verdere kosten zoals golfcarts, ballen en drankjes zijn niet inbegrepen.</p>
+    </div>
+  </section>
+
+  <section id="golftaal">
+    <p class="label">Nieuw in golf?</p>
+    <h2>Golftaal in gewone woorden</h2>
+    <p class="body">Op deze pagina staan een paar woorden die niet iedereen kent. Dit betekenen ze.</p>
+    <dl class="ff-dl">
+      <div><dt>Greenfee</dt><dd>Het bedrag voor één ronde op een baan waar je geen lid bent. Bij ons betaal je die zelf aan de baan, alleen als je meespeelt.</dd></div>
+      <div><dt>Handicap 54 (vroeger GVB)</dt><dd>Het bewijs dat je de regels kent en de basis beheerst. Vroeger heette het golfvaardigheidsbewijs. Je hebt het op de meeste banen nodig.</dd></div>
+      <div><dt>Handicap</dt><dd>Hoeveel slagen je gemiddeld meer nodig hebt dan par. Iedereen begint met handicap 54, en hoe beter je speelt, hoe lager hij wordt.</dd></div>
+      <div><dt>Flight</dt><dd>De groep waarmee je een ronde speelt, maximaal vier spelers. Wij delen de flights in op niveau.</dd></div>
+      <div><dt>Starttijd</dt><dd>Het tijdstip waarop je flight mag beginnen. Bij onze speeldagen regelen wij die.</dd></div>
+      <div><dt>Societydag</dt><dd>Een speeldag van de club, met een groep leden op een baan.</dd></div>
+    </dl>
+    <p class="body" style="margin-top:1.4rem">Meer weten? Lees onze uitleg voor beginners.</p>
+    <div class="ff-cards" style="margin-top:1.4rem">
+      <a href="/nl/fiftyfore/golftermen/"><b>Golftermen</b><span>Van greenfee tot flight: de woorden die je op de baan hoort, in gewone taal.</span></a>
+      <a href="/nl/fiftyfore/golfregels/"><b>Golfregels</b><span>De regels en afspraken die je echt nodig hebt in je eerste rondes.</span></a>
+      <a href="/nl/fiftyfore/golftips/"><b>Golftips</b><span>Praktische tips voor je eerste rondes op een echte baan.</span></a>
     </div>
   </section>
 
