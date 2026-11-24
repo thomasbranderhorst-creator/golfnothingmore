@@ -469,7 +469,7 @@ background:linear-gradient(180deg,#26355A 0%,#1F2A44 40%,#19223B 100%);color:var
     <p class="label">Hoe het werkt</p>
     <h2>Eén club, landelijke speeldagen, een groep per regio</h2>
     <ul class="ff-list">
-      <li><b>1. Je meldt je gratis aan</b>Je geeft aan in welke regio je woont. Dat is vrijblijvend, we peilen of er genoeg interesse is.</li>
+      <li><b>1. Je meldt je gratis aan</b>Je geeft je woonplaats door. Zo kunnen we golfers bij elkaar zoeken die dicht bij elkaar wonen, ook als dat over een provinciegrens heen is. Aanmelden is vrijblijvend, we peilen of er genoeg interesse is.</li>
       <li><b>2. In januari kijken we of het kan</b>Zijn er genoeg aanmeldingen om te starten, dan krijg je een betaalverzoek voor een jaar lidmaatschap.</li>
       <li><b>3. Genoeg leden? Dan gaan we van start</b>We openen de WhatsApp-groepen en plannen de eerste speeldagen, in maart. Betalen er te weinig leden, dan krijg je je geld terug. We denken aan zo&#39;n 50 leden om van start te kunnen.</li>
       <li><b>4. Daarna gaat alles via WhatsApp</b>Je komt via WhatsApp in de groep die bij je past, en daar loopt alle communicatie. De speeldagen zijn landelijk. Heeft een regio genoeg leden, dan krijgt die een eigen chapter met eigen speeldagen.</li>
@@ -570,7 +570,7 @@ background:linear-gradient(180deg,#26355A 0%,#1F2A44 40%,#19223B 100%);color:var
       </div>
       <label>Hoe lang golf je al?<select name="fields[ervaring]" required><option value="">Kies</option><option>Ik begin net</option><option>Minder dan 1 jaar</option><option>1 tot 3 jaar</option><option>3 tot 10 jaar</option><option>Meer dan 10 jaar</option></select></label>
       <label>Je handicap<select name="fields[handicap]" required><option value="">Kies</option><option>Nog geen GVB</option><option>54</option><option>36,1 tot 53,9</option><option>28,1 tot en met 36</option><option>28 of lager</option></select></label>
-      <label>In welke regio woon je?<select name="fields[regio]" required><option value="">Kies je provincie</option><option>Groningen</option><option>Friesland</option><option>Drenthe</option><option>Overijssel</option><option>Flevoland</option><option>Gelderland</option><option>Utrecht</option><option>Noord-Holland</option><option>Zuid-Holland</option><option>Zeeland</option><option>Noord-Brabant</option><option>Limburg</option><option>Buiten Nederland</option></select></label>
+      <label>Wat is je woonplaats?<input type="text" name="fields[city]" autocomplete="address-level2" maxlength="60" required></label>
       <span class="check"><input type="checkbox" id="ffwa" name="fields[whatsapp_ok]" value="ja" required><label for="ffwa" style="display:inline;font-family:var(--body);font-weight:400">Jullie mogen me via WhatsApp een bericht sturen als we van start gaan. Word ik lid, dan kom ik in de WhatsApp-groepen, waar andere leden mijn telefoonnummer zien.</label></span>
       <span class="check"><input type="checkbox" id="fforg" name="fields[organiseren]" value="ja"><label for="fforg" style="display:inline;font-family:var(--body);font-weight:400">Ik wil eventueel helpen om in mijn regio societydagen te organiseren.</label></span>
       <span class="check"><input type="checkbox" id="ffdeals" name="fields[deals_optin]" value="ja"><label for="ffdeals" style="display:inline;font-family:var(--body);font-weight:400">Golf, nothing more mag mij via de mail promo&#39;s sturen, mits die golfgerelateerd zijn.</label></span>
@@ -593,12 +593,12 @@ f.addEventListener('submit',function(ev){ev.preventDefault();
  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v('email'))){say('Dat e-mailadres klopt niet helemaal.',true);return;}
  if((v('phone').replace(/[^0-9]/g,'')).length<9){say('Vul je telefoonnummer in, dan kunnen we je toevoegen aan de WhatsApp-groep.',true);return;}
  if(!v('geslacht')||!v('leeftijd')){say('Vul nog je geslacht en leeftijd in.',true);return;}
- if(!v('ervaring')||!v('handicap')||!v('regio')){say('Vul nog in hoe lang je golft, je handicap en je regio.',true);return;}
+ if(!v('ervaring')||!v('handicap')||!v('city')){say('Vul nog in hoe lang je golft, je handicap en je woonplaats.',true);return;}
  if(!document.getElementById('ffwa').checked){say('Vink aan dat we je via WhatsApp mogen berichten. Zonder WhatsApp kun je helaas niet meedoen.',true);return;}
  b.disabled=true;b.textContent='Versturen...';
  fetch(f.action,{method:'POST',body:new FormData(f)}).then(function(r){return r.json().catch(function(){return null;});}).then(function(d){
   if(d&&d.success===false){say('Er ging iets mis. Probeer het zo nog eens.',true);return;}
-  try{plausible('Fifty Fore aanmelding',{props:{regio:v('regio'),src:ffsrc||'direct'}});}catch(_){}
+  try{plausible('Fifty Fore aanmelding',{props:{woonplaats:v('city'),src:ffsrc||'direct'}});}catch(_){}
   f.querySelectorAll('label,.check,button,.ff-note,.ff-grid').forEach(function(x){x.style.display='none';});
   say('Bedankt! Je krijgt nu een mail van ons. Klik op de knop daarin om je aanmelding te bevestigen. In januari laten we je weten of we van start gaan.');
  }).catch(function(){say('Er ging iets mis aan onze kant. Probeer het zo nog eens, of mail hello@golfnothingmore.com.',true);}).then(function(){b.disabled=false;b.textContent='Meld me aan';});
