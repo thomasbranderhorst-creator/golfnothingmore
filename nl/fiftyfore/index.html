@@ -407,8 +407,12 @@ background:linear-gradient(180deg,#26355A 0%,#1F2A44 40%,#19223B 100%);color:var
 .ff-legend span{display:inline-block;width:1.6rem;height:0;border-top:3px solid #F6EEDD}.ff-legend .l2{border-top:3px dashed #F2A65A;margin-left:.8rem}
 .ff-som{display:flex;flex-wrap:wrap;gap:.6rem 2rem;background:var(--gold);color:#1F2A44;border-radius:.4rem;padding:1rem 1.3rem;font-size:1.25rem;margin:0 0 1rem;max-width:34rem}
 .ff-som b{font-size:1.5rem}
+.ff-vbmedia{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:0 0 1.2rem}
+.ff-vbmedia figure{margin:0}
+.ff-vbmedia video,.ff-vbmedia img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:.4rem;border:6px solid #F6EEDD;box-shadow:0 .8rem 1.6rem rgba(0,0,0,.35);background:#17203A}
+.ff-vbmedia figcaption{color:var(--muted);font-size:.85rem;margin-top:.5rem}
 .ff-land{display:block;width:100%;height:clamp(6rem,14vw,10rem)}
-@media (max-width:44rem){.ff-cards{grid-template-columns:1fr}.ff-photos{grid-template-columns:repeat(2,1fr)}.ff-hero2{grid-template-columns:1fr}.ff-bord{max-width:16rem}.ffx .ff-road li.now::before{background:linear-gradient(180deg,var(--red) 0 1.4rem,rgba(242,166,90,.35) 1.4rem)}}
+@media (max-width:44rem){.ff-vbmedia{gap:.5rem}.ff-vbmedia video,.ff-vbmedia img{border-width:3px}.ff-vbmedia figcaption{font-size:.75rem}.ff-cards{grid-template-columns:1fr}.ff-photos{grid-template-columns:repeat(2,1fr)}.ff-hero2{grid-template-columns:1fr}.ff-bord{max-width:16rem}.ffx .ff-road li.now::before{background:linear-gradient(180deg,var(--red) 0 1.4rem,rgba(242,166,90,.35) 1.4rem)}}
 </style>
 <div class="ffx">
 <div class="wrap">
