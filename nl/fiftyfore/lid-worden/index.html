@@ -410,6 +410,9 @@ background:linear-gradient(180deg,#26355A 0%,#1F2A44 40%,#19223B 100%);color:var
 .ff-vbmedia figure{margin:0}
 .ff-vbmedia video,.ff-vbmedia img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:.4rem;border:6px solid #F6EEDD;box-shadow:0 .8rem 1.6rem rgba(0,0,0,.35);background:#17203A}
 .ff-vbmedia figcaption{color:var(--muted);font-size:.85rem;margin-top:.5rem}
+.ffx .ff-cards a.has-img{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.ff-cards a.has-img img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;border-bottom:2px solid var(--gold)}
+.ff-cards a.has-img b{padding:1rem 1.2rem 0}.ff-cards a.has-img span{padding:0 1.2rem 1.1rem}
 .ff-land{display:block;width:100%;height:clamp(6rem,14vw,10rem)}
 @media (max-width:44rem){.ff-vbmedia{gap:.5rem}.ff-vbmedia video,.ff-vbmedia img{border-width:3px}.ff-vbmedia figcaption{font-size:.75rem}.ff-cards{grid-template-columns:1fr}.ff-photos{grid-template-columns:repeat(2,1fr)}.ff-hero2{grid-template-columns:1fr}.ff-bord{max-width:16rem}.ffx .ff-road li.now::before{background:linear-gradient(180deg,var(--red) 0 1.4rem,rgba(242,166,90,.35) 1.4rem)}}
 </style>
@@ -450,15 +453,15 @@ background:linear-gradient(180deg,#26355A 0%,#1F2A44 40%,#19223B 100%);color:var
     <p class="label">Meer voor beginners</p>
     <h2>Lees ook</h2>
     <div class="ff-cards">
-      <a href="/nl/fiftyfore/golftermen/"><b>Golftermen</b><span>Van greenfee tot flight: de woorden die je op de baan hoort, in gewone taal.</span></a>
-      <a href="/nl/fiftyfore/golfregels/"><b>Golfregels</b><span>De regels en afspraken die je echt nodig hebt in je eerste rondes.</span></a>
-      <a href="/nl/fiftyfore/golftips/"><b>Golftips</b><span>Praktische tips voor je eerste rondes op een echte baan.</span></a>
-      <a href="/nl/fiftyfore/handicap-54-halen/"><b>Je GVB halen</b><span>Waar je handicap 54 haalt, wat het kost en of het verloopt.</span></a>
-      <a href="/nl/fiftyfore/handicap/"><b>Je handicap</b><span>Hoe je handicap omlaag gaat, en waarom je geen 20 kaarten nodig hebt.</span></a>
-      <a href="/nl/fiftyfore/handicap-voorbeeld/"><b>Van 54 naar 48,8</b><span>Een echt voorbeeld: hoe één goede ronde ruim 5 slagen van de handicap afhaalde.</span></a>
-      <a href="/nl/fiftyfore/uitrusting/"><b>Je golftas</b><span>Welke clubs je minimaal nodig hebt, en wat je nog meer meeneemt.</span></a>
-      <a href="/nl/fiftyfore/spelvormen/"><b>Spelvormen</b><span>Stableford, strokeplay, matchplay en scramble: zo tel je.</span></a>
-      <a href="/nl/fiftyfore/praktisch/"><b>Praktisch</b><span>Hoe lang duurt een ronde, mag je zomaar op de driving range, en wat kost het?</span></a>
+      <a class="has-img" href="/nl/fiftyfore/golftermen/"><picture><source srcset="/img/home/gids-golftermen.webp" type="image/webp"><img src="/img/home/gids-golftermen.jpg" width="800" height="500" alt="" loading="lazy"></picture><b>Golftermen</b><span>Van greenfee tot flight: de woorden die je op de baan hoort, in gewone taal.</span></a>
+      <a class="has-img" href="/nl/fiftyfore/golfregels/"><picture><source srcset="/img/home/gids-golfregels.webp" type="image/webp"><img src="/img/home/gids-golfregels.jpg" width="800" height="500" alt="" loading="lazy"></picture><b>Golfregels</b><span>De regels en afspraken die je echt nodig hebt in je eerste rondes.</span></a>
+      <a class="has-img" href="/nl/fiftyfore/golftips/"><picture><source srcset="/img/home/gids-golftips.webp" type="image/webp"><img src="/img/home/gids-golftips.jpg" width="800" height="500" alt="" loading="lazy"></picture><b>Golftips</b><span>Praktische tips voor je eerste rondes op een echte baan.</span></a>
+      <a class="has-img" href="/nl/fiftyfore/handicap-54-halen/"><picture><source srcset="/img/home/gids-handicap-54-halen.webp" type="image/webp"><img src="/img/home/gids-handicap-54-halen.jpg" width="800" height="500" alt="" loading="lazy"></picture><b>Je GVB halen</b><span>Waar je handicap 54 haalt, wat het kost en of het verloopt.</span></a>
+      <a class="has-img" href="/nl/fiftyfore/handicap/"><picture><source srcset="/img/home/gids-handicap.webp" type="image/webp"><img src="/img/home/gids-handicap.jpg" width="800" height="500" alt="" loading="lazy"></picture><b>Je handicap</b><span>Hoe je handicap omlaag gaat, en waarom je geen 20 kaarten nodig hebt.</span></a>
+      <a class="has-img" href="/nl/fiftyfore/handicap-voorbeeld/"><picture><source srcset="/img/home/gids-handicap-voorbeeld.webp" type="image/webp"><img src="/img/home/gids-handicap-voorbeeld.jpg" width="800" height="500" alt="" loading="lazy"></picture><b>Van 54 naar 48,8</b><span>Een echt voorbeeld: hoe één goede ronde ruim 5 slagen van de handicap afhaalde.</span></a>
+      <a class="has-img" href="/nl/fiftyfore/uitrusting/"><picture><source srcset="/img/home/gids-uitrusting.webp" type="image/webp"><img src="/img/home/gids-uitrusting.jpg" width="800" height="500" alt="" loading="lazy"></picture><b>Je golftas</b><span>Welke clubs je minimaal nodig hebt, en wat je nog meer meeneemt.</span></a>
+      <a class="has-img" href="/nl/fiftyfore/spelvormen/"><picture><source srcset="/img/home/gids-spelvormen.webp" type="image/webp"><img src="/img/home/gids-spelvormen.jpg" width="800" height="500" alt="" loading="lazy"></picture><b>Spelvormen</b><span>Stableford, strokeplay, matchplay en scramble: zo tel je.</span></a>
+      <a class="has-img" href="/nl/fiftyfore/praktisch/"><picture><source srcset="/img/home/gids-praktisch.webp" type="image/webp"><img src="/img/home/gids-praktisch.jpg" width="800" height="500" alt="" loading="lazy"></picture><b>Praktisch</b><span>Hoe lang duurt een ronde, mag je zomaar op de driving range, en wat kost het?</span></a>
     </div>
   </section>
 
