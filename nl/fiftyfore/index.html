@@ -383,8 +383,11 @@ background:linear-gradient(180deg,#26355A 0%,#1F2A44 40%,#19223B 100%);color:var
 .ffx footer{border-top-color:var(--line);color:var(--muted)}
 .ffx footer .name{color:var(--ink)}
 .ffx footer a{color:var(--soft)}
+.ff-photos{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.ff-photos img{display:block;width:100%;height:auto;border-radius:.4rem;border:6px solid #F6EEDD;box-shadow:0 .8rem 1.6rem rgba(0,0,0,.35)}
+.ff-photos picture:nth-child(odd) img{transform:rotate(-1.5deg)}.ff-photos picture:nth-child(even) img{transform:rotate(1.5deg)}
 .ff-land{display:block;width:100%;height:clamp(6rem,14vw,10rem)}
-@media (max-width:44rem){.ff-hero2{grid-template-columns:1fr}.ff-bord{max-width:16rem}.ffx .ff-road li.now::before{background:linear-gradient(180deg,var(--red) 0 1.4rem,rgba(242,166,90,.35) 1.4rem)}}
+@media (max-width:44rem){.ff-photos{grid-template-columns:repeat(2,1fr)}.ff-hero2{grid-template-columns:1fr}.ff-bord{max-width:16rem}.ffx .ff-road li.now::before{background:linear-gradient(180deg,var(--red) 0 1.4rem,rgba(242,166,90,.35) 1.4rem)}}
 </style>
 <div class="ffx">
 <div class="wrap">
@@ -423,6 +426,15 @@ background:linear-gradient(180deg,#26355A 0%,#1F2A44 40%,#19223B 100%);color:var
     <p class="label">Voor wie?</p>
     <h2>Samen golfen, zonder wedstrijddruk</h2>
     <p class="body">Voor beginners, hoge handicappers en golfers die net hun GVB hebben. Zit je al een stuk lager? Dan ben je net zo welkom. Betere golfers maken de speeldagen juist leuker: je speelt een ontspannen ronde en helpt nieuwe golfers op weg. Je handicap bepaalt niet of je erbij hoort.</p>
+  </section>
+
+  <section class="ff-photos-sec" aria-label="Foto's van de baan">
+    <div class="ff-photos">
+      <picture><source srcset="/img/home/ff-proost.webp" type="image/webp"><img src="/img/home/ff-proost.jpg" width="800" height="1000" alt="Thomas en Chris proosten met een glas bubbels" loading="lazy"></picture>
+      <picture><source srcset="/img/home/ff-afslag-wolken.webp" type="image/webp"><img src="/img/home/ff-afslag-wolken.jpg" width="800" height="1000" alt="Een afslag op de baan onder een grote wolkenlucht" loading="lazy"></picture>
+      <picture><source srcset="/img/home/ff-afslag-zw.webp" type="image/webp"><img src="/img/home/ff-afslag-zw.jpg" width="800" height="1000" alt="Een afslag in zwart-wit, met de schaduw over de afslagplaats" loading="lazy"></picture>
+      <picture><source srcset="/img/home/ff-duim.webp" type="image/webp"><img src="/img/home/ff-duim.jpg" width="800" height="1000" alt="Duim omhoog vanuit de golfkar" loading="lazy"></picture>
+    </div>
   </section>
 
   <section id="hoe">
