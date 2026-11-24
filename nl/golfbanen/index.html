@@ -177,7 +177,7 @@
   .ways.three { grid-template-columns:repeat(3,1fr); }
   @media (max-width:52rem) { .ways.three { grid-template-columns:1fr; } }
 
-  .reels-block:not(:has(video)) { display:none; }
+  
 
   .gnmnav .links a.lang { border:1px solid var(--line); border-radius:999px; padding:6px 11px; }
   @media (max-width:760px) { .gnmnav .links a.lang { border:0; border-bottom:1px solid var(--line); border-radius:0; padding:14px 20px; } }
@@ -270,7 +270,7 @@ try{plausible('Social',{props:{network:a.getAttribute('data-soc'),place:a.getAtt
 .memes{display:grid;grid-template-columns:repeat(auto-fill,minmax(12rem,1fr));gap:.9rem;margin-top:1.4rem}
 .memes a{display:block;border-radius:.6rem;overflow:hidden;line-height:0;box-shadow:0 14px 30px -20px rgba(16,26,21,.6);transition:transform .15s ease}
 .memes a:hover{transform:translateY(-2px) rotate(-.4deg)}
-.memes img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+.memes img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
 .memes a:focus-visible{outline:2px solid var(--accent,#A85814);outline-offset:3px}
 @media (max-width:40rem){.memes{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:62%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.6rem}.memes a{scroll-snap-align:start}.memes a:hover{transform:none}}
 </style>
